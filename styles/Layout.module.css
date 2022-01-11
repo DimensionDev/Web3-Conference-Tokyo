@@ -4,4 +4,6 @@
     min-height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
+    background: linear-gradient(180deg, #081B4B 0%, #10001D 100%);
+    color: white;
 }
