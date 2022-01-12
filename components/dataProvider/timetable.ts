@@ -12,7 +12,7 @@ import img11 from "../../assets/schedule/11.png";
 import img12 from "../../assets/schedule/12.png";
 import img13 from "../../assets/schedule/13.png";
 
-interface TimeTable {
+export interface TimeTableProp {
   preview: any;
   time: string;
   title: string;
@@ -24,7 +24,7 @@ interface TimeTable {
   }>;
 }
 
-const timeTablesMap: TimeTable[] = [
+const timeTablesMap: TimeTableProp[] = [
   {
     preview: img1,
     time: "11:00-11:10",
