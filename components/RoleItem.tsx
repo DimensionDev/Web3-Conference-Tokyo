@@ -11,7 +11,7 @@ const RoleItem: NextPage<Props> = ({ role }) => {
   return (
     <div className={style.box}>
       <div className={style.avatarBox}>
-        <Image width={246} height={246}  className={style.avatar} src={avatar} />
+        <Image width={'246px'} height={'246px'}  className={style.avatar} src={avatar} />
       </div>
       <div className={style.uInfo}>
         {roleTitles.map((item, index) => {
