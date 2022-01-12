@@ -8,7 +8,7 @@ import ArrowRightImg from "../assets/arrow_right.svg";
 import CloseImg from "../assets/close.svg";
 import Image from "next/image";
 const Roles: NextPage = () => {
-  const [isShowMask, setIsShowMask] = useState(true);
+  const [isShowMask, setIsShowMask] = useState(false);
   const [curIndex, setCurIndex] = useState(0);
   const [curPerson, setCurPerson] = useState<Role>(rolesInfoMap[curIndex]);
   const toggle = (num: number, e?: MouseEvent) => {
@@ -68,7 +68,7 @@ const Roles: NextPage = () => {
             </div>
           </div>
           <Image
-            src={ArrowLeftImg}
+            src={ArrowRightImg}
             className={style.iconActive}
             onClick={() => toggle(1)}
           />
