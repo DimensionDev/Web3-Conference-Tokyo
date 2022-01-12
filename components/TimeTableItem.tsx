@@ -30,7 +30,11 @@ const TimeTableItem: NextPage<Props> = ({ info }) => {
             {extra.map((subBoxItem, index) => {
               return (
                 <div key={index} className={style.subBoxItem}>
-                  <div className={style.subBoxType}>{subBoxItem.type}</div>
+                  <div className={style.subBoxType}>
+                    {subBoxItem.type || (
+                      <div className={style.hidden}>u cant see me</div>
+                    )}
+                  </div>
                   <div className={style.subBoxName}>{subBoxItem.name}</div>
                   <div className={style.subBoxSub}>{subBoxItem.sub}</div>
                 </div>

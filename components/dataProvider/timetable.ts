@@ -61,7 +61,7 @@ const timeTablesMap: TimeTableProp[] = [
     extra: [
       { type: "Mod", name: "なし / Mai Fujimoto", sub: "" },
       { type: "Speaker", name: "ホリーさん", sub: "やさしいDeFi" },
-      { type: " ", name: "Yuさん", sub: "" },
+      { type: "", name: "Yuさん", sub: "" },
     ],
   },
   {
@@ -90,9 +90,9 @@ const timeTablesMap: TimeTableProp[] = [
     extra: [
       { type: "Mod", name: "新子さん", sub: "渋谷デザイン" },
       { type: "Speaker", name: "Mizonoさん", sub: "Quon" },
-      { type: " ", name: "佐藤詳悟", sub: "Firebug" },
-      { type: " ", name: "熊谷さん", sub: "Akatsuki" },
-      { type: " ", name: "伏見さん", sub: "メルカリ" },
+      { type: "", name: "佐藤詳悟", sub: "Firebug" },
+      { type: "", name: "熊谷さん", sub: "Akatsuki" },
+      { type: "", name: "伏見さん", sub: "メルカリ" },
     ],
   },
   {
@@ -106,9 +106,9 @@ const timeTablesMap: TimeTableProp[] = [
     extra: [
       { type: "Mod", name: "加藤さん", sub: "TOKEN economist" },
       { type: "Speaker", name: "國光さん", sub: "gumi Cryptos" },
-      { type: " ", name: "陽水さん", sub: "Hokusai" },
-      { type: " ", name: "岡部さん", sub: "JPYC" },
-      { type: " ", name: "Sushiさん", sub: "HiDE" },
+      { type: "", name: "陽水さん", sub: "Hokusai" },
+      { type: "", name: "岡部さん", sub: "JPYC" },
+      { type: "", name: "Sushiさん", sub: "HiDE" },
     ],
   },
   {
@@ -122,9 +122,9 @@ const timeTablesMap: TimeTableProp[] = [
     extra: [
       { type: "Mod", name: "設楽さん", sub: "幻冬舎" },
       { type: "Speaker", name: "佐渡島さん", sub: "コルク" },
-      { type: " ", name: "白石さん", sub: "Arigato Bank" },
-      { type: " ", name: "久保田さん", sub: "元CoinDesk Japan" },
-      { type: " ", name: "平手さん", sub: "Joyfa" },
+      { type: "", name: "白石さん", sub: "Arigato Bank" },
+      { type: "", name: "久保田さん", sub: "元CoinDesk Japan" },
+      { type: "", name: "平手さん", sub: "Joyfa" },
     ],
   },
   {
@@ -165,9 +165,9 @@ const timeTablesMap: TimeTableProp[] = [
     extra: [
       { type: "Mod", name: "アラタさん", sub: "CryptoTimes" },
       { type: "Speaker", name: "Makotoさん", sub: "ENS" },
-      { type: " ", name: "キャサリン", sub: "現Polygon、元MakerDAO" },
-      { type: " ", name: "Gabby", sub: "YGG" },
-      { type: " ", name: "登壇舎未定", sub: "Merit circle" },
+      { type: "", name: "キャサリン", sub: "現Polygon、元MakerDAO" },
+      { type: "", name: "Gabby", sub: "YGG" },
+      { type: "", name: "登壇舎未定", sub: "Merit circle" },
     ],
   },
   {
@@ -177,8 +177,8 @@ const timeTablesMap: TimeTableProp[] = [
     sub: [],
     extra: [
       { type: "主催", name: "辻さん", sub: "" },
-      { type: " ", name: "藤本", sub: "" },
-      { type: " ", name: "Maskメンバー！", sub: "" },
+      { type: "", name: "藤本", sub: "" },
+      { type: "", name: "Maskメンバー！", sub: "" },
     ],
   },
 ];

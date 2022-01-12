@@ -94,7 +94,6 @@
   line-height: 100%;
   opacity: 0.5;
   padding: 4px 0;
-  border-bottom: 1px solid #87b1ff;
   margin-bottom: 10px;
 }
 .subBoxName {
@@ -104,4 +103,8 @@
 }
 .subBoxSub {
   font-size: 14px;
+}
+.hidden {
+  opacity: 0;
+  border: none;
 }
