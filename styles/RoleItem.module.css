@@ -1,0 +1,41 @@
+.box {
+  padding: 12px;
+  width: 270px;
+  height: 375px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.13) 2.92%,
+    rgba(255, 255, 255, 0.24) 90.3%
+  );
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  border: 1px solid;
+  border-image-source: linear-gradient(
+    349.46deg,
+    rgba(255, 255, 255, 0.058) -14.96%,
+    rgba(255, 255, 255, 0.2) 75%,
+    rgba(255, 255, 255, 0.148) 147.77%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+.avatarBox {
+  border-radius: 8px;
+}
+.avatar {
+  width: 246px;
+  height: 246px;
+  border-radius: 8px;
+  border: 2px solid;
+  border-image-source: linear-gradient(135.73deg, #ff8edf 2.34%, #4b7eff 99%);
+}
+.uName {
+  font-weight: 1000;
+  font-size: 24px;
+}
+.uInfo {
+  font-size: 16px;
+}
