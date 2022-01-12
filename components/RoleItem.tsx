@@ -3,6 +3,7 @@ import style from "../styles/RoleItem.module.css";
 import Image from "next/image";
 import { Role } from "./dataProvider/role";
 import MoreImg from "../assets/more.svg";
+
 interface Props {
   role: Role;
 }
