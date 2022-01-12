@@ -1,4 +1,5 @@
 .box {
+  position: relative;
   padding: 12px;
   width: 270px;
   height: 375px;
@@ -7,30 +8,33 @@
     rgba(255, 255, 255, 0.13) 2.92%,
     rgba(255, 255, 255, 0.24) 90.3%
   );
-  backdrop-filter: blur(10px);
   border-radius: 18px;
-  border: 1px solid;
-  border-image-source: linear-gradient(
-    349.46deg,
-    rgba(255, 255, 255, 0.058) -14.96%,
-    rgba(255, 255, 255, 0.2) 75%,
-    rgba(255, 255, 255, 0.148) 147.77%
-  );
+  border: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   text-align: center;
 }
+.box:hover .more {
+  display: unset;
+}
+.more {
+  display: none;
+  position: absolute;
+  bottom: 12px;
+  right: 8px;
+}
+
 .avatarBox {
-  border-radius: 8px;
+  border: 2px solid;
+  border-image: linear-gradient(135.73deg, #ff8edf 2.34%, #4b7eff 99%) 1;
+  clip-path: inset(0 round 8px);
 }
 .avatar {
   width: 246px;
   height: 246px;
   border-radius: 8px;
-  border: 2px solid;
-  border-image-source: linear-gradient(135.73deg, #ff8edf 2.34%, #4b7eff 99%);
 }
 .uName {
   font-weight: 1000;

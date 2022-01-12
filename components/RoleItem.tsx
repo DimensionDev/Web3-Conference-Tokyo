@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import style from "../styles/RoleItem.module.css";
 import Image from "next/image";
 import { Role } from "./dataProvider/role";
+import MoreImg from '../assets/more.svg'
 interface Props {
   role: Role;
 }
@@ -10,7 +11,7 @@ const RoleItem: NextPage<Props> = ({ role }) => {
   return (
     <div className={style.box}>
       <div className={style.avatarBox}>
-        <Image className={style.avatar} src={avatar} />
+        <Image width={246} height={246}  className={style.avatar} src={avatar} />
       </div>
       <div className={style.uInfo}>
         {roleTitles.map((item, index) => {
@@ -18,6 +19,10 @@ const RoleItem: NextPage<Props> = ({ role }) => {
         })}
       </div>
       <div className={style.uName}>{name}</div>
+      <div className={style.more} >
+      <Image src={MoreImg} />
+
+      </div>
     </div>
   );
 };
