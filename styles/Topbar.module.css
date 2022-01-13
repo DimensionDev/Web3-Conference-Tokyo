@@ -21,6 +21,9 @@
   z-index: 99999;
 }
 .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 66px;
   height: 72px;
 }
@@ -58,7 +61,7 @@
   background-clip: text;
   color: transparent;
 }
-.ActiveMenuItem{
+.ActiveMenuItem {
   font-size: 18px;
   background: radial-gradient(
     64.79% 343.64% at 35.21% 164.52%,
@@ -82,4 +85,104 @@
   align-items: center;
   margin-left: 206px;
   gap: 8px;
+}
+
+@media screen and (max-width: 1024px) {
+  .lang {
+    margin-left: 70px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+  .menu {
+    gap: 80px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .container {
+    padding: 0 5px;
+  }
+  .menu {
+    gap: 32px;
+  }
+  .menuItem {
+    font-size: x-small;
+  }
+  .lang {
+    margin-left: 30px;
+    font-size: x-small;
+  }
+  .ActiveMenuItem {
+    font-size: small;
+  }
+  .menuItem:hover {
+    font-size: small;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .container {
+    padding: 0;
+  }
+  .menu {
+    gap: 8px;
+  }
+  .menuItem {
+    font-size: xx-small;
+  }
+  .lang {
+    margin-left: 16px;
+    font-size: xx-small;
+    gap: 6px;
+  }
+  .ActiveMenuItem {
+    font-size: small;
+  }
+  .menuItem:hover {
+    font-size: small;
+  }
+}
+@media screen and (max-width: 375px) {
+  .lang {
+    margin-left: 8px;
+    gap: 4px;
+  }
+  .ActiveMenuItem {
+    font-size: x-small;
+  }
+  .menuItem:hover {
+    font-size: x-small;
+  }
+  .logo {
+    width: 50px;
+    height: 62px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .menu {
+    gap: 2px;
+  }
+  .lang {
+    margin-left: 4px;
+    gap: 4px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .menu {
+    gap: 2px;
+  }
+  .menuItem {
+    font-size: 8pt;
+  }
+  .lang {
+    font-size: 1pt;
+    margin-left: 2px;
+    gap: 2px;
+  }
+  .logo {
+    width: 36px;
+    height: 42px;
+  }
 }
