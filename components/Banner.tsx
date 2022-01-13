@@ -3,6 +3,7 @@ import Image from "next/image";
 import TitleImg from "../assets/title.svg";
 import LaserIcon from "../assets/laser_icon.svg";
 import style from "../styles/Banner.module.css";
+
 const Banner: NextPage = () => {
   return (
     <div className={style.container}>

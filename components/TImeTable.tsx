@@ -11,7 +11,7 @@ const TimeTable: NextPage = () => {
       <div className={style.cardBox}>
         {timeTablesMap.map((item, index) => {
           return (
-            <div>
+            <div key={`${index}_timeContainer`} >
               <TimeTableItem key={`${index}_timetable`} info={item} />
               {item.switchTime && (
                 <PreTimeInfo

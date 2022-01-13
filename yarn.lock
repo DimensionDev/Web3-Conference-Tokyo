@@ -80,6 +80,13 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@gltf-transform/core@^1.2.4":
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/@gltf-transform/core/-/core-1.2.4.tgz#676d23224fc5cdaf27f733c71ac36d829fa8e071"
+  integrity sha512-XAq++xwQg7ZPxHzRACf1uTuYntqJ7DTiE4IOWJa+ATvSk4hoHRCAFsMB0ziTKgEUObcKVrNvBwctxx5ABVrktA==
+  dependencies:
+    gl-matrix "~3.4.3"
+
 "@hapi/accept@5.0.2":
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/@hapi/accept/-/accept-5.0.2.tgz#ab7043b037e68b722f93f376afb05e85c0699523"
@@ -1359,6 +1366,11 @@ get-symbol-description@^1.0.0:
     call-bind "^1.0.2"
     get-intrinsic "^1.1.1"
 
+gl-matrix@~3.4.3:
+  version "3.4.3"
+  resolved "https://registry.yarnpkg.com/gl-matrix/-/gl-matrix-3.4.3.tgz#fc1191e8320009fd4d20e9339595c6041ddc22c9"
+  integrity sha512-wcCp8vu8FT22BnvKVPjXa/ICBWRq/zjFfdofZy1WSpQZpphblv12/bOQLBC1rMM7SGOFS9ltVmKOHil5+Ml7gA==
+
 glob-parent@^5.1.2, glob-parent@~5.1.0:
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/glob-parent/-/glob-parent-5.1.2.tgz#869832c58034fe68a4093c17dc15e8340d8401c4"
@@ -2365,6 +2377,13 @@ react-scroll@^1.8.4:
     lodash.throttle "^4.1.1"
     prop-types "^15.7.2"
 
+react-spline@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/react-spline/-/react-spline-1.2.1.tgz#c074178cf752b1f582fb62af0c330d9a3f5e0099"
+  integrity sha512-d17gOvoKjWfHmsXm7H1YbK715dDEVuIc72eNcrrpNp7T/H8zH2yfNvk1NSJQSuGchTXaa90hbiGRC3FGpJHMZA==
+  dependencies:
+    three "0.123.0"
+
 react@17.0.2:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react/-/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
@@ -2712,6 +2731,11 @@ text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
+
+three@0.123.0:
+  version "0.123.0"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.123.0.tgz#3bb6d8f908a432eb7cd450f7eab6dd40fde53085"
+  integrity sha512-KNnx/IbilvoHRkxOtL0ouozoDoElyuvAXhFB21RK7F5IPWSmqyFelICK6x3hJerLNSlAdHxR0hkuvMMhH9pqXg==
 
 timers-browserify@2.0.12:
   version "2.0.12"
