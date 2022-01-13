@@ -12,9 +12,13 @@ const TimeTable: NextPage = () => {
         {timeTablesMap.map((item, index) => {
           return (
             <div>
-              <TimeTableItem info={item} key={index} />
+              <TimeTableItem key={`${index}_timetable`} info={item} />
               {item.switchTime && (
-                <PreTimeInfo key={`${index}_pre`} text={item.switchTime} isBig={item.isBig} />
+                <PreTimeInfo
+                  key={`${index}_pre`}
+                  text={item.switchTime}
+                  isBig={item.isBig}
+                />
               )}
             </div>
           );

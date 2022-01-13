@@ -6,12 +6,15 @@ import TimeTable from "./TImeTable";
 import Roles from "./Roles";
 import Sponsor from "./Sponsor";
 import Footer from "./Footer";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
+import CanvasScript from "../components/utils/CanvasBg";
 
 const Layout: NextPage = () => {
- 
+  useEffect(() => {
+    CanvasScript(window);
+  }, []);
   return (
-    <div className={style.container}>
+    <div id='layout' className={style.container}>
       <Topbar />
       <Banner />
       <TimeTable />

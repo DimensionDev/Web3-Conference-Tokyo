@@ -11,7 +11,9 @@ const PreTimeInfo: NextPage<Props> = ({ text, isBig }) => {
   return (
     <div className={style.container}>
       <Image src={Left} />
-      <div className={isBig ? `${style.text} ${style.BigText}` : style.text}>{text}</div>
+      <div className={isBig ? `${style.text} ${style.BigText}` : style.text}>
+        {text}
+      </div>
       <Image src={Right} />
     </div>
   );
