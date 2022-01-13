@@ -3,19 +3,12 @@ import Image from "next/image";
 import TitleImg from "../assets/title.svg";
 import LaserIcon from "../assets/laser_icon.svg";
 import style from "../styles/Banner.module.css";
+import MobileHeroSub from "../assets/mobileHeroSub.svg";
 
 const Banner: NextPage = () => {
-  return (
-    <div className={style.container}>
-      <div className={style.contentBox}>
-        <Image className={style.title} src={TitleImg} alt="" />
-        <div className={style.titleSub}>
-          <div className={style.titleSubContent}>
-            <div>「 時間 11:00 ~ 19:00 」</div>
-            <div>|</div>
-            <div>オンライン配信有り！</div>
-          </div>
-        </div>
+  const renderLaser = () => {
+    return (
+      ((globalThis || window).innerWidth > 1024 && (
         <div className={style.LaserContentBox}>
           <Image src={LaserIcon} />
           <div className={style.laserContent}>
@@ -27,6 +20,23 @@ const Banner: NextPage = () => {
             </div>
           </div>
         </div>
+      )) || <Image className={style.mobileLaser} src={MobileHeroSub} />
+    );
+  };
+  return (
+    <div className={style.container}>
+      <div className={style.contentBox}>
+        <div className={style.title}>
+          <Image src={TitleImg} alt="" />
+        </div>
+        <div className={style.titleSub}>
+          <div className={style.titleSubContent}>
+            <div>「 時間 11:00 ~ 19:00 」</div>
+            <div>|</div>
+            <div>オンライン配信有り！</div>
+          </div>
+        </div>
+        {renderLaser()}
       </div>
     </div>
   );

@@ -63,6 +63,50 @@
 }
 .LaserContentText {
   color: #000000;
-
   font-size: 15px;
+}
+
+@media screen and (max-width: 1024px) {
+  .contentBox {
+    width: 100%;
+    align-items: center;
+  }
+  .titleSub {
+    width: 100%;
+  }
+  .LaserContentBox {
+    width: 100%;
+    height: auto;
+  }
+  .titleSubContent {
+    gap: 80px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .title {
+    max-width: 90%;
+  }
+}
+@media screen and (max-width: 540px) {
+  .titleSub {
+    margin: 40px 0;
+  }
+  .titleSubContent {
+    font-size: 16px;
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+ 
+  .titleSubContent {
+    font-size: 16px;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .titleSubContent {
+    font-size: 13px;
+    gap: 12px;
+  }
 }
