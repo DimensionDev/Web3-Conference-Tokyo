@@ -58,6 +58,24 @@
   background-clip: text;
   color: transparent;
 }
+.ActiveMenuItem{
+  font-size: 18px;
+  background: radial-gradient(
+    64.79% 343.64% at 35.21% 164.52%,
+    #72fff9 0%,
+    #faffda 23.44%,
+    #9dd9fb 37.81%,
+    #a0faea 46.14%,
+    #9aa6ff 54.47%,
+    #b4d7e6 63.54%,
+    #fccdb9 75.52%,
+    #cff4ff 84.9%,
+    #faffed 92.19%,
+    #40d1ff 100%
+  );
+  background-clip: text;
+  color: transparent;
+}
 .lang {
   cursor: pointer;
   display: flex;
