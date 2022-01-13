@@ -36,3 +36,38 @@
   padding-top: 40px;
   text-align: center;
 }
+
+@media screen and (max-width: 1024px) {
+  .inner{
+    width: 100%;
+  }
+}
+@media screen and (max-width: 414px) {
+  .container{
+    padding: 20px;
+  }
+  .joinUs{
+    margin-bottom: 20px;
+  }
+  .mediaBox{
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .copyright{
+    padding: 20px;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .joinUs{
+    margin-bottom: 10px;
+  }
+  .mediaBox{
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+  .copyright{
+    padding: 10px;
+    font-size: 14px;
+  }
+}
