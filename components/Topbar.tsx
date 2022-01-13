@@ -3,11 +3,13 @@ import Image from "next/image";
 import style from "../styles/Topbar.module.css";
 import LangImg from "../assets/lang.svg";
 import LogoImg from "../assets/Logo.svg";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const menuMap = ["タイムテーブル", "登壇者", "メディアパートナー"];
 const Topbar: NextPage = () => {
+  const ctx = useRef() as any;
   const [LangText, setLangText] = useState("English");
+  const [activeTopbar, setActiveTopbar] = useState(false);
   const toggleLang = () => {
     if (LangText === "English") {
       setLangText("日本語");
@@ -16,17 +18,27 @@ const Topbar: NextPage = () => {
     }
   };
   const getTopbarStyle = () => {
-    console.log("sss");
+    if (ctx && ctx.current && ctx.current.offsetTop > 1) {
+      setActiveTopbar(true);
+    } else {
+      setActiveTopbar(false);
+    }
   };
   useEffect(() => {
-    document.addEventListener("scroll", getTopbarStyle);
+    window.addEventListener("scroll", getTopbarStyle, true);
     return () => {
-      document.removeEventListener("scroll", getTopbarStyle);
+      window.removeEventListener("scroll", getTopbarStyle, true);
     };
   }, []);
-
   return (
-    <div className={style.container}>
+    <div
+      ref={ctx}
+      className={
+        activeTopbar
+          ? `${style.container} ${style.containerActive}`
+          : style.container
+      }
+    >
       <div className={style.logo}>
         <Image className={style.logo} src={LogoImg} alt="logo" />
       </div>

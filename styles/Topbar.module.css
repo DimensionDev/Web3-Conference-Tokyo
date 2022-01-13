@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: space-between;
 }
-.containerFloat {
+.containerActive {
   background: linear-gradient(
     90deg,
     rgba(16, 2, 33, 0.5) 0%,
