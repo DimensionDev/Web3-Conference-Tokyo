@@ -1,23 +1,27 @@
-import NoritakaOkabe from "../../assets/roles/Noritaka Okabe.png";
-import YosuiHarasawa from "../../assets/roles/Yosui Harasawa10号23点更新.jpeg";
-import Nekomatu from "../../assets/roles/猫井 夕菜(ねこい ゆうな) a.k.a.  @nekomatu .jpg";
-import XiongGu from "../../assets/roles/熊谷 祐二.png";
-import Kuniyoshi from "../../assets/roles/Kuniyoshi Mabuchi.png";
-import Shuiye from "../../assets/roles/水野和寛.png";
-import Anzhai from "../../assets/roles/安宅 基（あたか はじめ）.jpg";
-import Sato from "../../assets/roles/210109_0018 - 佐藤詳悟.png";
-import Yellow from "../../assets/roles/コムギ（こむぎ）.jpeg";
-import Makoto from "../../assets/roles/Makoto Inoue.png";
-import Pingshou from "../../assets/roles/平手 宏志朗.jpg";
-import Longjing from "../../assets/roles/亀井 聡彦 （かめい としひこ）.jpeg";
-import Jueci from "../../assets/roles/堀次 泰介（ほりつぎ たいすけ）.jpg";
-import Youjie from "../../assets/roles/設楽 悠介.jpg";
-import XingShu from "../../assets/roles/内山 幸樹.png";
-import YongPing from "../../assets/roles/佐渡島 庸平.jpg";
-import Kathleen from "../../assets/roles/11号17点更新Kathleen Chu.jpg";
-import XizhuangGe from "../../assets/roles/11号17点更新クリス　ダイ.png";
-import CryptoBaby from "../../assets/roles/11号17点更新 Crypto Baby.jpeg";
-import ShigoAri from "../../assets/roles/截屏2022-01-12 上午11.51.08.png";
+import NoritakaOkabe from "../../assets/roles/0.svg";
+import YosuiHarasawa from "../../assets/roles/1.svg";
+import Nekomatu from "../../assets/roles/2.svg";
+import XiongGu from "../../assets/roles/3.svg";
+import Kuniyoshi from "../../assets/roles/4.svg";
+import Shuiye from "../../assets/roles/5.svg";
+import Anzhai from "../../assets/roles/6.svg";
+import Sato from "../../assets/roles/7.svg";
+import Yellow from "../../assets/roles/8.svg";
+import Makoto from "../../assets/roles/9.svg";
+import Pingshou from "../../assets/roles/10.svg";
+import Longjing from "../../assets/roles/11.svg";
+import Jueci from "../../assets/roles/12.svg";
+import Youjie from "../../assets/roles/13.svg";
+import XingShu from "../../assets/roles/14.svg";
+import YongPing from "../../assets/roles/15.svg";
+import Kathleen from "../../assets/roles/16.svg";
+import XizhuangGe from "../../assets/roles/17.svg";
+import CryptoBaby from "../../assets/roles/18.svg";
+import ShigoAri from "../../assets/roles/19.svg";
+import Fujian from "../../assets/roles/20.svg";
+import Jingyuan from "../../assets/roles/21.svg";
+import XuDou from "../../assets/roles/22.svg";
+import Shunmi from "../../assets/roles/23.svg";
 export interface Role {
   avatar: any;
   coLink: string;
@@ -266,6 +270,51 @@ const rolesInfoMap: Role[] = [
     2020年2月ブロックチェーン/仮想通貨に関するリサーチレポート「CT Analysis」をリリース、2021年9月に『あなたをクリプトオタクまで成長させる暗号資産特化レポート』をテーマにリニューアルを行い、登録者数は現在4000人超え、月に4-5本のインフォグラッフィクのレポートを定期配信。
     トレンドにあわせた内容を配信する他に、企業からのカスタムレポートの依頼も受託している。
     `,
+    ],
+  },
+  {
+    avatar: Fujian,
+    coLink: "",
+    twitterLink: "",
+    name: "伏見 慎剛",
+    roleTitles: [
+      "株式会社メルカリ 執行役員NFT担当",
+      "株式会社メルコイン 取締役",
+    ],
+    intro: [
+      "早稲田大学を卒業後、株式会社リクルート（現株式会社リクルートホールディングス）に入社。人材領域や販促領域での営業やマネジメントを経験した後、新規事業開発に従事。主にO2O決済分野のサービス立ち上げや事業運営に携わる。2012年より、創業期の株式会社Origamiに参画し、事業拡大のためのビジネス全般を担当し、戦略的提携や資金調達等にも従事。2020年3月、同社のメルカリグループ参画により、メルカリグループに参画。メルペイ執行役員 VP of Growthを経て、2021年4月より現職。",
+    ],
+  },
+  {
+    avatar: Jingyuan,
+    coLink: "",
+    twitterLink: "",
+    name: "井元秀彰",
+    roleTitles: ["株式会社和らしべ・CEO"],
+    intro: [
+      "複数ブロックチェーン企業のアンバサダーを経て、脱サラして株式会社和らしべを共同創業。「法定通貨に依存しない分散型経済圏を創る」をビジョンにweb2とweb3の掛橋となるDapps開発や手数料の民主化を可能にするprotocolを提供しています。",
+    ],
+  },
+  {
+    avatar: XuDou,
+    coLink: "",
+    twitterLink: "",
+    name: "絢斗 優",
+    roleTitles: ["BlockchainPROseed"],
+    intro: [
+      "メディアアーティストとしてのバックグラウンドと、ブロックチェーン業界の知見を生かし、業界間の橋渡しとして活動。ブロックチェーンを活用したチャリティープロジェクトKIZUNAでは、Binance charityやKevin Abosch等とチャリティーキャンペーンを推進。BlockchainPROseedではブロックチェーンに特化したコミュニティ支援を専門とし、COSMOS、Propy、SKALE、Flow, Avalancheなどの海外プロジェクトとのmeetupやイベント運営、AMM、youtubeコンテンツ制作などに協力。世界最大規模のNFTカンファレンスNon-fungible Tokyoの運営に2019年より参加。",
+      "NFT事業立上げに関するサポートもしていおり、2021年に東京都現代美術館で開催された企画展「ライゾマティクス_マルティプレックス」などの制作協力も行なっている。",
+      "2006年よりメディアアーティスト、トラックメイカーとして活動開始。ユネスコダンスコングレスや文化庁芸術祭など国内外で作品を発表。2017年よりVRコンテンツの制作に取り組み、Vtuberのライブ演出やVRプラットフォームでのイベント制作などを行う",
+    ],
+  },
+  {
+    avatar: Shunmi,
+    coLink: "",
+    twitterLink: "",
+    name: "加藤 順弥",
+    roleTitles: ["TOKEN ECONOMIST 代表"],
+    intro: [
+      "中上級者向けのブロックチェーンメディア「TOKEN ECONOMIST」の代表。プロジェクトをの深堀りを中心にし、日々良質なプロジェクトのリサーチを行う。その他、Telegram発祥のブロックチェーン「Everscale」の日本DAOや、興味ドリブンでユーザー同士の交流ができるSaaS「Ecomedia」の開発を行うScalably株式会社のBDも務めている。",
     ],
   },
 ];

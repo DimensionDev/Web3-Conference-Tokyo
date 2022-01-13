@@ -16,8 +16,8 @@ const RoleItem: NextPage<Props> = ({ role, onMore, idx }) => {
       <div className={style.inner}>
         <div className={style.avatarBox}>
           <Image
-            width={"246px"}
-            height={"246px"}
+            width={246}
+            height={246}
             className={style.avatar}
             src={avatar}
           />
