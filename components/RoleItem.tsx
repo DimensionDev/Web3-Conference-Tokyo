@@ -25,6 +25,7 @@ const RoleItem: NextPage<Props> = ({ role, onMore, idx }) => {
             height={246}
             className={style.avatar}
             src={avatar}
+            onClick={() => onMore(role, idx)}
           />
           <div className={style.mediaBox}>
             <a href={role.coLink} target="_blank">
