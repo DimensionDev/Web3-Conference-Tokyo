@@ -27,13 +27,14 @@
     rgba(16, 16, 50, 0.9) 90.3%
   );
   backdrop-filter: blur(10px);
+  z-index: 999;
 }
 .avatar {
-  width: 246px;
-  height: 246px;
   border-radius: 8px;
 }
 .avatarBox {
+  width: 246px;
+  height: 246px;
   border-radius: 8px;
   border: 2px solid transparent;
   background-image: linear-gradient(135.73deg, #ff8edf 2.34%, #4b7eff 99%);
@@ -68,6 +69,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  z-index: 1000;
 }
 .detailContent {
   width: 660px;
@@ -107,4 +109,8 @@
 }
 .close:hover {
   opacity: 1;
+}
+
+.infoBox{
+  flex:1
 }

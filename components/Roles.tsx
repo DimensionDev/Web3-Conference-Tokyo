@@ -45,21 +45,20 @@ const Roles: NextPage = () => {
         <div className={style.detailBox}>
           <Image
             src={ArrowLeftImg}
-            className={style.iconActive}
+            className={curIndex === 0 ? style.iconDisable : style.iconActive}
             onClick={() => toggle(-1)}
           />
           <div className={style.detailContent}>
             <div className={style.imgContainer}>
               <div className={style.avatarBox}>
                 <Image
-                  width={"246px"}
-                  height={"246px"}
+                  width={244}
+                  height={244}
                   className={style.avatar}
-                  placeholder={"empty"}
                   src={curPerson.avatar}
                 />
               </div>
-              <div>
+              <div className={style.infoBox} >
                 <div className={style.uInfo}>{curPerson.roleTitles}</div>
                 <div className={style.uName}>{curPerson.name}</div>
               </div>
@@ -81,7 +80,7 @@ const Roles: NextPage = () => {
           </div>
           <Image
             src={ArrowRightImg}
-            className={style.iconActive}
+            className={curIndex === 19 ? style.iconDisable : style.iconActive}
             onClick={() => toggle(1)}
           />
         </div>
