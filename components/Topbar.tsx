@@ -13,7 +13,7 @@ const menuMap = [
 ];
 const Topbar: NextPage = () => {
   const ctx = useRef() as any;
-  const [LangText, setLangText] = useState("English");
+  const [LangText, setLangText] = useState("日本語");
   const [activeTopbar, setActiveTopbar] = useState(false);
 
   const [activeMenuItem, setActiveMenuItem] = useState("");

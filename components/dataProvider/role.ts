@@ -25,7 +25,9 @@ import Shunmi from "../../assets/roles/23.svg";
 export interface Role {
   avatar: any;
   coLink: string;
-  twitterLink: string;
+  twitterLink?: string;
+  ethLink?: string;
+  facebookLink?: string;
   name: string;
   roleTitles: string[];
   intro?: string[];
@@ -33,8 +35,8 @@ export interface Role {
 const rolesInfoMap: Role[] = [
   {
     avatar: NoritakaOkabe,
-    coLink: "",
-    twitterLink: "",
+    coLink: "https://jpyc.co.jp/",
+    twitterLink: "https://twitter.com/noritaka_okabe",
     name: "Noritaka Okabe",
     roleTitles: ["JPYC Inc.", "CEO/ BCCC Director"],
     intro: [
@@ -45,8 +47,8 @@ const rolesInfoMap: Role[] = [
   },
   {
     avatar: YosuiHarasawa,
-    coLink: "",
-    twitterLink: "",
+    coLink: "https://hokusai.app/",
+    twitterLink: "https://twitter.com/y0su1",
     name: "Yosui Harasawa",
     roleTitles: ["Hokusai"],
     intro: [
@@ -55,8 +57,8 @@ const rolesInfoMap: Role[] = [
   },
   {
     avatar: Nekomatu,
-    coLink: "",
-    twitterLink: "",
+    coLink: "https://defigeek.xyz/",
+    twitterLink: "https://twitter.com/nekoi7yu",
     name: "猫井夕菜  @nekomatu ",
     roleTitles: ["DeFiGeek(DFGC) ", "モデレーター"],
     intro: [
@@ -67,8 +69,8 @@ const rolesInfoMap: Role[] = [
   },
   {
     avatar: XiongGu,
-    coLink: "",
-    twitterLink: "",
+    coLink: "https://aktsk.jp/",
+    twitterLink: "https://twitter.com/yujikumagai_",
     name: "熊谷 祐二",
     roleTitles: ["株式会社アカツキ/ディレクター"],
     intro: [
@@ -80,8 +82,8 @@ const rolesInfoMap: Role[] = [
   },
   {
     avatar: Kuniyoshi,
-    coLink: "",
-    twitterLink: "",
+    coLink: "https://www.pwc.com/jp/en",
+    facebookLink: "https://www.facebook.com/kuniyoshi.mabuchi",
     name: "Kuniyoshi Mabuchi",
     roleTitles: ["PwC Managing Director", "ex Facebook Director"],
     intro: [
@@ -93,8 +95,8 @@ const rolesInfoMap: Role[] = [
   },
   {
     avatar: Shuiye,
-    coLink: "",
-    twitterLink: "",
+    coLink: "https://minto-inc.jp/",
+    twitterLink: "https://twitter.com/mizunoq",
     name: "水野 和寛",
     roleTitles: ["株式会社Minto CEO"],
     intro: [
@@ -105,8 +107,8 @@ const rolesInfoMap: Role[] = [
   },
   {
     avatar: Anzhai,
-    coLink: "",
-    twitterLink: "",
+    coLink: "https://corporate.otakumode.com/",
+    twitterLink: "https://twitter.com/paji_a",
     name: "安宅 基",
     roleTitles: ["株式会社Tokyo Otaku Mode", "創業者兼COO"],
     intro: [
@@ -115,8 +117,8 @@ const rolesInfoMap: Role[] = [
   },
   {
     avatar: Sato,
-    coLink: "",
-    twitterLink: "",
+    coLink: "firebug.jp",
+    twitterLink: "https://twitter.com/sato_shogo1",
     name: "佐藤 詳悟",
     roleTitles: ["株式会社FIREBUG ", "代表取締役CPO"],
     intro: [
@@ -125,8 +127,8 @@ const rolesInfoMap: Role[] = [
   },
   {
     avatar: Yellow,
-    coLink: "",
-    twitterLink: "",
+    coLink: "https://komugi.jp/",
+    twitterLink: "https://twitter.com/ro_mi",
     name: "コムギ",
     roleTitles: ["Web3特化のベンチャーキャピタル ", "/Web3リサーチャー"],
     intro: [
@@ -135,8 +137,8 @@ const rolesInfoMap: Role[] = [
   },
   {
     avatar: Makoto,
-    coLink: "",
-    twitterLink: "",
+    coLink: "https://ens.domains",
+    ethLink: "https://twitter.com/kojirohirate",
     name: "Makoto Inoue",
     roleTitles: ["ENS, developer"],
     intro: [
@@ -145,8 +147,8 @@ const rolesInfoMap: Role[] = [
   },
   {
     avatar: Pingshou,
-    coLink: "",
-    twitterLink: "",
+    coLink: "株式会社ジョイファ",
+    twitterLink: "https://twitter.com/kojirohirate",
     name: "平手 宏志朗",
     roleTitles: ["株式会社ジョイファ"],
     intro: [
@@ -157,8 +159,8 @@ const rolesInfoMap: Role[] = [
   },
   {
     avatar: Longjing,
-    coLink: "",
-    twitterLink: "",
+    coLink: "https://fracton.ventures/",
+    twitterLink: "https://twitter.com/tolehico",
     name: "亀井 聡彦",
     roleTitles: ["Co-Founder of Fracton Ventures"],
     intro: [
@@ -167,8 +169,8 @@ const rolesInfoMap: Role[] = [
   },
   {
     avatar: Jueci,
-    coLink: "",
-    twitterLink: "",
+    coLink: "kyber.network",
+    twitterLink: "https://twitter.com/taisuke_hory",
     name: "堀次 泰介",
     roleTitles: ["Kyber Network Japan Manager"],
     intro: [
@@ -177,8 +179,8 @@ const rolesInfoMap: Role[] = [
   },
   {
     avatar: Youjie,
-    coLink: "",
-    twitterLink: "",
+    coLink: "https://www.neweconomy.jp/",
+    twitterLink: "https://twitter.com/ysksdr",
     name: "設楽 悠介",
     roleTitles: ["幻冬舎「あたらしい経済」編集長"],
     intro: [
@@ -187,8 +189,8 @@ const rolesInfoMap: Role[] = [
   },
   {
     avatar: XingShu,
-    coLink: "",
-    twitterLink: "",
+    coLink: "https://www.hottolink.co.jp",
+    twitterLink: "https://twitter.com/ucchy/",
     name: "内山 幸樹",
     roleTitles: ["（株)ホットリンク", "代表取締役＆グループCEO"],
     intro: [
@@ -207,8 +209,8 @@ const rolesInfoMap: Role[] = [
   },
   {
     avatar: YongPing,
-    coLink: "",
-    twitterLink: "",
+    coLink: "https://metabaworld.com",
+    twitterLink: "https://twitter.com/sadycork",
     name: "佐渡島 庸平",
     roleTitles: ["株式会社コルク"],
     intro: [
@@ -219,8 +221,8 @@ const rolesInfoMap: Role[] = [
   },
   {
     avatar: Kathleen,
-    coLink: "",
-    twitterLink: "",
+    coLink: "https://polygon.technology/",
+    twitterLink: "https://twitter.com/inquisitivekath",
     name: "Kathleen Chu",
     roleTitles: ["Head of Communications,", "Polygon"],
     intro: [
@@ -229,8 +231,8 @@ const rolesInfoMap: Role[] = [
   },
   {
     avatar: XizhuangGe,
-    coLink: "",
-    twitterLink: "",
+    coLink: "www.unicask.jp",
+    twitterLink: "https://twitter.com/chrisdai_tokyo",
     name: "クリス　ダイ",
     roleTitles: ["株式会社 UniCask"],
     intro: [
@@ -241,8 +243,8 @@ const rolesInfoMap: Role[] = [
   },
   {
     avatar: CryptoBaby,
-    coLink: "",
-    twitterLink: "",
+    coLink: "https://mask.io/",
+    twitterLink: "https://twitter.com/crypto___baby",
     name: "Crypto Baby",
     roleTitles: ["MaskNetwork Japan"],
     intro: [
@@ -252,8 +254,8 @@ const rolesInfoMap: Role[] = [
   },
   {
     avatar: ShigoAri,
-    coLink: "",
-    twitterLink: "",
+    coLink: "https://crypto-times.jp",
+    twitterLink: "https://twitter.com/cry_curr_ar",
     name: "Shingo Arai | 新井 進悟",
     roleTitles: ["Rokubunnoni Inc. CEO ", "CRYPTO TIMES 編集長"],
     intro: [
@@ -274,8 +276,8 @@ const rolesInfoMap: Role[] = [
   },
   {
     avatar: Fujian,
-    coLink: "",
-    twitterLink: "",
+    coLink: "https://www.mercoin.jp/",
+    twitterLink: "https://twitter.com/smcpglf",
     name: "伏見 慎剛",
     roleTitles: [
       "株式会社メルカリ 執行役員NFT担当",
@@ -287,8 +289,8 @@ const rolesInfoMap: Role[] = [
   },
   {
     avatar: Jingyuan,
-    coLink: "",
-    twitterLink: "",
+    coLink: "https://company.warashibe.market/",
+    twitterLink: "https://twitter.com/0xhideaki_sushi",
     name: "井元秀彰",
     roleTitles: ["株式会社和らしべ・CEO"],
     intro: [
@@ -297,8 +299,8 @@ const rolesInfoMap: Role[] = [
   },
   {
     avatar: XuDou,
-    coLink: "",
-    twitterLink: "",
+    coLink: "https://www.blockchainproseed.com/",
+    twitterLink: "https://twitter.com/Yu_Ayato",
     name: "絢斗 優",
     roleTitles: ["BlockchainPROseed"],
     intro: [
@@ -309,8 +311,8 @@ const rolesInfoMap: Role[] = [
   },
   {
     avatar: Shunmi,
-    coLink: "",
-    twitterLink: "",
+    coLink: "https://www.token-economist.com/",
+    twitterLink: "https://twitter.com/TokenEconomist",
     name: "加藤 順弥",
     roleTitles: ["TOKEN ECONOMIST 代表"],
     intro: [

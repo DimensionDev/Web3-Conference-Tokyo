@@ -38,6 +38,7 @@
 }
 
 .avatarBox {
+  position: relative;
   width: 246px;
   height: 246px;
   border-radius: 8px;
@@ -53,4 +54,24 @@
 }
 .uInfo {
   font-size: 15px;
+}
+
+.mediaBox {
+  position: absolute;
+  width: 242px;
+  height: 58px;
+  bottom: 1px;
+
+  background: linear-gradient(
+    90deg,
+    rgba(27, 26, 26, 0) -3.93%,
+    rgba(28, 26, 26, 0.4128) 51.26%,
+    rgba(27, 26, 26, 0) 100%
+  );
+  backdrop-filter: blur(4px);
+  border-top: 1px solid rgba(255, 255, 255, .2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
 }

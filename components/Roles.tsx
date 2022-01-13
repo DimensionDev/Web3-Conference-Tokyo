@@ -7,6 +7,11 @@ import ArrowLeftImg from "../assets/arrow_left.svg";
 import ArrowRightImg from "../assets/arrow_right.svg";
 import CloseImg from "../assets/close.svg";
 import Image from "next/image";
+
+import CoImg from "../assets/roles/co.svg";
+import TwitterImg from "../assets/roles/twitter.svg";
+import ETHImg from "../assets/roles/eth.svg";
+import FacebookImg from "../assets/roles/fb.svg";
 const Roles: NextPage = () => {
   const [isShowMask, setIsShowMask] = useState(false);
   const [curIndex, setCurIndex] = useState(0);
@@ -57,6 +62,26 @@ const Roles: NextPage = () => {
                   className={style.avatar}
                   src={curPerson.avatar}
                 />
+                <div className={style.mediaBox}>
+                  <a href={curPerson.coLink} target="_blank">
+                    <Image src={CoImg} />
+                  </a>
+                  {curPerson.twitterLink && (
+                    <a href={curPerson.twitterLink} target="_blank">
+                      <Image src={TwitterImg} />
+                    </a>
+                  )}
+                  {curPerson.ethLink && (
+                    <a href={curPerson.ethLink} target="_blank">
+                      <Image src={ETHImg} />
+                    </a>
+                  )}
+                  {curPerson.facebookLink && (
+                    <a href={curPerson.facebookLink} target="_blank">
+                      <Image src={FacebookImg} />
+                    </a>
+                  )}
+                </div>
               </div>
               <div className={style.infoBox}>
                 <div className={style.uInfo}>{curPerson.roleTitles}</div>
