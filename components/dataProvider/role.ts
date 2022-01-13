@@ -251,7 +251,7 @@ const rolesInfoMap: Role[] = [
     coLink: "",
     twitterLink: "",
     name: "Shingo Arai | 新井 進悟",
-    roleTitles: ["MaskNetwork Japan"],
+    roleTitles: ["Rokubunnoni Inc. CEO ", "CRYPTO TIMES 編集長"],
     intro: [
       `〇経歴/自己紹介
     2013年に東京理科大学大学院を卒業後、Web系やスマホアプリ系、大手広告代理店などの企業複数社にてデータ分析やデータサイエンスの業務に従事。AIのR＆D事業などにも携わる。

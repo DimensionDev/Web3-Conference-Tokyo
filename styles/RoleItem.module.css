@@ -27,7 +27,7 @@
   opacity: 1;
 }
 .inner:hover {
-  border: 1px solid #ff8edf;
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 .more {
   cursor: pointer;
@@ -53,9 +53,9 @@
 }
 .uName {
   font-weight: 1000;
-  font-size: 24px;
+  font-size: 23px;
 }
 .uInfo {
-  font-size: 16px;
+  font-size: 15px;
 }
 

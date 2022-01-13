@@ -1,0 +1,52 @@
+[
+    {
+        "LOGO Board_Scatter": {
+            "opacity": [
+                {
+                    "time": 0,
+                    "value": 0,
+                    "easing": "linear",
+                    "bezierParams": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "time": 500,
+                    "value": 1,
+                    "easing": "linear",
+                    "bezierParams": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "time": 3900,
+                    "value": 1,
+                    "easing": "linear",
+                    "bezierParams": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "time": 4000,
+                    "value": 0,
+                    "easing": "linear",
+                    "bezierParams": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        }
+    }
+]
