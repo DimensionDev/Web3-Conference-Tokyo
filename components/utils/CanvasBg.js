@@ -1,7 +1,6 @@
 const script = (window) => {
   // 可调参数
-  var BACKGROUND_COLOR = "rgba(0,43,54,1)"; // 背景颜色
-  var POINT_NUM = 100; // 星星数目
+  var POINT_NUM = window.innerWidth > 1024 ? 100 : 50; // 星星数目
   var POINT_COLOR = "rgba(255,255,255,0.7)"; // 点的颜色
   var LINE_LENGTH = 10000; // 点之间连线长度(的平方)
 
@@ -20,8 +19,6 @@ const script = (window) => {
   document.body.appendChild(cvs);
 
   var ctx = cvs.getContext("2d");
-
-  var startTime = new Date().getTime();
 
   //随机数函数
   function randomInt(min, max) {
