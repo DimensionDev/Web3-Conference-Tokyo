@@ -1,0 +1,29 @@
+.container {
+  width: 100%;
+  max-width: 1180px;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+.text {
+  background: conic-gradient(
+    from 156.14deg at 50.98% 50.98%,
+    #1dc4bd 0deg,
+    #d9f042 84.38deg,
+    #f8a5fd 163.12deg,
+    #a2acf9 236.25deg,
+    #3cf493 305.62deg,
+    #3dbef0 360deg
+  );
+  background-clip: text;
+  margin: 0px 10px;
+  font-weight: 1000;
+  font-size: 14px;
+  line-height: 100%;
+  color: transparent;
+  white-space: nowrap;
+  text-align: center
+}
+.BigText {
+  font-size: 30px;
+}

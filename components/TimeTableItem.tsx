@@ -2,6 +2,9 @@ import type { NextPage } from "next";
 import { TimeTableProp } from "./dataProvider/timetable";
 import style from "../styles/TimeTableItem.module.css";
 import Image from "next/image";
+import LiveImgJa from "../assets/schedule/live_ja.svg";
+import RecordImgJa from "../assets/schedule/record_ja.svg";
+import PreTimeInfo from "./PreTimeInfo";
 interface Props {
   info: TimeTableProp;
 }
@@ -12,6 +15,22 @@ const TimeTableItem: NextPage<Props> = ({ info }) => {
       <div className={style.inner}>
         <div className={style.previewBox}>
           <Image src={preview} className={style.previewImg} />
+          {info.difficuty && (
+            <div className={style.diffBox}>
+              <div>難易度</div>
+              <div className={style.whiteBtn}>{info.difficuty}</div>
+            </div>
+          )}
+          {info.isLive && (
+            <div className={style.previewTip}>
+              <Image src={LiveImgJa} />
+            </div>
+          )}
+          {info.isRecord && (
+            <div className={style.previewTip}>
+              <Image src={RecordImgJa} />
+            </div>
+          )}
         </div>
         <div className={style.infoBox}>
           <div className={style.time}>{time}</div>
@@ -43,6 +62,7 @@ const TimeTableItem: NextPage<Props> = ({ info }) => {
           </div>
         </div>
       </div>
+
     </div>
   );
 };

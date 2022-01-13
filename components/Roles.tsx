@@ -26,7 +26,6 @@ const Roles: NextPage = () => {
     setCurPerson(rolesInfoMap[newV]);
   };
   const handleScroll = ()=>{
-    console.log(ctx, document.body.scrollTop)
   }
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, true);

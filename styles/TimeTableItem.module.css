@@ -23,6 +23,7 @@
   gap: 62px;
 }
 .previewBox {
+  position: relative;
   width: 292px;
   height: 292px;
   border-radius: 10px;
@@ -107,4 +108,43 @@
 .hidden {
   opacity: 0;
   border: none;
+}
+
+.diffBox {
+  width: 100%;
+  position: absolute;
+  bottom: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) -3.93%,
+    rgba(255, 255, 255, 0.288) 29.09%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-weight: 274;
+  font-size: 14px;
+  line-height: 100%;
+  color: rgba(255, 255, 255, 0.75);
+}
+.whiteBtn {
+  padding: 4px 12px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 160%;
+  color: #0b133e;
+  background: #ffffff;
+  border-radius: 100px;
+  opacity: 1;
+}
+.previewTip {
+  position: absolute;
+  right: 0;
+  top: 6.94%;
+  transform: translateX(30px);
 }

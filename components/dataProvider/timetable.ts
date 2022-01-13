@@ -22,6 +22,11 @@ export interface TimeTableProp {
     name: string;
     sub: string;
   }>;
+  isLive?: boolean;
+  isRecord?: boolean;
+  difficuty?: string;
+  switchTime?: string;
+  isBig?: boolean;
 }
 
 const timeTablesMap: TimeTableProp[] = [
@@ -31,6 +36,8 @@ const timeTablesMap: TimeTableProp[] = [
     title: "オープニング ",
     sub: ["・  辻さんからイベント開催の想いなどを話してもらいます"],
     extra: [{ type: "登壇者", name: "Tsuji Kanakoちゃん", sub: "maskNetwork" }],
+    isLive: true,
+    switchTime: "5分で転換",
   },
   {
     preview: img2,
@@ -41,6 +48,8 @@ const timeTablesMap: TimeTableProp[] = [
       "・  未来のWebの予想",
     ],
     extra: [{ type: "登壇者", name: "SujiYan", sub: "MaskNetwork CEO" }],
+    isRecord: true,
+    switchTime: "11:30-11:35転換",
   },
   {
     preview: img3,
@@ -48,6 +57,7 @@ const timeTablesMap: TimeTableProp[] = [
     title: "OSS（オープンソースソフトウェア）",
     sub: ["  ・ の歴史からみるWeb3について"],
     extra: [{ type: "登壇者", name: "猫井夕菜", sub: "@nekomatu @nekoi7yu" }],
+    isLive: true,
   },
   {
     preview: img4,
@@ -63,6 +73,8 @@ const timeTablesMap: TimeTableProp[] = [
       { type: "Speaker", name: "ホリーさん", sub: "やさしいDeFi" },
       { type: "", name: "Yuさん", sub: "" },
     ],
+    difficuty: "上級編",
+    switchTime: "12:35-12:40 転換",
   },
   {
     preview: img5,
@@ -78,6 +90,9 @@ const timeTablesMap: TimeTableProp[] = [
       { type: "", name: "家入一真", sub: "CampFire" },
       { type: "", name: "内山さん", sub: "Hottolink" },
     ],
+    difficuty: "初心者編",
+    isLive: true,
+    switchTime: "13:20-13:25 転換",
   },
   {
     preview: img6,
@@ -94,6 +109,9 @@ const timeTablesMap: TimeTableProp[] = [
       { type: "", name: "熊谷さん", sub: "Akatsuki" },
       { type: "", name: "伏見さん", sub: "メルカリ" },
     ],
+    isLive: true,
+    switchTime: "13:55-14:30 大きな休憩",
+    isBig: true,
   },
   {
     preview: img7,
@@ -110,6 +128,8 @@ const timeTablesMap: TimeTableProp[] = [
       { type: "", name: "岡部さん", sub: "JPYC" },
       { type: "", name: "Sushiさん", sub: "HiDE" },
     ],
+    isLive: true,
+    switchTime: "15:00-15:05 転換",
   },
   {
     preview: img8,
@@ -126,6 +146,8 @@ const timeTablesMap: TimeTableProp[] = [
       { type: "", name: "久保田さん", sub: "元CoinDesk Japan" },
       { type: "", name: "平手さん", sub: "Joyfa" },
     ],
+    isLive: true,
+    switchTime: "15:35-16:05   転換",
   },
   {
     preview: img9,
@@ -136,6 +158,8 @@ const timeTablesMap: TimeTableProp[] = [
       " ・ メタバース/XR領域でのNFTの活用の仕方",
     ],
     extra: [{ type: "Mod", name: "クリスさ", sub: "Unicask" }],
+    isLive: true,
+    switchTime: "16:15-16:20  転換",
   },
   {
     preview: img10,
@@ -143,6 +167,8 @@ const timeTablesMap: TimeTableProp[] = [
     title: "社会実装に使えるブロックチェーン技術(海外)",
     sub: [],
     extra: [{ type: "登壇者", name: "Numbers protocol", sub: "" }],
+    isRecord: true,
+    switchTime: "16:50-16:55  転換",
   },
   {
     preview: img11,
@@ -156,6 +182,8 @@ const timeTablesMap: TimeTableProp[] = [
       { type: "Speaker", name: "SHUSHI TOP marketing ", sub: "" },
       { type: "Mod", name: "ReCone ", sub: "" },
     ],
+    isLive: true,
+    switchTime: "17:55-18:00 転換",
   },
   {
     preview: img12,
@@ -169,6 +197,8 @@ const timeTablesMap: TimeTableProp[] = [
       { type: "", name: "Gabby", sub: "YGG" },
       { type: "", name: "登壇舎未定", sub: "Merit circle" },
     ],
+    isRecord: true,
+    switchTime: "18:30-18:35 転換",
   },
   {
     preview: img13,
@@ -180,6 +210,7 @@ const timeTablesMap: TimeTableProp[] = [
       { type: "", name: "藤本", sub: "" },
       { type: "", name: "Maskメンバー！", sub: "" },
     ],
+    isLive: true,
   },
 ];
 export default timeTablesMap;
