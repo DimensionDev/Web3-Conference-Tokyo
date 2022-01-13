@@ -64,6 +64,7 @@ const Roles: NextPage = () => {
               </div>
             </div>
             <div className={style.introBox}>
+              <div className={style.scrollBox}>
               {curPerson.intro?.map((item, idx) => {
                 return (
                   <div key={idx}>
@@ -73,6 +74,8 @@ const Roles: NextPage = () => {
                   </div>
                 );
               })}
+              </div>
+             
             </div>
             <div className={style.close} onClick={() => setIsShowMask(false)}>
               <Image src={CloseImg} className={style.close} />

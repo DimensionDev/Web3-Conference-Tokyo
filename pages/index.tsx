@@ -7,7 +7,7 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Web3 Conference</title>
+        <title>Web3 Conference Tokyo</title>
         <meta name="description" content="Web3" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
