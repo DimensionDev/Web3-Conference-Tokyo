@@ -6,8 +6,10 @@ import MoreImg from "../assets/more.svg";
 
 interface Props {
   role: Role;
+  onMore: any;
+  idx: number;
 }
-const RoleItem: NextPage<Props> = ({ role }) => {
+const RoleItem: NextPage<Props> = ({ role, onMore, idx }) => {
   const { avatar, name, roleTitles } = role;
   return (
     <div className={style.box}>
@@ -26,7 +28,7 @@ const RoleItem: NextPage<Props> = ({ role }) => {
           })}
         </div>
         <div className={style.uName}>{name}</div>
-        <div className={style.more}>
+        <div className={style.more} onClick={() => onMore(role, idx)}>
           <Image src={MoreImg} />
         </div>
       </div>

@@ -60,7 +60,7 @@
   opacity: 0.1;
 }
 .detailBox {
-  position: absolute;
+  position: fixed;
   opacity: 1;
   display: flex;
   align-items: center;

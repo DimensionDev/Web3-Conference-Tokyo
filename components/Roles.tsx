@@ -11,8 +11,7 @@ const Roles: NextPage = () => {
   const [isShowMask, setIsShowMask] = useState(false);
   const [curIndex, setCurIndex] = useState(0);
   const [curPerson, setCurPerson] = useState<Role>(rolesInfoMap[curIndex]);
-  const toggle = (num: number, e?: MouseEvent) => {
-    e?.stopPropagation();
+  const toggle = (num: number) => {
     if (curIndex + num < 0 || curIndex + num > rolesInfoMap.length - 1) {
       return;
     }
@@ -25,10 +24,23 @@ const Roles: NextPage = () => {
       <div className={style.title}>登壇者様一覧</div>
       <div className={style.rolesBox}>
         {rolesInfoMap.map((item, index) => {
-          return <RoleItem key={index} role={item} />;
+          return (
+            <RoleItem
+              onMore={(role: Role, idx: number) => {
+                setCurPerson(role);
+                setCurIndex(idx);
+                setIsShowMask(true);
+              }}
+              key={index}
+              role={item}
+              idx={index}
+            />
+          );
         })}
       </div>
-      {isShowMask && <div className={style.mask} onClick={()=>setIsShowMask(false)} ></div>}
+      {isShowMask && (
+        <div className={style.mask} onClick={() => setIsShowMask(false)}></div>
+      )}
       {isShowMask && (
         <div className={style.detailBox}>
           <Image
