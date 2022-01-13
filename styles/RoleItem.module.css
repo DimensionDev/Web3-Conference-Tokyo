@@ -60,8 +60,9 @@
   position: absolute;
   width: 242px;
   height: 58px;
-  bottom: 1px;
-
+  bottom: 2px;
+  left: 2px;
+  border-radius: 8px;
   background: linear-gradient(
     90deg,
     rgba(27, 26, 26, 0) -3.93%,

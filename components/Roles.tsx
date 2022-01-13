@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import style from "../styles/Roles.module.css";
 import RoleItem from "./RoleItem";
 import rolesInfoMap, { Role } from "./dataProvider/role";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ArrowLeftImg from "../assets/arrow_left.svg";
 import ArrowRightImg from "../assets/arrow_right.svg";
 import CloseImg from "../assets/close.svg";
@@ -13,6 +13,7 @@ import TwitterImg from "../assets/roles/twitter.svg";
 import ETHImg from "../assets/roles/eth.svg";
 import FacebookImg from "../assets/roles/fb.svg";
 const Roles: NextPage = () => {
+  const ctx = useRef() as any
   const [isShowMask, setIsShowMask] = useState(false);
   const [curIndex, setCurIndex] = useState(0);
   const [curPerson, setCurPerson] = useState<Role>(rolesInfoMap[curIndex]);
@@ -24,8 +25,17 @@ const Roles: NextPage = () => {
     setCurIndex(newV);
     setCurPerson(rolesInfoMap[newV]);
   };
+  const handleScroll = ()=>{
+    console.log(ctx, document.body.scrollTop)
+  }
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, true);
+    return () => {
+      window.removeEventListener("scroll", handleScroll, true);
+    };
+  }, []);
   return (
-    <div className={style.container} id="登壇者">
+    <div ref={ctx} className={style.container} id="登壇者">
       <div className={style.title}>登壇者様一覧</div>
       <div className={style.rolesBox}>
         {rolesInfoMap.map((item, index) => {
@@ -64,21 +74,21 @@ const Roles: NextPage = () => {
                 />
                 <div className={style.mediaBox}>
                   <a href={curPerson.coLink} target="_blank">
-                    <Image src={CoImg} />
+                    <Image className={style.mediaIcon}  src={CoImg} />
                   </a>
                   {curPerson.twitterLink && (
                     <a href={curPerson.twitterLink} target="_blank">
-                      <Image src={TwitterImg} />
+                      <Image className={style.mediaIcon} src={TwitterImg} />
                     </a>
                   )}
                   {curPerson.ethLink && (
                     <a href={curPerson.ethLink} target="_blank">
-                      <Image src={ETHImg} />
+                      <Image className={style.mediaIcon} src={ETHImg} />
                     </a>
                   )}
                   {curPerson.facebookLink && (
-                    <a href={curPerson.facebookLink} target="_blank">
-                      <Image src={FacebookImg} />
+                    <a href={curPerson.facebookLink} target="_blank" className={style.mediaIcon}>
+                      <Image  src={FacebookImg} />
                     </a>
                   )}
                 </div>

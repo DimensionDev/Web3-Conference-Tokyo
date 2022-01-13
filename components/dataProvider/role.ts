@@ -147,7 +147,7 @@ const rolesInfoMap: Role[] = [
   },
   {
     avatar: Pingshou,
-    coLink: "株式会社ジョイファ",
+    coLink: "https://linktr.ee/joyfa",
     twitterLink: "https://twitter.com/kojirohirate",
     name: "平手 宏志朗",
     roleTitles: ["株式会社ジョイファ"],
@@ -169,7 +169,7 @@ const rolesInfoMap: Role[] = [
   },
   {
     avatar: Jueci,
-    coLink: "kyber.network",
+    coLink: "https://kyber.network/",
     twitterLink: "https://twitter.com/taisuke_hory",
     name: "堀次 泰介",
     roleTitles: ["Kyber Network Japan Manager"],
