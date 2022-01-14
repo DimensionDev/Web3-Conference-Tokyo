@@ -4,7 +4,6 @@ import style from "../styles/TimeTableItem.module.css";
 import Image from "next/image";
 import LiveImgJa from "../assets/schedule/live_ja.svg";
 import RecordImgJa from "../assets/schedule/record_ja.svg";
-import PreTimeInfo from "./PreTimeInfo";
 interface Props {
   info: TimeTableProp;
 }
@@ -62,7 +61,6 @@ const TimeTableItem: NextPage<Props> = ({ info }) => {
           </div>
         </div>
       </div>
-
     </div>
   );
 };

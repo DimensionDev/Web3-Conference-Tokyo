@@ -14,7 +14,6 @@
     rgba(255, 255, 255, 0.34) 52.91%,
     rgba(255, 255, 255, 0) 95.72%
   );
-  clip-path: (0 round 1px);
 }
 
 .inner {
@@ -38,6 +37,12 @@
   );
   background-origin: border-box;
   background-clip: border-box;
+}
+.previewTip {
+  position: absolute;
+  right: 0;
+  top: 6.94%;
+  transform: translateX(30px);
 }
 .previewImg {
   border-radius: 10px;
@@ -142,9 +147,12 @@
   border-radius: 100px;
   opacity: 1;
 }
-.previewTip {
-  position: absolute;
-  right: 0;
-  top: 6.94%;
-  transform: translateX(30px);
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 100%;
+  }
+  .inner {
+    width: 100%;
+  }
 }

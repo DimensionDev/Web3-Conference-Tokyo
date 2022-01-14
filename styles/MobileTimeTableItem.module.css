@@ -1,0 +1,176 @@
+.container {
+    width: 1180px;
+    padding: 20px 40px;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 2.92%,
+      rgba(255, 255, 255, 0.086) 23.4%,
+      rgba(255, 255, 255, 0) 90.3%
+    );
+    border: 1px solid;
+    border-image-source: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.34) 52.91%,
+      rgba(255, 255, 255, 0) 95.72%
+    );
+  }
+  
+  .inner {
+    display: flex;
+    align-items: center;
+    gap: 62px;
+  }
+  .previewBox {
+    position: relative;
+    width: 292px;
+    height: 292px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-image: radial-gradient(
+      68.14% 395.66% at 52.92% 43.33%,
+      #ff7ee3 0%,
+      #8692ff 25%,
+      #c3fbff 45.83%,
+      #d6e4ff 76.04%,
+      #17e3ff 100%
+    );
+    background-origin: border-box;
+    background-clip: border-box;
+  }
+  .previewTip {
+    position: absolute;
+    right: 0;
+    top: 6.94%;
+    transform: translateX(30px);
+  }
+  .previewImg {
+    border-radius: 10px;
+  }
+  
+  .infoBox {
+    max-width: 748px;
+    display: flex;
+    flex-direction: column;
+  }
+  .time {
+    font-size: 18px;
+    font-weight: 1000;
+    line-height: 160%;
+    margin: 30px 0px;
+  }
+  .title {
+    font-size: 30px;
+    font-weight: 1000;
+    line-height: 130%;
+    background: radial-gradient(
+      64.79% 343.64% at 35.21% 164.52%,
+      #72fff9 0%,
+      #faffda 23.44%,
+      #9dd9fb 37.81%,
+      #a0faea 46.14%,
+      #9aa6ff 54.47%,
+      #b4d7e6 63.54%,
+      #fccdb9 75.52%,
+      #cff4ff 84.9%,
+      #faffed 92.19%,
+      #40d1ff 100%
+    );
+    color: transparent;
+    background-clip: text;
+  }
+  .subTitle {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.2;
+    margin: 15px 0px;
+  }
+  .subBox {
+    margin: 40px 0;
+    display: flex;
+    align-items: flex-start;
+  }
+  .subBoxItem {
+    color: #87b1ff;
+    flex: 1;
+  }
+  .subBoxType {
+    width: fit-content;
+    font-size: 14px;
+    line-height: 100%;
+    opacity: 0.5;
+    padding: 4px 0;
+    margin-bottom: 10px;
+  }
+  .subBoxName {
+    margin-bottom: 4px;
+    font-size: 20px;
+    font-weight: 1000;
+  }
+  .subBoxSub {
+    font-size: 14px;
+  }
+  .hidden {
+    opacity: 0;
+    border: none;
+  }
+  
+  .diffBox {
+    width: 100%;
+    position: absolute;
+    bottom: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) -3.93%,
+      rgba(255, 255, 255, 0.288) 29.09%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    backdrop-filter: blur(4px);
+    border-radius: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-weight: 274;
+    font-size: 14px;
+    line-height: 100%;
+    color: rgba(255, 255, 255, 0.75);
+  }
+  .whiteBtn {
+    padding: 4px 12px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 160%;
+    color: #0b133e;
+    background: #ffffff;
+    border-radius: 100px;
+    opacity: 1;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .container {
+      width: 100%;
+    }
+    .inner {
+      width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .inner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .mobileTime {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .mobileTimeUp {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+  
