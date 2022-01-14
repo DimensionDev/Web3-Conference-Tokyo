@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import Image from "next/image";
 import style from "../styles/Topbar.module.css";
 import LangImg from "../assets/lang.svg";
 import LogoImg from "../assets/Logo.svg";
