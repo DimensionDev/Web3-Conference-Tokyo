@@ -13,7 +13,7 @@ import TwitterImg from "../assets/roles/twitter.svg";
 import ETHImg from "../assets/roles/eth.svg";
 import FacebookImg from "../assets/roles/fb.svg";
 const Roles: NextPage = () => {
-  const ctx = useRef() as any
+  const ctx = useRef() as any;
   const [isShowMask, setIsShowMask] = useState(false);
   const [curIndex, setCurIndex] = useState(0);
   const [curPerson, setCurPerson] = useState<Role>(rolesInfoMap[curIndex]);
@@ -25,8 +25,7 @@ const Roles: NextPage = () => {
     setCurIndex(newV);
     setCurPerson(rolesInfoMap[newV]);
   };
-  const handleScroll = ()=>{
-  }
+  const handleScroll = () => {};
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, true);
     return () => {
@@ -57,23 +56,21 @@ const Roles: NextPage = () => {
       )}
       {isShowMask && (
         <div className={style.detailBox}>
-          <Image
-            src={ArrowLeftImg}
-            className={curIndex === 0 ? style.iconDisable : style.iconActive}
-            onClick={() => toggle(-1)}
-          />
+          {(globalThis || window).innerWidth > 539 && (
+            <Image
+              src={ArrowLeftImg}
+              className={curIndex === 0 ? style.iconDisable : style.iconActive}
+              onClick={() => toggle(-1)}
+            />
+          )}
+
           <div className={style.detailContent}>
             <div className={style.imgContainer}>
               <div className={style.avatarBox}>
-                <Image
-                  width={244}
-                  height={244}
-                  className={style.avatar}
-                  src={curPerson.avatar}
-                />
+                <Image className={style.avatar} src={curPerson.avatar} />
                 <div className={style.mediaBox}>
                   <a href={curPerson.coLink} target="_blank">
-                    <Image className={style.mediaIcon}  src={CoImg} />
+                    <Image className={style.mediaIcon} src={CoImg} />
                   </a>
                   {curPerson.twitterLink && (
                     <a href={curPerson.twitterLink} target="_blank">
@@ -86,8 +83,12 @@ const Roles: NextPage = () => {
                     </a>
                   )}
                   {curPerson.facebookLink && (
-                    <a href={curPerson.facebookLink} target="_blank" className={style.mediaIcon}>
-                      <Image  src={FacebookImg} />
+                    <a
+                      href={curPerson.facebookLink}
+                      target="_blank"
+                      className={style.mediaIcon}
+                    >
+                      <Image src={FacebookImg} />
                     </a>
                   )}
                 </div>
@@ -111,18 +112,44 @@ const Roles: NextPage = () => {
               </div>
             </div>
             <div className={style.close} onClick={() => setIsShowMask(false)}>
-              <Image src={CloseImg} className={style.close} />
+              <Image src={CloseImg} />
             </div>
           </div>
-          <Image
-            src={ArrowRightImg}
-            className={
-              curIndex === rolesInfoMap.length - 1
-                ? style.iconDisable
-                : style.iconActive
-            }
-            onClick={() => toggle(1)}
-          />
+          {(globalThis || window).innerWidth > 539 && (
+            <Image
+              src={ArrowRightImg}
+              className={
+                curIndex === rolesInfoMap.length - 1
+                  ? style.iconDisable
+                  : style.iconActive
+              }
+              onClick={() => toggle(1)}
+            />
+          )}
+          {(globalThis || window).innerWidth < 540 && (
+            <div className={style.bottomSwitch}>
+              <div className={style.mobileSwitchIcon}>
+                <Image
+                  src={ArrowLeftImg}
+                  className={
+                    curIndex === 0 ? style.iconDisable : style.iconActive
+                  }
+                  onClick={() => toggle(-1)}
+                />
+              </div>
+              <div className={style.mobileSwitchIcon}>
+                <Image
+                  src={ArrowRightImg}
+                  className={
+                    curIndex === rolesInfoMap.length - 1
+                      ? style.iconDisable
+                      : style.iconActive
+                  }
+                  onClick={() => toggle(1)}
+                />
+              </div>
+            </div>
+          )}
         </div>
       )}
     </div>
