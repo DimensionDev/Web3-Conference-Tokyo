@@ -26,7 +26,7 @@ const Footer: NextPage = () => {
           {mediaMap.map((item) => {
             return (
               <div key={item.key}  className={style.imgItem}>
-                <Image src={item.img} />
+                <img src={item.img} />
               </div>
             );
           })}

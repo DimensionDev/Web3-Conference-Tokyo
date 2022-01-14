@@ -20,7 +20,7 @@ const RoleItem: NextPage<Props> = ({ role, onMore, idx }) => {
     <div className={style.box}>
       <div className={style.inner}>
         <div className={style.avatarBox}>
-          <Image
+          <img
             width={246}
             height={246}
             className={style.avatar}
@@ -29,21 +29,21 @@ const RoleItem: NextPage<Props> = ({ role, onMore, idx }) => {
           />
           <div className={style.mediaBox}>
             <a href={role.coLink} target="_blank">
-              <Image src={CoImg} />
+              <img src={CoImg} />
             </a>
             {role.twitterLink && (
               <a href={role.twitterLink} target="_blank">
-                <Image src={TwitterImg} />
+                <img src={TwitterImg} />
               </a>
             )}
             {role.ethLink && (
               <a href={role.ethLink} target="_blank">
-                <Image src={ETHImg} />
+                <img src={ETHImg} />
               </a>
             )}
             {role.facebookLink && (
               <a href={role.facebookLink} target="_blank">
-                <Image src={FacebookImg} />
+                <img src={FacebookImg} />
               </a>
             )}
           </div>
@@ -55,7 +55,7 @@ const RoleItem: NextPage<Props> = ({ role, onMore, idx }) => {
         </div>
         <div className={style.uName}>{name}</div>
         <div className={style.more} onClick={() => onMore(role, idx)}>
-          <Image src={MoreImg} />
+          <img src={MoreImg} />
         </div>
       </div>
     </div>

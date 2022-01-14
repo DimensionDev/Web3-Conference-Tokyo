@@ -55,7 +55,7 @@ const Topbar: NextPage = () => {
       }
     >
       <div className={style.logo}>
-        <Image className={style.logo} src={LogoImg} alt="logo" />
+        <img className={style.logo} src={LogoImg} alt="logo" />
       </div>
       <div className={style.rightBox}>
         <div className={style.menu}>
@@ -76,7 +76,7 @@ const Topbar: NextPage = () => {
           })}
         </div>
         <div className={style.lang} onClick={toggleLang}>
-          <Image src={LangImg} />
+          <img src={LangImg} />
           <div>{LangText}</div>
         </div>
       </div>

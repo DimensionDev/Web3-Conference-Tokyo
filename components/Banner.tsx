@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import Image from "next/image";
 import TitleImg from "../assets/title.svg";
 import LaserIcon from "../assets/laser_icon.svg";
 import style from "../styles/Banner.module.css";
@@ -10,7 +9,7 @@ const Banner: NextPage = () => {
     return (
       ((globalThis || window).innerWidth > 1024 && (
         <div className={style.LaserContentBox}>
-          <Image src={LaserIcon} />
+          <img src={LaserIcon} />
           <div className={style.laserContent}>
             <div className={style.LaserContentTitle}>
               Web3 Conference Tokyoについて
@@ -20,14 +19,14 @@ const Banner: NextPage = () => {
             </div>
           </div>
         </div>
-      )) || <Image className={style.mobileLaser} src={MobileHeroSub} />
+      )) || <img className={style.mobileLaser} src={MobileHeroSub} />
     );
   };
   return (
     <div className={style.container}>
       <div className={style.contentBox}>
         <div className={style.title}>
-          <Image src={TitleImg} alt="" />
+          <img src={TitleImg} alt="" />
         </div>
         <div className={style.titleSub}>
           <div className={style.titleSubContent}>

@@ -57,7 +57,7 @@ const Roles: NextPage = () => {
       {isShowMask && (
         <div className={style.detailBox}>
           {(globalThis || window).innerWidth > 539 && (
-            <Image
+            <img
               src={ArrowLeftImg}
               className={curIndex === 0 ? style.iconDisable : style.iconActive}
               onClick={() => toggle(-1)}
@@ -67,19 +67,19 @@ const Roles: NextPage = () => {
           <div className={style.detailContent}>
             <div className={style.imgContainer}>
               <div className={style.avatarBox}>
-                <Image className={style.avatar} src={curPerson.avatar} />
+                <img className={style.avatar} src={curPerson.avatar} />
                 <div className={style.mediaBox}>
                   <a href={curPerson.coLink} target="_blank">
-                    <Image className={style.mediaIcon} src={CoImg} />
+                    <img className={style.mediaIcon} src={CoImg} />
                   </a>
                   {curPerson.twitterLink && (
                     <a href={curPerson.twitterLink} target="_blank">
-                      <Image className={style.mediaIcon} src={TwitterImg} />
+                      <img className={style.mediaIcon} src={TwitterImg} />
                     </a>
                   )}
                   {curPerson.ethLink && (
                     <a href={curPerson.ethLink} target="_blank">
-                      <Image className={style.mediaIcon} src={ETHImg} />
+                      <img className={style.mediaIcon} src={ETHImg} />
                     </a>
                   )}
                   {curPerson.facebookLink && (
@@ -88,7 +88,7 @@ const Roles: NextPage = () => {
                       target="_blank"
                       className={style.mediaIcon}
                     >
-                      <Image src={FacebookImg} />
+                      <img src={FacebookImg} />
                     </a>
                   )}
                 </div>
@@ -112,11 +112,11 @@ const Roles: NextPage = () => {
               </div>
             </div>
             <div className={style.close} onClick={() => setIsShowMask(false)}>
-              <Image src={CloseImg} />
+              <img src={CloseImg} />
             </div>
           </div>
           {(globalThis || window).innerWidth > 539 && (
-            <Image
+            <img
               src={ArrowRightImg}
               className={
                 curIndex === rolesInfoMap.length - 1
@@ -129,7 +129,7 @@ const Roles: NextPage = () => {
           {(globalThis || window).innerWidth < 540 && (
             <div className={style.bottomSwitch}>
               <div className={style.mobileSwitchIcon}>
-                <Image
+                <img
                   src={ArrowLeftImg}
                   className={
                     curIndex === 0 ? style.iconDisable : style.iconActive
@@ -138,7 +138,7 @@ const Roles: NextPage = () => {
                 />
               </div>
               <div className={style.mobileSwitchIcon}>
-                <Image
+                <img
                   src={ArrowRightImg}
                   className={
                     curIndex === rolesInfoMap.length - 1
