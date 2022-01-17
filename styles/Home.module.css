@@ -2,5 +2,8 @@
   width: 100%;
   height: 100vh;
   overflow: auto;
+  background: url("../assets/hero/bg_light.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 

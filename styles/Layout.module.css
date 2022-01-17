@@ -13,9 +13,7 @@
 .bannerBg {
   padding: 0;
   overflow: auto;
-  background: url("../assets/hero/bg_light.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
+ 
   transform-style: preserve-3d;
   position: relative;
 }
