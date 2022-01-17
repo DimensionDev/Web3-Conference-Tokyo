@@ -11,8 +11,10 @@ import CoImg from "../assets/roles/co.svg";
 import TwitterImg from "../assets/roles/twitter.svg";
 import ETHImg from "../assets/roles/eth.svg";
 import FacebookImg from "../assets/roles/fb.svg";
+import i18next from "i18next";
 
 const Roles: NextPage = () => {
+  const {t} = i18next
   const ctx = useRef() as any;
   const [isShowMask, setIsShowMask] = useState(false);
   const [curIndex, setCurIndex] = useState(0);
@@ -34,7 +36,7 @@ const Roles: NextPage = () => {
   }, []);
   return (
     <div ref={ctx} className={style.container} id="Speaker">
-      <div className={style.title}>登壇者様一覧</div>
+      <div className={style.title}>{t('roles_title')}</div>
       <div className={style.rolesBox}>
         {rolesInfoMap.map((item, index) => {
           return (

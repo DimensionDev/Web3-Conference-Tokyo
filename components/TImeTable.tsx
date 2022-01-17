@@ -3,11 +3,13 @@ import style from "../styles/TimeTable.module.css";
 import timeTablesMap from "./dataProvider/timetable";
 import PreTimeInfo from "./PreTimeInfo";
 import TimeTableItem from "./TimeTableItem";
+import i18next from "i18next";
 
 const TimeTable: NextPage = () => {
+  const {t} = i18next
   return (
     <div className={style.container} id={"Schedule"}>
-      <div className={style.title}>タイムテーブル</div>
+      <div className={style.title}>{t('timeTable_title')}</div>
       <div className={style.cardBox}>
         {timeTablesMap.map((item, index) => {
           return (
