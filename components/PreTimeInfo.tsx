@@ -2,6 +2,7 @@ import { NextPage } from "next/types";
 import style from "../styles/PreTimeInfo.module.css";
 import Left from "../assets/switch/left.svg";
 import Right from "../assets/switch/right.svg";
+import Image from 'next/image'
 interface Props {
   text: string;
   isBig?: boolean;
@@ -9,11 +10,11 @@ interface Props {
 const PreTimeInfo: NextPage<Props> = ({ text, isBig }) => {
   return (
     <div className={style.container}>
-      <img src={Left} />
+      <Image src={Left} />
       <div className={isBig ? `${style.text} ${style.BigText}` : style.text}>
         {text}
       </div>
-      <img src={Right} />
+      <Image src={Right} />
     </div>
   );
 };

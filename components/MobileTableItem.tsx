@@ -3,6 +3,7 @@ import { TimeTableProp } from "./dataProvider/timetable";
 import style from "../styles/MobileTimeTableItem.module.css";
 import MobileLiveJa from "../assets/mobile_live.svg";
 import MobileRecordJa from "../assets/mobile_record.svg";
+import Image from 'next/image'
 interface Props {
   info: TimeTableProp;
 }
@@ -13,8 +14,8 @@ const MobileTableItem: NextPage<Props> = ({ info }) => {
     <div className={style.inner}>
       <div className={style.mobileTime}>
         <div className={style.mobileTimeUp}>
-          {info.isLive && <img src={MobileLiveJa} />}
-          {info.isRecord && <img src={MobileRecordJa} />}
+          {info.isLive && <Image src={MobileLiveJa} />}
+          {info.isRecord && <Image src={MobileRecordJa} />}
           <div className={style.time}>{time}</div>
         </div>
         {info.difficuty && (

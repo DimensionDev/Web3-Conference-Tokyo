@@ -1,9 +1,9 @@
-const debug = process.env.NODE_ENV !== 'production'
+const debug = process.env.NODE_ENV !== "production";
 
 module.exports = {
-  assetPrefix: !debug ? '/Web3-Conference-Tokyo/' : '',
-  // images:{
-  //   loader:"imgix",
-  //   path:'',
-  // }
-}
+  assetPrefix: !debug ? "/Web3-Conference-Tokyo/" : "",
+  images: {
+    loader: "akamai",
+    path: "",
+  },
+};

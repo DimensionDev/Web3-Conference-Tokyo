@@ -3,13 +3,14 @@ import TitleImg from "../assets/title.svg";
 import LaserIcon from "../assets/laser_icon.svg";
 import style from "../styles/Banner.module.css";
 import MobileHeroSub from "../assets/mobileHeroSub.svg";
+import Image from "next/image";
 
 const Banner: NextPage = () => {
   const renderLaser = () => {
     return (
       ((globalThis || window).innerWidth > 1024 && (
         <div className={style.LaserContentBox}>
-          <img src={LaserIcon} />
+          <Image src={LaserIcon} />
           <div className={style.laserContent}>
             <div className={style.LaserContentTitle}>
               Web3 Conference Tokyoについて
@@ -19,14 +20,14 @@ const Banner: NextPage = () => {
             </div>
           </div>
         </div>
-      )) || <img className={style.mobileLaser} src={MobileHeroSub} />
+      )) || <Image className={style.mobileLaser} src={MobileHeroSub} />
     );
   };
   return (
     <div className={style.container}>
       <div className={style.contentBox}>
         <div className={style.title}>
-          <img src={TitleImg} alt="" />
+          <Image src={TitleImg} alt="" />
         </div>
         <div className={style.titleSub}>
           <div className={style.titleSubContent}>

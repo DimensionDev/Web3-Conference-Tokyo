@@ -13,7 +13,7 @@ const TimeTableItem: NextPage<Props> = ({ info }) => {
     <div className={style.container}>
       <div className={style.inner}>
         <div className={style.previewBox}>
-          <img src={preview} className={style.previewImg} />
+          <Image src={preview} className={style.previewImg} />
           {info.difficuty && (
             <div className={style.diffBox}>
               <div>難易度</div>
@@ -22,12 +22,12 @@ const TimeTableItem: NextPage<Props> = ({ info }) => {
           )}
           {info.isLive && (
             <div className={style.previewTip}>
-              <img src={LiveImgJa} />
+              <Image src={LiveImgJa} />
             </div>
           )}
           {info.isRecord && (
             <div className={style.previewTip}>
-              <img src={RecordImgJa} />
+              <Image src={RecordImgJa} />
             </div>
           )}
         </div>

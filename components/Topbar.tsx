@@ -3,6 +3,7 @@ import style from "../styles/Topbar.module.css";
 import LangImg from "../assets/lang.svg";
 import LogoImg from "../assets/Logo.svg";
 import { useEffect, useRef, useState } from "react";
+import Image from 'next/image'
 import React from "react";
 
 const menuMap = [
@@ -54,7 +55,7 @@ const Topbar: NextPage = () => {
       }
     >
       <div className={style.logo}>
-        <img className={style.logo} src={LogoImg} alt="logo" />
+        <Image className={style.logo} src={LogoImg} alt="logo" />
       </div>
       <div className={style.rightBox}>
         <div className={style.menu}>
@@ -75,7 +76,7 @@ const Topbar: NextPage = () => {
           })}
         </div>
         <div className={style.lang} onClick={toggleLang}>
-          <img src={LangImg} />
+          <Image src={LangImg} />
           <div>{LangText}</div>
         </div>
       </div>
