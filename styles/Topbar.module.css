@@ -1,8 +1,7 @@
 .container {
   width: 100%;
   position: sticky;
-  position: -webkit-sticky;
-  top:0;
+  top: 0;
   padding: 0 70px;
   height: 80px;
   display: flex;
@@ -18,7 +17,7 @@
     rgba(22, 3, 46, 0) 100%
   );
   backdrop-filter: blur(4px);
-  z-index: 99999;
+  z-index: 200;
 }
 .logo {
   display: flex;
@@ -40,11 +39,12 @@
   cursor: pointer;
   font-family: sans-serif;
   font-style: normal;
-  font-weight: 1000;
+  font-weight: 300;
   font-size: 16px;
+  min-width: 60px;
+  font-weight: bolder;
 }
 .menuItem:hover {
-  font-size: 18px;
   background: radial-gradient(
     64.79% 343.64% at 35.21% 164.52%,
     #72fff9 0%,
@@ -62,7 +62,6 @@
   color: transparent;
 }
 .ActiveMenuItem {
-  font-size: 18px;
   background: radial-gradient(
     64.79% 343.64% at 35.21% 164.52%,
     #72fff9 0%,
@@ -85,6 +84,8 @@
   align-items: center;
   margin-left: 206px;
   gap: 8px;
+  min-width: 80px;
+  text-align: right;
 }
 
 @media screen and (max-width: 1024px) {
@@ -115,10 +116,10 @@
     font-size: x-small;
   }
   .ActiveMenuItem {
-    font-size: small;
+    font-size: x-small;
   }
   .menuItem:hover {
-    font-size: small;
+    font-size: x-small;
   }
 }
 
@@ -138,10 +139,10 @@
     gap: 6px;
   }
   .ActiveMenuItem {
-    font-size: small;
+    font-size: xx-small;
   }
   .menuItem:hover {
-    font-size: small;
+    font-size: xx-small;
   }
 }
 @media screen and (max-width: 375px) {
@@ -149,11 +150,14 @@
     margin-left: 8px;
     gap: 4px;
   }
+  .menuItem {
+    font-size: xx-small;
+  }
   .ActiveMenuItem {
-    font-size: x-small;
+    font-size: xx-small;
   }
   .menuItem:hover {
-    font-size: x-small;
+    font-size: xx-small;
   }
   .logo {
     width: 50px;

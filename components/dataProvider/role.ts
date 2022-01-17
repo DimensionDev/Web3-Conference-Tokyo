@@ -314,7 +314,7 @@ const rolesInfoMap: Role[] = [
     coLink: "https://www.token-economist.com/",
     twitterLink: "https://twitter.com/TokenEconomist",
     name: "加藤 順弥",
-    roleTitles: ["TOKEN ECONOMIST 代表"],
+    roleTitles: ["TOKEN ECONOMIST","代表"],
     intro: [
       "中上級者向けのブロックチェーンメディア「TOKEN ECONOMIST」の代表。プロジェクトをの深堀りを中心にし、日々良質なプロジェクトのリサーチを行う。その他、Telegram発祥のブロックチェーン「Everscale」の日本DAOや、興味ドリブンでユーザー同士の交流ができるSaaS「Ecomedia」の開発を行うScalably株式会社のBDも務めている。",
     ],

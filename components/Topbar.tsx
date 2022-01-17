@@ -3,25 +3,29 @@ import style from "../styles/Topbar.module.css";
 import LangImg from "../assets/lang.svg";
 import LogoImg from "../assets/Logo.svg";
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import React from "react";
+import i18next from "i18next";
 
 const menuMap = [
-  { text: "タイムテーブル", ref: "test" },
-  { text: "登壇者", ref: "2" },
-  { text: "メディアパートナー", ref: "3" },
+  { text: "Overall Progress", ref: "test" },
+  { text: "Speaker", ref: "2" },
+  { text: "Partner", ref: "3" },
 ];
 const Topbar: NextPage = () => {
   const ctx = useRef() as any;
   const [LangText, setLangText] = useState("日本語");
   const [activeTopbar, setActiveTopbar] = useState(false);
 
-  const [activeMenuItem, setActiveMenuItem] = useState("");
+  // const [activeMenuItem, setActiveMenuItem] = useState("");
 
   const [curHref, setCurHref] = useState("");
   const toggleLang = () => {
     if (LangText === "English") {
-      setLangText("日本語");
+      i18next.changeLanguage("ja");
+      setLangText('日本語')
     } else {
+      i18next.changeLanguage("en");
       setLangText("English");
     }
   };
@@ -54,7 +58,7 @@ const Topbar: NextPage = () => {
       }
     >
       <div className={style.logo}>
-        <img className={style.logo} src={LogoImg} alt="logo" />
+        <Image className={style.logo} src={LogoImg} alt="logo" />
       </div>
       <div className={style.rightBox}>
         <div className={style.menu}>
@@ -75,7 +79,7 @@ const Topbar: NextPage = () => {
           })}
         </div>
         <div className={style.lang} onClick={toggleLang}>
-          <img src={LangImg} />
+          <Image src={LangImg} />
           <div>{LangText}</div>
         </div>
       </div>

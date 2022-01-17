@@ -9,12 +9,13 @@ import Footer from "./Footer";
 import { useEffect } from "react";
 import CanvasScript from "../components/utils/CanvasBg";
 
+
 const Layout: NextPage = () => {
   useEffect(() => {
     CanvasScript(window);
   }, []);
   return (
-    <div id='layout' className={style.container}>
+    <div id="layout" className={style.container}>
       <Topbar />
       <Banner />
       <TimeTable />

@@ -3,7 +3,6 @@
   max-width: 1180px;
   display: flex;
   align-items: center;
-  margin-top: 50px;
 }
 .text {
   background: conic-gradient(
@@ -17,13 +16,25 @@
   );
   background-clip: text;
   margin: 0px 10px;
-  font-weight: 1000;
+  font-weight: bold;
   font-size: 14px;
   line-height: 100%;
   color: transparent;
   white-space: nowrap;
-  text-align: center
+  text-align: center;
 }
 .BigText {
   font-size: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .BigText {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .BigText {
+    font-size: 16px;
+  }
 }

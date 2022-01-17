@@ -1,61 +1,55 @@
 .container {
-  width: 1180px;
-  padding: 20px 40px;
+  width: 100%;
+  padding: 40px 50px;
   background: linear-gradient(
     90deg,
     rgba(255, 255, 255, 0) 2.92%,
     rgba(255, 255, 255, 0.086) 23.4%,
     rgba(255, 255, 255, 0) 90.3%
   );
+  border: 1px solid;
+  border-image-source: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.34) 52.91%,
+    rgba(255, 255, 255, 0) 95.72%
+  );
 }
 
 .inner {
-  display: flex;
-  gap: 62px;
-}
-.previewBox {
-  position: relative;
-  width: 292px;
-  height: 292px;
-  border-radius: 10px;
-  border: 2px solid transparent;
-  background-image: radial-gradient(
-    68.14% 395.66% at 52.92% 43.33%,
-    #ff7ee3 0%,
-    #8692ff 25%,
-    #c3fbff 45.83%,
-    #d6e4ff 76.04%,
-    #17e3ff 100%
-  );
-  background-origin: border-box;
-  background-clip: border-box;
-}
-.previewTip {
-  position: absolute;
-  right: 0;
-  top: 6.94%;
-  transform: translateX(30px);
-}
-.previewImg {
   width: 100%;
-  height: 100%;
-  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .infoBox {
-  width: auto;
-  max-width: 50%;
+  max-width: 748px;
   display: flex;
   flex-direction: column;
 }
+.mobileTime {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.mobileTimeUp {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 .time {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 1000;
   line-height: 160%;
 }
 .title {
   font-size: 30px;
   font-weight: bold;
+  line-height: 130%;
   background: radial-gradient(
     64.79% 343.64% at 35.21% 164.52%,
     #72fff9 0%,
@@ -71,18 +65,17 @@
   );
   color: transparent;
   background-clip: text;
-  margin-top: 30px;
 }
 .subTitle {
   font-weight: normal;
   font-size: 14px;
   line-height: 1.2;
-  margin: 15px 0px;
+  margin: 8px 0px;
 }
 .subBox {
-  margin-top: 15px;
   display: flex;
   align-items: flex-start;
+  gap: 4px;
 }
 .subBoxItem {
   color: #87b1ff;
@@ -99,14 +92,18 @@
 .subBoxName {
   margin-bottom: 4px;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 1000;
 }
 .subBoxSub {
   font-size: 14px;
 }
 .hidden {
+  font-size: 14px;
+  line-height: 100%;
   opacity: 0;
   border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .diffBox {
@@ -142,11 +139,22 @@
   opacity: 1;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 414px) {
   .container {
-    width: 100%;
+    padding: 16px;
   }
-  .inner {
-    width: 100%;
+  .time {
+    font-size: 12px;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .subBoxName {
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .subBoxSub {
+    font-size: 12px;
   }
 }
