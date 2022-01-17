@@ -1,8 +1,9 @@
 import type { NextPage } from "next";
 import style from "../styles/TimeTable.module.css";
 import timeTablesMap from "./dataProvider/timetable";
-
+import PreTimeInfo from "./PreTimeInfo";
 import TimeTableItem from "./TimeTableItem";
+
 const TimeTable: NextPage = () => {
   return (
     <div className={style.container} id={"タイムテーブル"}>
@@ -10,8 +11,11 @@ const TimeTable: NextPage = () => {
       <div className={style.cardBox}>
         {timeTablesMap.map((item, index) => {
           return (
-            <div key={`${index}_timeContainer`} style={{ width: "100%" }}>
+            <div style={{ width: "100%" }} key={`outer_${index}`}>
               <TimeTableItem key={`${index}_timetable`} info={item} />
+              {item.switchTime && (
+                <PreTimeInfo text={item.switchTime} isBig={item.isBig} />
+              )}
             </div>
           );
         })}

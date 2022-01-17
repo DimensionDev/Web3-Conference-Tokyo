@@ -1,0 +1,160 @@
+.container {
+  width: 100%;
+  padding: 40px 50px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 2.92%,
+    rgba(255, 255, 255, 0.086) 23.4%,
+    rgba(255, 255, 255, 0) 90.3%
+  );
+  border: 1px solid;
+  border-image-source: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.34) 52.91%,
+    rgba(255, 255, 255, 0) 95.72%
+  );
+}
+
+.inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.infoBox {
+  max-width: 748px;
+  display: flex;
+  flex-direction: column;
+}
+.mobileTime {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.mobileTimeUp {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.time {
+  font-size: 18px;
+  font-weight: 1000;
+  line-height: 160%;
+}
+.title {
+  font-size: 30px;
+  font-weight: 1000;
+  line-height: 130%;
+  background: radial-gradient(
+    64.79% 343.64% at 35.21% 164.52%,
+    #72fff9 0%,
+    #faffda 23.44%,
+    #9dd9fb 37.81%,
+    #a0faea 46.14%,
+    #9aa6ff 54.47%,
+    #b4d7e6 63.54%,
+    #fccdb9 75.52%,
+    #cff4ff 84.9%,
+    #faffed 92.19%,
+    #40d1ff 100%
+  );
+  color: transparent;
+  background-clip: text;
+}
+.subTitle {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.2;
+  margin: 15px 0px;
+}
+.subBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+.subBoxItem {
+  color: #87b1ff;
+  flex: 1;
+}
+.subBoxType {
+  width: fit-content;
+  font-size: 14px;
+  line-height: 100%;
+  opacity: 0.5;
+  padding: 4px 0;
+  margin-bottom: 10px;
+}
+.subBoxName {
+  margin-bottom: 4px;
+  font-size: 20px;
+  font-weight: 1000;
+}
+.subBoxSub {
+  font-size: 14px;
+}
+.hidden {
+  font-size: 14px;
+  line-height: 100%;
+  opacity: 0;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.diffBox {
+  width: 100%;
+  position: absolute;
+  bottom: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) -3.93%,
+    rgba(255, 255, 255, 0.288) 29.09%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-weight: 274;
+  font-size: 14px;
+  line-height: 100%;
+  color: rgba(255, 255, 255, 0.75);
+}
+.whiteBtn {
+  padding: 4px 12px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 160%;
+  color: #0b133e;
+  background: #ffffff;
+  border-radius: 100px;
+  opacity: 1;
+}
+
+@media screen and (max-width: 414px) {
+  .container {
+    padding: 16px;
+  }
+  .time {
+    font-size: 12px;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .subBoxName {
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .subBoxSub {
+    font-size: 12px;
+  }
+}

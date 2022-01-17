@@ -189,7 +189,7 @@ const timeTablesMap: TimeTableProp[] = [
     preview: img12,
     time: "16:55-17:55",
     title: "セッション６:DAOはどう世界を変えていくのか",
-    sub: [" ・DAOって何がすごいの？", " ・DAOの在り方", " ・DAOのこれから"],
+    sub: ["・DAOって何がすごいの？", "・DAOの在り方", "・DAOのこれから"],
     extra: [
       { type: "Mod", name: "アラタさん", sub: "CryptoTimes" },
       { type: "Speaker", name: "Makotoさん", sub: "ENS" },
