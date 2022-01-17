@@ -5,8 +5,35 @@
   overflow-x: hidden;
   overflow-y: auto;
   color: white;
-  position: relative;
   z-index: 1;
   background-color: transparent;
+  perspective: 1px;
 }
 
+.bannerBg {
+  padding: 0;
+  height: 100%;
+  overflow: auto;
+  background: url("../assets/hero/banner_bg_light.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.ast {
+  position: absolute;
+  left: 60%;
+  transform: translate(0%, 25%);
+  animation: float 2.5s ease-in-out infinite alternate;
+}
+@keyframes float {
+  0% {
+    transform: translateY(25%)
+  }
+  50% {
+    transform: translateY(30%)
+  }
+  100% {
+    transform: translateY(25%)
+  }
+}

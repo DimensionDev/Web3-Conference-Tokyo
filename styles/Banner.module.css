@@ -90,7 +90,7 @@
   }
 }
 @media screen and (max-width: 540px) {
-  .container{
+  .container {
     height: unset;
     padding: 16px;
   }
@@ -105,7 +105,6 @@
 }
 
 @media screen and (max-width: 414px) {
- 
   .titleSubContent {
     font-size: 16px;
     gap: 20px;

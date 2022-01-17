@@ -4,6 +4,7 @@ import LaserIcon from "../assets/laser_icon.svg";
 import style from "../styles/Banner.module.css";
 import MobileHeroSub from "../assets/mobileHeroSub.svg";
 import Image from "next/image";
+import AstImg from "../assets/hero/ast.svg";
 
 const Banner: NextPage = () => {
   const renderLaser = () => {
