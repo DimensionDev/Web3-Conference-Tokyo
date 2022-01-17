@@ -6,12 +6,12 @@ import { useEffect, useRef, useState } from "react";
 import ArrowLeftImg from "../assets/arrow_left.svg";
 import ArrowRightImg from "../assets/arrow_right.svg";
 import CloseImg from "../assets/close.svg";
-import Image from "next/image";
-
+import Image from "next/image"
 import CoImg from "../assets/roles/co.svg";
 import TwitterImg from "../assets/roles/twitter.svg";
 import ETHImg from "../assets/roles/eth.svg";
 import FacebookImg from "../assets/roles/fb.svg";
+
 const Roles: NextPage = () => {
   const ctx = useRef() as any;
   const [isShowMask, setIsShowMask] = useState(false);

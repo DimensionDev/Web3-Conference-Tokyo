@@ -62,7 +62,8 @@
   height: 58px;
   bottom: 2px;
   left: 2px;
-  border-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
   background: linear-gradient(
     90deg,
     rgba(27, 26, 26, 0) -3.93%,
@@ -70,9 +71,90 @@
     rgba(27, 26, 26, 0) 100%
   );
   backdrop-filter: blur(4px);
-  border-top: 1px solid rgba(255, 255, 255, .2);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 15px;
+}
+
+@media screen and (max-width: 540px) {
+  .box {
+    width: 45%;
+    height: 302px;
+    border-radius: 10px;
+  }
+  .inner {
+    border-radius: 10px;
+  }
+  .avatarBox {
+    width: 217px;
+    height: 217px;
+  }
+  .uName {
+    font-size: 18px;
+  }
+  .uInfo {
+    font-size: 12px;
+  }
+  .mediaBox {
+    width: calc(100% - 4px);
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .box {
+    width: 46%;
+    height: 280px;
+    border-radius: 10px;
+  }
+  .inner {
+    padding: 8px;
+    border-radius: 10px;
+  }
+  .avatarBox {
+    width: 166px;
+    height: 166px;
+  }
+  .uName {
+    font-size: 14px;
+  }
+  .uInfo {
+    font-size: 14px;
+  }
+  .mediaBox {
+    height: 40px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .box {
+    width: 47%;
+    height: 250px;
+  }
+  .avatarBox {
+    width: 160px;
+    height: 160px;
+  }
+  .uName {
+    font-size: 12px;
+  }
+  .uInfo {
+    font-size: 8px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .box {
+    width: 47%;
+    height: 240px;
+  }
+  .avatarBox {
+    width: 130px;
+    height: 130px;
+  }
+  .uName {
+    font-size: 10px;
+  }
+  .uInfo {
+    font-size: 6px;
+  }
 }
