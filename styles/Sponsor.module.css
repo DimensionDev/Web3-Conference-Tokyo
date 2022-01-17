@@ -11,11 +11,14 @@
   height: 702px;
   opacity: 0.9;
   border-radius: 18px;
+  display: flex;
+  align-items: center;
 }
 
 @media screen and (max-width: 1024px) {
   .inner {
     width: 100%;
+    padding: 0 40px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -32,12 +35,13 @@
   .container {
     margin: 50px 0;
   }
-  .inner{
+  .inner {
     max-height: 250px;
+    padding: 0 20px;
   }
 }
 @media screen and (max-width: 360px) {
- .inner{
-   max-height: 200px;
- } 
+  .inner {
+    max-height: 200px;
+  }
 }

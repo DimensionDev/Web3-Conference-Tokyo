@@ -12,7 +12,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  transform-style: preserve-3d;
 }
 
 .titleSub {
@@ -68,6 +67,23 @@
   font-weight: normal;
 }
 
+.ast {
+  position: absolute;
+  left: 60%;
+  animation: float 8s ease-in-out infinite alternate;
+}
+@keyframes float {
+  0% {
+    transform: translateY(-20%);
+  }
+  50% {
+    transform: translateY(-15%);
+  }
+  100% {
+    transform: translateY(-20%);
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .contentBox {
     width: 100%;
@@ -106,13 +122,13 @@
 
 @media screen and (max-width: 414px) {
   .titleSubContent {
-    font-size: 16px;
+    font-size: 14px;
     gap: 20px;
   }
 }
 @media screen and (max-width: 375px) {
   .titleSubContent {
-    font-size: 13px;
+    font-size: 12px;
     gap: 12px;
   }
 }

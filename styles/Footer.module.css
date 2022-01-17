@@ -30,7 +30,6 @@
 .copyright {
   font-weight: 500;
   font-size: 20px;
-  line-height: 30px;
   color: rgba(255, 255, 255, 0.2);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 40px;
@@ -43,6 +42,9 @@
   }
 }
 @media screen and (max-width: 540px) {
+  .container {
+    padding-bottom: 0;
+  }
   .copyright {
     padding: 16px;
     font-size: 10px;
@@ -51,6 +53,7 @@
 @media screen and (max-width: 414px) {
   .container {
     padding: 20px;
+    padding-bottom: 0;
   }
   .joinUs {
     margin-bottom: 20px;

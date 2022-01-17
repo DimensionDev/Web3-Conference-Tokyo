@@ -27,6 +27,9 @@ const Banner: NextPage = () => {
   return (
     <div className={style.container}>
       <div className={style.contentBox}>
+      <div className={style.ast}>
+          <Image src={AstImg} />
+        </div>
         <div className={style.title}>
           <Image src={TitleImg} alt="" />
         </div>

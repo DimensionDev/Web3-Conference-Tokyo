@@ -54,7 +54,6 @@
   font-size: 23px;
 }
 .uInfo {
-  word-break: keep-all;
   font-size: 15px;
 }
 .mediaIcon {
@@ -108,6 +107,7 @@
   }
   .mediaBox {
     width: calc(100% - 4px);
+    bottom: 1px;
   }
 }
 
@@ -129,7 +129,7 @@
     font-size: 14px;
   }
   .uInfo {
-    font-size: 14px;
+    font-size: 12px;
   }
   .mediaBox {
     height: 40px;

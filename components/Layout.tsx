@@ -19,9 +19,6 @@ const Layout: NextPage = () => {
   return (
     <div id="layout" className={style.container}>
       <div className={style.bannerBg}>
-        <div className={style.ast}>
-          <Image src={AstImg} />
-        </div>
         <Topbar />
         <Banner />
       </div>
