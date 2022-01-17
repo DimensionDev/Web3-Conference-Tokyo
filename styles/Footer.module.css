@@ -32,42 +32,40 @@
   font-size: 20px;
   line-height: 30px;
   color: rgba(255, 255, 255, 0.2);
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 40px;
   text-align: center;
 }
 
 @media screen and (max-width: 1024px) {
-  .inner{
+  .inner {
     width: 100%;
   }
 }
+@media screen and (max-width: 540px) {
+  .copyright {
+    padding: 16px;
+    font-size: 10px;
+  }
+}
 @media screen and (max-width: 414px) {
-  .container{
+  .container {
     padding: 20px;
   }
-  .joinUs{
+  .joinUs {
     margin-bottom: 20px;
   }
-  .mediaBox{
+  .mediaBox {
     gap: 16px;
     margin-bottom: 20px;
   }
-  .copyright{
-    padding: 20px;
-    font-size: 16px;
-  }
 }
 @media screen and (max-width: 360px) {
-  .joinUs{
+  .joinUs {
     margin-bottom: 10px;
   }
-  .mediaBox{
+  .mediaBox {
     gap: 12px;
     margin-bottom: 10px;
-  }
-  .copyright{
-    padding: 10px;
-    font-size: 14px;
   }
 }

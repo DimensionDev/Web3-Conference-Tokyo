@@ -31,7 +31,7 @@ const Footer: NextPage = () => {
             );
           })}
         </div>
-        <div className={style.copyright}>2021 copyright</div>
+        <div className={style.copyright}>© 2022 Web3 Conference Tokyo. All Rights Reserved</div>
       </div>
     </div>
   );

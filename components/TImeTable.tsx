@@ -6,7 +6,7 @@ import TimeTableItem from "./TimeTableItem";
 
 const TimeTable: NextPage = () => {
   return (
-    <div className={style.container} id={"タイムテーブル"}>
+    <div className={style.container} id={"Schedule"}>
       <div className={style.title}>タイムテーブル</div>
       <div className={style.cardBox}>
         {timeTablesMap.map((item, index) => {

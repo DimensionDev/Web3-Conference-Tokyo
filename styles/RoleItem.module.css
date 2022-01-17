@@ -49,10 +49,12 @@
   border-radius: 8px;
 }
 .uName {
+  word-break: keep-all;
   font-weight: bold;
   font-size: 23px;
 }
 .uInfo {
+  word-break: keep-all;
   font-size: 15px;
 }
 .mediaIcon {

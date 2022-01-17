@@ -3,7 +3,6 @@
   max-width: 1180px;
   display: flex;
   align-items: center;
-  margin-top: 50px;
 }
 .text {
   background: conic-gradient(
@@ -22,14 +21,8 @@
   line-height: 100%;
   color: transparent;
   white-space: nowrap;
-  text-align: center
+  text-align: center;
 }
 .BigText {
   font-size: 30px;
-}
-
-@media screen and (max-width: 540px) {
-  .container{
-    margin: 0;
-  }
 }

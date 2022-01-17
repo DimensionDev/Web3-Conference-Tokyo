@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const Sponsor: NextPage = () => {
   return (
-    <div className={style.container} id="メディアパートナー">
+    <div className={style.container} id="Partner">
       <div className={style.inner}>
         <Image src={SponsorImg} />
       </div>

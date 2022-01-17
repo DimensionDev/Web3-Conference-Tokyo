@@ -7,9 +7,9 @@ import Image from 'next/image'
 import React from "react";
 
 const menuMap = [
-  { text: "タイムテーブル", ref: "test" },
-  { text: "登壇者", ref: "2" },
-  { text: "メディアパートナー", ref: "3" },
+  { text: "Schedule", ref: "test" },
+  { text: "Speaker", ref: "2" },
+  { text: "Partner", ref: "3" },
 ];
 const Topbar: NextPage = () => {
   const ctx = useRef() as any;
