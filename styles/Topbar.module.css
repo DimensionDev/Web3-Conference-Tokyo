@@ -40,11 +40,11 @@
   cursor: pointer;
   font-family: sans-serif;
   font-style: normal;
-  font-weight: 1000;
+  font-weight: 300;
   font-size: 16px;
 }
 .menuItem:hover {
-  font-size: 18px;
+  font-weight: bolder;
   background: radial-gradient(
     64.79% 343.64% at 35.21% 164.52%,
     #72fff9 0%,
@@ -62,7 +62,7 @@
   color: transparent;
 }
 .ActiveMenuItem {
-  font-size: 18px;
+  font-weight: bolder;
   background: radial-gradient(
     64.79% 343.64% at 35.21% 164.52%,
     #72fff9 0%,

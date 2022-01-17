@@ -37,7 +37,7 @@
   background-clip: text;
   color: transparent;
   font-style: normal;
-  font-weight: 1000;
+  font-weight: bold;
   font-size: 25px;
 }
 .LaserContentBox {
@@ -50,7 +50,7 @@
   justify-content: center;
 }
 .laserContent {
-  font-weight: 1000;
+  font-weight: bold;
   line-height: 2;
   margin-left: 38px;
   max-width: 831px;

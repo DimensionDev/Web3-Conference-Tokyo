@@ -55,13 +55,13 @@
 }
 .time {
   font-size: 18px;
-  font-weight: 1000;
+  font-weight: bold;
   line-height: 160%;
   margin: 30px 0px;
 }
 .title {
   font-size: 30px;
-  font-weight: 1000;
+  font-weight: bold;
   line-height: 130%;
   background: radial-gradient(
     64.79% 343.64% at 35.21% 164.52%,
@@ -105,7 +105,7 @@
 .subBoxName {
   margin-bottom: 4px;
   font-size: 20px;
-  font-weight: 1000;
+  font-weight: bold;
 }
 .subBoxSub {
   font-size: 14px;

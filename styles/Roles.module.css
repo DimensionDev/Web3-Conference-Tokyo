@@ -6,7 +6,7 @@
 }
 .title {
   font-size: 50px;
-  font-weight: 1000;
+  font-weight: bold;
   margin: 50px 0;
 }
 .rolesBox {
@@ -42,7 +42,7 @@
   align-items: center;
 }
 .uName {
-  font-weight: 1000;
+  font-weight: bold;
   font-size: 24px;
 }
 .uInfo {
