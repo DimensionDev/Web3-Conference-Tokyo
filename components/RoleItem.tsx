@@ -28,21 +28,33 @@ const RoleItem: NextPage<Props> = ({ role, onMore, idx }) => {
             onClick={() => onMore(role, idx)}
           />
           <div className={style.mediaBox}>
-            <a href={role.coLink} target="_blank">
+            <a className={style.mediaIcon} href={role.coLink} target="_blank">
               <Image src={CoImg} />
             </a>
             {role.twitterLink && (
-              <a href={role.twitterLink} target="_blank">
+              <a
+                className={style.mediaIcon}
+                href={role.twitterLink}
+                target="_blank"
+              >
                 <Image src={TwitterImg} />
               </a>
             )}
             {role.ethLink && (
-              <a href={role.ethLink} target="_blank">
+              <a
+                className={style.mediaIcon}
+                href={role.ethLink}
+                target="_blank"
+              >
                 <Image src={ETHImg} />
               </a>
             )}
             {role.facebookLink && (
-              <a href={role.facebookLink} target="_blank">
+              <a
+                className={style.mediaIcon}
+                href={role.facebookLink}
+                target="_blank"
+              >
                 <Image src={FacebookImg} />
               </a>
             )}

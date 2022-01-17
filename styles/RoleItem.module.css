@@ -55,6 +55,13 @@
 .uInfo {
   font-size: 15px;
 }
+.mediaIcon {
+  cursor: pointer;
+  opacity: 0.75;
+}
+.mediaIcon:hover {
+  opacity: 1;
+}
 
 .mediaBox {
   position: absolute;
@@ -150,6 +157,10 @@
   .avatarBox {
     width: 130px;
     height: 130px;
+    border-radius: 4px;
+  }
+  .avatar{
+    border-radius: 4px;
   }
   .uName {
     font-size: 10px;

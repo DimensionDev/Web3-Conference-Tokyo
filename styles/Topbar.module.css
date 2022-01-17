@@ -85,6 +85,8 @@
   align-items: center;
   margin-left: 206px;
   gap: 8px;
+  min-width: 80px;
+  text-align: right;
 }
 
 @media screen and (max-width: 1024px) {
@@ -149,11 +151,14 @@
     margin-left: 8px;
     gap: 4px;
   }
+  .menuItem {
+    font-size: 4pt;
+  }
   .ActiveMenuItem {
-    font-size: x-small;
+    font-size: xx-small;
   }
   .menuItem:hover {
-    font-size: x-small;
+    font-size: xx-small;
   }
   .logo {
     width: 50px;

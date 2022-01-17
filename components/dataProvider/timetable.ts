@@ -195,7 +195,7 @@ const timeTablesMap: TimeTableProp[] = [
       { type: "Speaker", name: "Makotoさん", sub: "ENS" },
       { type: "", name: "キャサリン", sub: "現Polygon、元MakerDAO" },
       { type: "", name: "Gabby", sub: "YGG" },
-      { type: "", name: "登壇舎未定", sub: "Merit circle" },
+      // { type: "", name: "登壇舎未定", sub: "Merit circle" },
     ],
     isRecord: true,
     switchTime: "18:30-18:35 転換",

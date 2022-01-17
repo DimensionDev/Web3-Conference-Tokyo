@@ -48,7 +48,7 @@
 }
 .title {
   font-size: 30px;
-  font-weight: 1000;
+  font-weight: bold;
   line-height: 130%;
   background: radial-gradient(
     64.79% 343.64% at 35.21% 164.52%,
