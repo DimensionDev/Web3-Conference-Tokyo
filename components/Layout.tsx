@@ -8,8 +8,6 @@ import Sponsor from "./Sponsor";
 import Footer from "./Footer";
 import { useEffect } from "react";
 import CanvasScript from "../components/utils/CanvasBg";
-import Image from 'next/image'
-import AstImg from '../assets/hero/ast.svg'
 
 
 const Layout: NextPage = () => {
@@ -18,10 +16,8 @@ const Layout: NextPage = () => {
   }, []);
   return (
     <div id="layout" className={style.container}>
-      <div className={style.bannerBg}>
-        <Topbar />
-        <Banner />
-      </div>
+      <Topbar />
+      <Banner />
       <TimeTable />
       <Roles />
       <Sponsor />

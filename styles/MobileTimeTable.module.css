@@ -34,7 +34,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 .mobileTimeUp {
   display: flex;
@@ -70,7 +70,7 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 1.2;
-  margin: 15px 0px;
+  margin: 8px 0px;
 }
 .subBox {
   display: flex;
