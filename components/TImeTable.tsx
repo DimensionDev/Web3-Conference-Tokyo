@@ -10,7 +10,6 @@ const TimeTable: NextPage = () => {
       <div className={style.title}>タイムテーブル</div>
       <div className={style.cardBox}>
         {timeTablesMap.map((item, index) => {
-          console.log(globalThis.innerWidth);
           return (
             <div key={`${index}_timeContainer`} style={{ width: "100%" }}>
               {/* <TimeTableItem key={`${index}_timetable`} info={item} /> */}

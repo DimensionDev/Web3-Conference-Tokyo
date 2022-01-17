@@ -20,7 +20,7 @@ const Banner: NextPage = () => {
             </div>
           </div>
         </div>
-      )) || <Image className={style.mobileLaser} src={MobileHeroSub} />
+      )) || <Image src={MobileHeroSub} />
     );
   };
   return (
