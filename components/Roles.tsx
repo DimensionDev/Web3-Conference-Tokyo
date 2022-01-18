@@ -18,14 +18,14 @@ const Roles: NextPage = () => {
   const ctx = useRef() as any;
   const [isShowMask, setIsShowMask] = useState(false);
   const [curIndex, setCurIndex] = useState(0);
-  const [curPerson, setCurPerson] = useState<Role>(rolesInfoMap[curIndex]);
+  const [curPerson, setCurPerson] = useState<Role>(rolesInfoMap()[curIndex]);
   const toggle = (num: number) => {
     if (curIndex + num < 0 || curIndex + num > rolesInfoMap.length - 1) {
       return;
     }
     const newV = curIndex + num;
     setCurIndex(newV);
-    setCurPerson(rolesInfoMap[newV]);
+    setCurPerson(rolesInfoMap()[newV]);
   };
   const handleScroll = () => {};
   useEffect(() => {
@@ -38,7 +38,7 @@ const Roles: NextPage = () => {
     <div ref={ctx} className={style.container} id="Speaker">
       <div className={style.title}>{t('roles_title')}</div>
       <div className={style.rolesBox}>
-        {rolesInfoMap.map((item, index) => {
+        {rolesInfoMap().map((item, index) => {
           return (
             <RoleItem
               onMore={(role: Role, idx: number) => {
