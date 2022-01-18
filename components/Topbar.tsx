@@ -8,9 +8,9 @@ import React from "react";
 import i18next from "i18next";
 
 const menuMap = [
-  { text: "Overall Progress", ref: "test" },
-  { text: "Speaker", ref: "2" },
-  { text: "Partner", ref: "3" },
+  { text: "Overall Progress", ref: "#1" },
+  { text: "Speaker", ref: "#2" },
+  { text: "Partner", ref: "#3" },
 ];
 const Topbar: NextPage = () => {
   const ctx = useRef() as any;
@@ -71,7 +71,7 @@ const Topbar: NextPage = () => {
                     ? `${style.ActiveMenuItem} ${style.menuItem}`
                     : style.menuItem
                 }
-                onClick={() => jumpHref(item.text)}
+                onClick={() => jumpHref(item.ref)}
               >
                 {item.text}
               </div>
