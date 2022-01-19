@@ -9,6 +9,10 @@ import LiveImgEn from "../assets/schedule/live_en.svg";
 import RecordImgEn from "../assets/schedule/record_en.svg";
 import MobileLiveJa from "../assets/mobile_live.svg";
 import MobileRecordJa from "../assets/mobile_record.svg";
+
+import MobileLiveEn from "../assets/mobile_live.svg";
+import MobileRecordEn from "../assets/mobile_record.svg";
+
 import { useEffect, useState } from "react";
 import i18next from "i18next";
 interface Props {
@@ -20,10 +24,17 @@ const TimeTableItem: NextPage<Props> = ({ info }) => {
   const [curLang, setCurLang] = useState("ja");
   useEffect(() => {
     setCurLang(i18next.language);
-    setScreenWidth((globalThis || window).innerWidth);
+    window.addEventListener("resize", () =>
+      setScreenWidth((globalThis || window).innerWidth)
+    );
+    return () =>
+      window.removeEventListener("resize", () =>
+        setScreenWidth((globalThis || window).innerWidth)
+      );
   });
+
   const render = () => {
-    if (screenWidth > 768) {
+    if (screenWidth > 1024) {
       return (
         <div className={style.container}>
           <div className={style.inner}>
@@ -83,8 +94,14 @@ const TimeTableItem: NextPage<Props> = ({ info }) => {
           <div className={mStyle.inner}>
             <div className={mStyle.mobileTime}>
               <div className={mStyle.mobileTimeUp}>
-                {info.isLive && <Image src={MobileLiveJa} />}
-                {info.isRecord && <Image src={MobileRecordJa} />}
+                {info.isLive && (
+                  <Image src={curLang === "ja" ? MobileLiveJa : MobileLiveEn} />
+                )}
+                {info.isRecord && (
+                  <Image
+                    src={curLang === "ja" ? MobileRecordJa : MobileRecordEn}
+                  />
+                )}
                 <div className={mStyle.time}>{time}</div>
               </div>
               {info.difficuty && (

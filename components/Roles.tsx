@@ -19,6 +19,7 @@ const Roles: NextPage = () => {
   const [isShowMask, setIsShowMask] = useState(false);
   const [curIndex, setCurIndex] = useState(0);
   const [curPerson, setCurPerson] = useState<Role>(rolesMap[curIndex]);
+  const [screenWidth, setScreenWidth] = useState(0);
   const toggle = (num: number) => {
     if (curIndex + num < 0 || curIndex + num > rolesMap.length - 1) {
       return;
@@ -27,6 +28,16 @@ const Roles: NextPage = () => {
     setCurIndex(newV);
     setCurPerson(rolesInfoMap()[newV]);
   };
+
+  useEffect(() => {
+    window.addEventListener("resize", () =>
+      setScreenWidth((globalThis || window).innerWidth)
+    );
+    return () =>
+      window.removeEventListener("resize", () =>
+        setScreenWidth((globalThis || window).innerWidth)
+      );
+  });
 
   return (
     <div ref={ctx} className={style.container} id="#2">

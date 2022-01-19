@@ -2,29 +2,39 @@ import type { NextPage } from "next";
 import TitleImg from "../assets/title.svg";
 import LaserIcon from "../assets/laser_icon.svg";
 import style from "../styles/Banner.module.css";
-import MobileHeroSub from "../assets/mobileHeroSub.svg";
+import MobileHeroSubJa from "../assets/mobileHeroSubJa.svg";
+import MobileHeroSubEn from '../assets/mobileHeroSubEn.svg'
 import Image from "next/image";
 import AstImg from "../assets/hero/ast.svg";
 import i18next from "i18next";
+import { useEffect, useState } from "react";
 
 const Banner: NextPage = () => {
-  const t = i18next.t;
+  const {t} = i18next;
+  const [screenWidth, setScreenWidth] = useState(0);
+  const [curLang, setCurLang] = useState("ja");
+  useEffect(() => {
+    setCurLang(i18next.language);
+    window.addEventListener("resize", () =>
+      setScreenWidth((globalThis || window).innerWidth)
+    );
+    return () =>
+      window.removeEventListener("resize", () =>
+        setScreenWidth((globalThis || window).innerWidth)
+      );
+  });
 
   const renderLaser = () => {
     return (
-      ((globalThis || window).innerWidth > 1024 && (
+      (screenWidth > 1024 && (
         <div className={style.LaserContentBox}>
           <Image src={LaserIcon} />
           <div className={style.laserContent}>
-            <div className={style.LaserContentTitle}>
-              Web3 Conference Tokyoについて
-            </div>
-            <div className={style.LaserContentText}>
-              2022年は今年のブームを踏まえより一層業界の枠を超えて交わりを深める必要があり、ブロックチェーン業界内だけで盛り上がるイベントではなく業界内外のハブを目指します
-            </div>
+            <div className={style.LaserContentTitle}>{t("banner_1")}</div>
+            <div className={style.LaserContentText}>{t("banner_2")}</div>
           </div>
         </div>
-      )) || <Image src={MobileHeroSub} />
+      )) || <Image src={curLang === 'ja'? MobileHeroSubJa:MobileHeroSubEn} />
     );
   };
   return (
