@@ -3,15 +3,17 @@ import TitleImg from "../assets/title.svg";
 import LaserIcon from "../assets/laser_icon.svg";
 import style from "../styles/Banner.module.css";
 import MobileHeroSubJa from "../assets/mobileHeroSubJa.svg";
-import MobileHeroSubEn from '../assets/mobileHeroSubEn.svg'
+import MobileHeroSubEn from "../assets/mobileHeroSubEn.svg";
 import Image from "next/image";
 import AstImg from "../assets/hero/ast.svg";
 import i18next from "i18next";
 import { useEffect, useState } from "react";
 
 const Banner: NextPage = () => {
-  const {t} = i18next;
-  const [screenWidth, setScreenWidth] = useState(0);
+  const { t } = i18next;
+  const [screenWidth, setScreenWidth] = useState(
+    (globalThis || window).innerWidth
+  );
   const [curLang, setCurLang] = useState("ja");
   useEffect(() => {
     setCurLang(i18next.language);
@@ -28,13 +30,13 @@ const Banner: NextPage = () => {
     return (
       (screenWidth > 1024 && (
         <div className={style.LaserContentBox}>
-          <Image src={LaserIcon} />
+          <Image width="100%" height="100%" src={LaserIcon} />
           <div className={style.laserContent}>
             <div className={style.LaserContentTitle}>{t("banner_1")}</div>
             <div className={style.LaserContentText}>{t("banner_2")}</div>
           </div>
         </div>
-      )) || <Image src={curLang === 'ja'? MobileHeroSubJa:MobileHeroSubEn} />
+      )) || <Image src={curLang === "ja" ? MobileHeroSubJa : MobileHeroSubEn} />
     );
   };
   return (

@@ -10,8 +10,8 @@ import RecordImgEn from "../assets/schedule/record_en.svg";
 import MobileLiveJa from "../assets/mobile_live.svg";
 import MobileRecordJa from "../assets/mobile_record.svg";
 
-import MobileLiveEn from "../assets/mobile_live.svg";
-import MobileRecordEn from "../assets/mobile_record.svg";
+import MobileLiveEn from "../assets/mobile_live_en.svg";
+import MobileRecordEn from "../assets/mobile_record_en.svg";
 
 import { useEffect, useState } from "react";
 import i18next from "i18next";
