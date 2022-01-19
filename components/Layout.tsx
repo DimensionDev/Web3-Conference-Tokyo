@@ -18,7 +18,6 @@ const Layout: NextPage = () => {
 
   useEffect(() => {
     i18next.on("languageChanged", (v) => {
-      console.log('ss')
       if (v == "ja") {
         setLang("en");
       } else {

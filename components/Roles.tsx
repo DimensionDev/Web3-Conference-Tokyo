@@ -6,15 +6,15 @@ import { useEffect, useRef, useState } from "react";
 import ArrowLeftImg from "../assets/arrow_left.svg";
 import ArrowRightImg from "../assets/arrow_right.svg";
 import CloseImg from "../assets/close.svg";
-import Image from "next/image"
+import Image from "next/image";
 import CoImg from "../assets/roles/co.svg";
 import TwitterImg from "../assets/roles/twitter.svg";
 import ETHImg from "../assets/roles/eth.svg";
 import FacebookImg from "../assets/roles/fb.svg";
 import i18next from "i18next";
-const rolesMap = rolesInfoMap()
+const rolesMap = rolesInfoMap();
 const Roles: NextPage = () => {
-  const {t} = i18next
+  const { t } = i18next;
   const ctx = useRef() as any;
   const [isShowMask, setIsShowMask] = useState(false);
   const [curIndex, setCurIndex] = useState(0);
@@ -25,18 +25,12 @@ const Roles: NextPage = () => {
     }
     const newV = curIndex + num;
     setCurIndex(newV);
-    setCurPerson(rolesMap[newV]);
+    setCurPerson(rolesInfoMap()[newV]);
   };
-  const handleScroll = () => {};
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll, true);
-    return () => {
-      window.removeEventListener("scroll", handleScroll, true);
-    };
-  }, []);
+
   return (
     <div ref={ctx} className={style.container} id="#2">
-      <div className={style.title}>{t('roles_title')}</div>
+      <div className={style.title}>{t("roles_title")}</div>
       <div className={style.rolesBox}>
         {rolesInfoMap().map((item, index) => {
           return (
