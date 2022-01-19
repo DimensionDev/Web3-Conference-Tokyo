@@ -64,7 +64,7 @@ const TimeTableItem: NextPage<Props> = ({ info }) => {
                     <div key={index} className={style.subBoxItem}>
                       <div className={style.subBoxType}>
                         {subBoxItem.type || (
-                          <div className={style.hidden}>u cant see me</div>
+                          <div className={style.hidden}>{"cant see"}</div>
                         )}
                       </div>
                       <div className={style.subBoxName}>{subBoxItem.name}</div>

@@ -7,9 +7,11 @@
     rgba(255, 255, 255, 0.086) 23.4%,
     rgba(255, 255, 255, 0) 90.3%
   );
+
 }
 
 .inner {
+  width: 100%;
   display: flex;
   gap: 62px;
 }
@@ -103,9 +105,12 @@
   margin-bottom: 4px;
   font-size: 20px;
   font-weight: bold;
+  white-space: nowrap;
+  
 }
 .subBoxSub {
   font-size: 14px;
+  white-space: nowrap;
 }
 .hidden {
   opacity: 0;
