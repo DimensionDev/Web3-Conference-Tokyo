@@ -6,14 +6,28 @@ import TimeTable from "./TImeTable";
 import Roles from "./Roles";
 import Sponsor from "./Sponsor";
 import Footer from "./Footer";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import CanvasScript from "../components/utils/CanvasBg";
-
+import i18next from "i18next";
 
 const Layout: NextPage = () => {
   useEffect(() => {
     CanvasScript(window);
   }, []);
+  const [lang, setLang] = useState("ja");
+
+  useEffect(() => {
+    i18next.on("languageChanged", (v) => {
+      console.log('ss')
+      if (v == "ja") {
+        setLang("en");
+      } else {
+        setLang("ja");
+      }
+    });
+    return () => i18next.off("languageChanged");
+  }, []);
+
   return (
     <div id="layout" className={style.container}>
       <Topbar />

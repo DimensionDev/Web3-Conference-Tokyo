@@ -8,7 +8,7 @@ import React from "react";
 import i18next from "i18next";
 
 const menuMap = [
-  { text: "Overall Progress", ref: "#1" },
+  { text: "Schedule", ref: "#1" },
   { text: "Speaker", ref: "#2" },
   { text: "Partner", ref: "#3" },
 ];
@@ -29,6 +29,7 @@ const Topbar: NextPage = () => {
       setLangText("English");
     }
   };
+
   const getTopbarStyle = () => {
     if (ctx && ctx.current && ctx.current.offsetTop > 1) {
       setActiveTopbar(true);
