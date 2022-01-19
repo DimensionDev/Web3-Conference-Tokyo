@@ -6,7 +6,7 @@ import _ja from "../public/locales/ja/common.json";
 
 function MyApp({ Component, pageProps }: AppProps) {
   i18next.init({
-    lng: 'ja',
+    lng: "ja",
     fallbackLng: "ja",
     resources: {
       en: {
@@ -17,7 +17,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       },
     },
   });
- 
 
   return <Component {...pageProps} />;
 }
