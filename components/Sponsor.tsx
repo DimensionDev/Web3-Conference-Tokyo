@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import style from "../styles/Sponsor.module.css";
-import SponsorImgJa from "../assets/sponsor/ja.svg";
-import SponsorImgEn from "../assets/sponsor/en.svg";
+import SponsorImgJa from "../assets/sponsor/ja.png";
+import SponsorImgEn from "../assets/sponsor/en.png";
 import Image from "next/image";
 import i18next from "i18next";
 const Sponsor: NextPage = () => {

@@ -30,22 +30,22 @@
   margin-top: 40px;
   margin-bottom: 70px;
 }
+.divider {
+  margin: 0 120px;
+}
 .titleSubContent {
-  display: flex;
-  align-items: center;
-  gap: 120px;
-  background: linear-gradient(90.19deg, #ff4dcd 3.38%, #4976ec 74.22%);
-  background-clip: text;
-  color: transparent;
-  font-style: normal;
   font-weight: bold;
   font-size: 18px;
+  background-image: linear-gradient(90.19deg, #ff4dcd 3.38%, #4976ec 74.22%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .LaserContentBox {
   display: flex;
   width: 1180px;
   height: 240px;
-  background: url(../assets/laser.svg) no-repeat;
+  background: url('../assets/laser.png') no-repeat;
   background-size: 100% 100%;
   align-items: center;
   justify-content: center;
@@ -97,8 +97,9 @@
     width: 100%;
     height: auto;
   }
-  .titleSubContent {
-    gap: 80px;
+
+  .divider {
+    margin: 0 80px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -115,21 +116,25 @@
     margin-top: 32px;
     margin-bottom: 40px;
   }
-  .titleSubContent {
-    font-size: 16px;
-    gap: 40px;
+  .divider {
+    margin: 0 40px;
   }
 }
 
 @media screen and (max-width: 414px) {
   .titleSubContent {
     font-size: 14px;
-    gap: 20px;
+  }
+  .divider {
+    margin: 0 20px;
   }
 }
 @media screen and (max-width: 375px) {
   .titleSubContent {
     font-size: 12px;
     gap: 12px;
+  }
+  .divider {
+    margin: 0 12px;
   }
 }

@@ -7,13 +7,13 @@ import Roles from "./Roles";
 import Sponsor from "./Sponsor";
 import Footer from "./Footer";
 import { useEffect, useState } from "react";
-import CanvasScript from "../components/utils/CanvasBg";
+// import CanvasScript from "../components/utils/CanvasBg";
 import i18next from "i18next";
 
 const Layout: NextPage = () => {
-  useEffect(() => {
-    CanvasScript(window);
-  }, []);
+  // useEffect(() => {
+  //   CanvasScript(window);
+  // }, []);
   const [lang, setLang] = useState("ja");
 
   useEffect(() => {

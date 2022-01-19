@@ -3,15 +3,15 @@ import { TimeTableProp } from "./dataProvider/timetable";
 import style from "../styles/TimeTableItem.module.css";
 import mStyle from "../styles/MobileTimeTable.module.css";
 import Image from "next/image";
-import LiveImgJa from "../assets/schedule/live_ja.svg";
-import RecordImgJa from "../assets/schedule/record_ja.svg";
-import LiveImgEn from "../assets/schedule/live_en.svg";
-import RecordImgEn from "../assets/schedule/record_en.svg";
-import MobileLiveJa from "../assets/mobile_live.svg";
-import MobileRecordJa from "../assets/mobile_record.svg";
+import LiveImgJa from "../assets/schedule/live_ja.png";
+import RecordImgJa from "../assets/schedule/record_ja.png";
+import LiveImgEn from "../assets/schedule/live_en.png";
+import RecordImgEn from "../assets/schedule/record_en.png";
 
-import MobileLiveEn from "../assets/mobile_live_en.svg";
-import MobileRecordEn from "../assets/mobile_record_en.svg";
+import MobileLiveJa from "../assets/mobile_live.png";
+import MobileRecordJa from "../assets/mobile_record.png";
+import MobileLiveEn from "../assets/mobile_live_en.png";
+import MobileRecordEn from "../assets/mobile_record_en.png";
 
 import { useEffect, useState } from "react";
 import i18next from "i18next";
@@ -24,7 +24,7 @@ const TimeTableItem: NextPage<Props> = ({ info }) => {
   const [curLang, setCurLang] = useState("ja");
   useEffect(() => {
     setCurLang(i18next.language);
-    setScreenWidth((globalThis || window).innerWidth)
+    setScreenWidth((globalThis || window).innerWidth);
     window.addEventListener("resize", () =>
       setScreenWidth((globalThis || window).innerWidth)
     );

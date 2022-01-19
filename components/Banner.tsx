@@ -2,8 +2,8 @@ import type { NextPage } from "next";
 import TitleImg from "../assets/title.svg";
 import LaserIcon from "../assets/laser_icon.svg";
 import style from "../styles/Banner.module.css";
-import MobileHeroSubJa from "../assets/mobileHeroSubJa.svg";
-import MobileHeroSubEn from "../assets/mobileHeroSubEn.svg";
+import MobileHeroSubJa from "../assets/mobileHeroSubJa.png";
+import MobileHeroSubEn from "../assets/mobileHeroSubEn.png";
 import Image from "next/image";
 import AstImg from "../assets/hero/ast.svg";
 import i18next from "i18next";
@@ -51,9 +51,9 @@ const Banner: NextPage = () => {
         </div>
         <div className={style.titleSub}>
           <div className={style.titleSubContent}>
-            <div>{t("banner_3")}</div>
-            <div>|</div>
-            <div>{t("banner_4")}</div>
+            {t("banner_3")}
+            <span className={style.divider}>|</span>
+            {t("banner_4")}
           </div>
         </div>
         {renderLaser()}
