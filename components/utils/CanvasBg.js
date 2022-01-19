@@ -120,14 +120,14 @@ const script = (window) => {
 
     ctx.fillRect(0, 0, cvs.width, cvs.height);
 
-    var arr = p0.x == null ? points : [p0].concat(points);
-    for (var i = 0; i < arr.length; ++i) {
-      for (var j = i + 1; j < arr.length; ++j) {
-        drawLine(arr[i], arr[j], 1.0);
-      }
-      arr[i].draw();
-      arr[i].move();
-    }
+    // var arr = p0.x == null ? points : [p0].concat(points);
+    // for (var i = 0; i < arr.length; ++i) {
+    //   for (var j = i + 1; j < arr.length; ++j) {
+    //     drawLine(arr[i], arr[j], 1.0);
+    //   }
+    //   arr[i].draw();
+    //   arr[i].move();
+    // }
 
     window.requestAnimationFrame(drawFrame);
   }
