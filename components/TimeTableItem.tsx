@@ -24,6 +24,7 @@ const TimeTableItem: NextPage<Props> = ({ info }) => {
   const [curLang, setCurLang] = useState("ja");
   useEffect(() => {
     setCurLang(i18next.language);
+    setScreenWidth((globalThis || window).innerWidth)
     window.addEventListener("resize", () =>
       setScreenWidth((globalThis || window).innerWidth)
     );

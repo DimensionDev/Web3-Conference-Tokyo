@@ -30,7 +30,8 @@ const Banner: NextPage = () => {
     return (
       (screenWidth > 1024 && (
         <div className={style.LaserContentBox}>
-          <Image width="100%" height="100%" src={LaserIcon} />
+          <Image src={LaserIcon} />
+
           <div className={style.laserContent}>
             <div className={style.LaserContentTitle}>{t("banner_1")}</div>
             <div className={style.LaserContentText}>{t("banner_2")}</div>
