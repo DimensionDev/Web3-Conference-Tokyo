@@ -1,8 +1,8 @@
 const script = (window) => {
   // 可调参数
-  var POINT_NUM = window.innerWidth > 1024 ? 30 : 5; // 星星数目
+  var POINT_NUM = window.innerWidth > 1024 ? 10 : 5; // 星星数目
   var POINT_COLOR = "rgba(255,255,255,0.7)"; // 点的颜色
-  var LINE_LENGTH = window.innerWidth > 1024 ? 10000 : 1000; // 点之间连线长度(的平方)
+  var LINE_LENGTH = window.innerWidth > 1024 ? 100000 : 1000; // 点之间连线长度(的平方)
 
   // 创建背景画布
   var cvs = document.createElement("canvas");
