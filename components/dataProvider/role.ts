@@ -41,7 +41,7 @@ const func: () => Role[] = () => {
       avatar: NoritakaOkabe,
       coLink: "https://jpyc.co.jp/",
       twitterLink: "https://twitter.com/noritaka_okabe",
-      name: t('roles_1_name'),
+      name: t("roles_1_name"),
       roleTitles: ["JPYC Inc.", "CEO/ BCCC Director"],
       intro: [
         "2001年、一橋大学在学中に有限会社（現株式会社）リアルアンリアルを創業し、代表取締役、取締役CTO等を務める。",
@@ -63,8 +63,8 @@ const func: () => Role[] = () => {
       avatar: Nekomatu,
       coLink: "https://defigeek.xyz/",
       twitterLink: "https://twitter.com/nekoi7yu",
-      name: "猫井夕菜  @nekomatu ",
-      roleTitles: ["DeFiGeek(DFGC) ", "モデレーター"],
+      name: t("roles_2_name"),
+      roleTitles: [t("roles_2_co")],
       intro: [
         "Debian/Ubuntuユーザーで業務ではLinuxカーネルなどを取り扱う組込み系ソフトウェアエンジニア。学生時代からOSSが好きで卒業研究はP2Pに関するもの。好きなOSSライセンスはGPLv2。",
         "技術交流会に育ててもらった恩があり、複数のイベント主催者(事務係)を行っている。日本発DAO型コミュニティであるDFGCではモデレーターロールをしている。",
@@ -75,8 +75,8 @@ const func: () => Role[] = () => {
       avatar: XiongGu,
       coLink: "https://aktsk.jp/",
       twitterLink: "https://twitter.com/yujikumagai_",
-      name: "熊谷 祐二",
-      roleTitles: ["株式会社アカツキ/ディレクター"],
+      name: t("roles_3_name"),
+      roleTitles: [t("roles_3_co")],
       intro: [
         "2014年にiemo株式会社共同代表取締役COO就任を経て、同社を株式会社ディー・エヌ・エーへ売却。 ",
         "2015年にスポーツテック事業を手掛けるSkyBall株式会社を創業し、",
@@ -101,8 +101,8 @@ const func: () => Role[] = () => {
       avatar: Shuiye,
       coLink: "https://minto-inc.jp/",
       twitterLink: "https://twitter.com/mizunoq",
-      name: "水野 和寛",
-      roleTitles: ["株式会社Minto CEO"],
+      name: t("roles_4_name"),
+      roleTitles: [t("roles_4_co")],
       intro: [
         "日本1位のデコメ(絵文字)サイトや世界的にヒットしたスマホアプリ「Touch the Numbers」などをプロデュース。その後、株式会社クオンを設立。SNS発のキャラクター創出にフォーカスし、FacebookやWeChatなど全世界のチャットアプリと提携。スタンプのDL数は50億超で世界一位。日本以外に中国・タイ・ベトナムに支社。",
         "2021年にSNS×漫画領域の国内No.1ベンチャーwwwaap社と経営統合し",
@@ -113,8 +113,8 @@ const func: () => Role[] = () => {
       avatar: Anzhai,
       coLink: "https://corporate.otakumode.com/",
       twitterLink: "https://twitter.com/paji_a",
-      name: "安宅 基",
-      roleTitles: ["株式会社Tokyo Otaku Mode", "創業者兼COO"],
+      name: t("roles_5_name"),
+      roleTitles: [t("roles_5_co"), t("roles_5_co_1")],
       intro: [
         "2009年11月にリアルタイムQ&Aサービスを開発。2011年11月に同サービスを法人化、2011年12月に事業売却の形でバイアウトした。その後、Tokyo Otaku Mode創業に参画。Tokyo Otaku Mode Co-founderとして米国シードアクセレーター （http://500.co）のプログラム参加。EC事業など新規事業開発及び事業全般の統括を行う。",
       ],
@@ -123,8 +123,8 @@ const func: () => Role[] = () => {
       avatar: Sato,
       coLink: "firebug.jp",
       twitterLink: "https://twitter.com/sato_shogo1",
-      name: "佐藤 詳悟",
-      roleTitles: ["株式会社FIREBUG ", "代表取締役CPO"],
+      name: t("roles_6_name"),
+      roleTitles: [t("roles_6_co"), t("roles_6_co1")],
       intro: [
         "1983年生まれ、東京都出身。大学卒業後の2005年、吉本興業に入社。ナインティナインやロンドンブーツ1号2号、COWCOW、ロバートなどのマネージャーを歴任。ロバート秋山の『クリエーターズ・ファイル』、COWCOWの『あたりまえ体操』などのコンテンツ開発にも携わる。15年に独立。経営者や文化人など多様な背景を持つ人材のエージェント会社「QREATOR AGENT」を立ち上げ、落合陽一や前田裕二などのメディア露出支援を行う。16年にはお笑い芸人や俳優、モデル、アーティストなど著名人のDXパートナーとして、 デジタルを起点としたIP開発・ビジネスモデル構築を包括的に手掛ける“エンタメビジネススタジオ”FIREBUGを立ち上げ。メルカリやBASEなどのスタートアップ企業のビジネス支援の他、よゐこや北斗晶、菊地亜美をはじめとするタレントのYouTubeチャンネルの開発・運用、いきものがかりなどのアーティストの360°プロデュース事業を展開している",
       ],
@@ -133,8 +133,8 @@ const func: () => Role[] = () => {
       avatar: Yellow,
       coLink: "https://komugi.jp/",
       twitterLink: "https://twitter.com/ro_mi",
-      name: "コムギ",
-      roleTitles: ["Web3特化のベンチャーキャピタル ", "/Web3リサーチャー"],
+      name: t("roles_7_name"),
+      roleTitles: [t("roles_7_co"), t("roles_7_co1")],
       intro: [
         "Web3に特化したベンチャーキャピタル（VC）でリサーチャーを務める。大学卒業後、ＮＨＫ出版に入社。編集担当作に『教養としてのテクノロジー』『ITビジネスの原理』『VRビジネスの衝撃』など多数。2019年に暗号資産ニュースメディア「CoinDesk Japan」創刊編集長、ブロックチェーンカンファレンス「btokyo」プロデューサーを経て、2021年6月より現職。",
       ],
@@ -153,8 +153,8 @@ const func: () => Role[] = () => {
       avatar: Pingshou,
       coLink: "https://linktr.ee/joyfa",
       twitterLink: "https://twitter.com/kojirohirate",
-      name: "平手 宏志朗",
-      roleTitles: ["株式会社ジョイファ"],
+      name: t("roles_8_name"),
+      roleTitles: [t("roles_8_co")],
       intro: [
         "2017年よりブロックチェーン事業に携わり、日本およびシンガポールの企業において、データ管理・証券取引・エネルギー取引といった分野における、ブロックチェーンプロジェクトをリード。",
         "2020年4月に NFT x エンターテイメントのエコシステムを開発しているEnjinにジョインし、同社が発行する仮想通貨の上場や、国内外の企業との事業提携を推進。",
@@ -165,7 +165,7 @@ const func: () => Role[] = () => {
       avatar: Longjing,
       coLink: "https://fracton.ventures/",
       twitterLink: "https://twitter.com/tolehico",
-      name: "亀井 聡彦",
+      name: t("roles_9_name"),
       roleTitles: ["Co-Founder of Fracton Ventures"],
       intro: [
         "早稲田大学CS学科卒。卒業後2011年のサンフランシスコへの移住をきっかけにスタートアップと出会う。帰国後、2013年から、シードアクセラレーターやコレクティブ・インパクト・コミュニティのMistoletoe(ミスルトウ)、IoT特化ファンドABBALab(アバラボ)等にてスタートアップの投資、育成、支援を行う。 Web3.0のスタートアップエコシステムに貢献するべく2021年に、Fracton Venturesを共同創業。",
@@ -175,7 +175,7 @@ const func: () => Role[] = () => {
       avatar: Jueci,
       coLink: "https://kyber.network/",
       twitterLink: "https://twitter.com/taisuke_hory",
-      name: "堀次 泰介",
+      name: t("roles_10_name"),
       roleTitles: ["Kyber Network Japan Manager"],
       intro: [
         "2018年より、シンガポールのDeFiプロトコル開発チームであるKyber NetworkのJapan Managerとして活動。日本DeFi協会アドバイザーも務めつつ、日本のDeFiユーザーの理解促進と普及を促進するため、DeFiを学んでゆくオンライン・コミュニティ活動『やさしいDeFi』を2年以上主催。",
@@ -185,8 +185,8 @@ const func: () => Role[] = () => {
       avatar: Youjie,
       coLink: "https://www.neweconomy.jp/",
       twitterLink: "https://twitter.com/ysksdr",
-      name: "設楽 悠介",
-      roleTitles: ["幻冬舎「あたらしい経済」編集長"],
+      name: t("roles_11_name"),
+      roleTitles: [t("roles_11_co")],
       intro: [
         "幻冬舎でブロックチェーン/暗号資産専門メディア「あたらしい経済」を創刊。同社コンテンツビジネス局で新規事業やコンテンツマーケティング事業を担当。幻冬舎コミックスの取締役を兼務、ライツや電子書籍事業担当。個人活動で「みんなのメンタールーム（Amazon audible）」や「風呂敷畳み人ラジオ（Voicy）」、「欲望のSNS（podcast）」等のコンテンツ配信。Forbes Japanで「ポストDXの世界」連載。著書『畳み人という選択』（プレジデント社）。ツイッター：@ysksdr",
       ],
@@ -195,8 +195,8 @@ const func: () => Role[] = () => {
       avatar: XingShu,
       coLink: "https://www.hottolink.co.jp",
       twitterLink: "https://twitter.com/ucchy/",
-      name: "内山 幸樹",
-      roleTitles: ["（株)ホットリンク", "代表取締役＆グループCEO"],
+      name: t("roles_12_name"),
+      roleTitles: [t("roles_12_co"), t("roles_12_co1")],
       intro: [
         "1995年、東京大学大学院博士課程在学中に日本最初期の検索エンジンの開発＆検索エンジンベンチャーの創業に携わる。 ",
         "2000年に株式会社ホットリンクを創業、2013年東証マザーズ上場。 ",
@@ -215,8 +215,8 @@ const func: () => Role[] = () => {
       avatar: YongPing,
       coLink: "https://metabaworld.com",
       twitterLink: "https://twitter.com/sadycork",
-      name: "佐渡島 庸平",
-      roleTitles: ["株式会社コルク"],
+      name: t("roles_13_name"),
+      roleTitles: [t("roles_13_co")],
       intro: [
         `1979年生まれ。東京大学文学部卒。講談社を経て、2012年クリエイターのエージェント会社、株式会社コルクを創業。三田紀房、安野モヨコ、小山宙哉ら著名作家陣とエージェント契約を結び、作品編集、著作権管理、ファンコミュニティ形成・運営などを行う。従来の出版流通の形の先にあるインターネット時代のエンターテインメントのモデル構築を目指している。
         Twitter： @sadycork　YouTube【編集者 佐渡島チャンネル】：https://bit.ly/3fopD9P
@@ -237,8 +237,8 @@ const func: () => Role[] = () => {
       avatar: XizhuangGe,
       coLink: "www.unicask.jp",
       twitterLink: "https://twitter.com/chrisdai_tokyo",
-      name: "クリス　ダイ",
-      roleTitles: ["株式会社 UniCask"],
+      name: t("roles_14_name"),
+      roleTitles: [t("roles_14_co")],
       intro: [
         `株式会社UniCask共同創業者及びCEO。株式会社レシカ創業者及びCEO。ブロックチェーンのエバンジェリストであり、ブロックチェーン技術を活用した非金融分野でのWeb3.0分散型ビジネスの考案に注力。Web3.0モデルとそのビジネス、社会学、哲学的側面に深く惹かれる。ブロックチェーンの技術・ビジネス動向の研究や、社内外への情報発信などに取り組んでいる。
         ２０１９年に "『ネクスト・ブロックチェーン次世代産業創生のエコシステム』日本経済新聞出版社"を共著。２０２０年に"『Blockchain and Crypto Currency』Springer"を共著
@@ -260,8 +260,8 @@ const func: () => Role[] = () => {
       avatar: ShigoAri,
       coLink: "https://crypto-times.jp",
       twitterLink: "https://twitter.com/cry_curr_ar",
-      name: "Shingo Arai | 新井 進悟",
-      roleTitles: ["Rokubunnoni Inc. CEO ", "CRYPTO TIMES 編集長"],
+      name: t("roles_15_name"),
+      roleTitles: [t("roles_15_co"), t("roles_15_co1")],
       intro: [
         `〇経歴/自己紹介
       2013年に東京理科大学大学院を卒業後、Web系やスマホアプリ系、大手広告代理店などの企業複数社にてデータ分析やデータサイエンスの業務に従事。AIのR＆D事業などにも携わる。
@@ -282,11 +282,8 @@ const func: () => Role[] = () => {
       avatar: Fujian,
       coLink: "https://www.mercoin.jp/",
       twitterLink: "https://twitter.com/smcpglf",
-      name: "伏見 慎剛",
-      roleTitles: [
-        "株式会社メルカリ 執行役員NFT担当",
-        "株式会社メルコイン 取締役",
-      ],
+      name: t("roles_16_name"),
+      roleTitles: [t("roles_16_co"), t("roles_16_co1")],
       intro: [
         "早稲田大学を卒業後、株式会社リクルート（現株式会社リクルートホールディングス）に入社。人材領域や販促領域での営業やマネジメントを経験した後、新規事業開発に従事。主にO2O決済分野のサービス立ち上げや事業運営に携わる。2012年より、創業期の株式会社Origamiに参画し、事業拡大のためのビジネス全般を担当し、戦略的提携や資金調達等にも従事。2020年3月、同社のメルカリグループ参画により、メルカリグループに参画。メルペイ執行役員 VP of Growthを経て、2021年4月より現職。",
       ],
@@ -295,8 +292,8 @@ const func: () => Role[] = () => {
       avatar: Jingyuan,
       coLink: "https://company.warashibe.market/",
       twitterLink: "https://twitter.com/0xhideaki_sushi",
-      name: "井元秀彰",
-      roleTitles: ["株式会社和らしべ・CEO"],
+      name: t("roles_17_name"),
+      roleTitles: [t("roles_17_co")],
       intro: [
         "複数ブロックチェーン企業のアンバサダーを経て、脱サラして株式会社和らしべを共同創業。「法定通貨に依存しない分散型経済圏を創る」をビジョンにweb2とweb3の掛橋となるDapps開発や手数料の民主化を可能にするprotocolを提供しています。",
       ],
@@ -305,7 +302,7 @@ const func: () => Role[] = () => {
       avatar: XuDou,
       coLink: "https://www.blockchainproseed.com/",
       twitterLink: "https://twitter.com/Yu_Ayato",
-      name: "絢斗 優",
+      name: t("roles_18_name"),
       roleTitles: ["BlockchainPROseed"],
       intro: [
         "メディアアーティストとしてのバックグラウンドと、ブロックチェーン業界の知見を生かし、業界間の橋渡しとして活動。ブロックチェーンを活用したチャリティープロジェクトKIZUNAでは、Binance charityやKevin Abosch等とチャリティーキャンペーンを推進。BlockchainPROseedではブロックチェーンに特化したコミュニティ支援を専門とし、COSMOS、Propy、SKALE、Flow, Avalancheなどの海外プロジェクトとのmeetupやイベント運営、AMM、youtubeコンテンツ制作などに協力。世界最大規模のNFTカンファレンスNon-fungible Tokyoの運営に2019年より参加。",
@@ -317,8 +314,8 @@ const func: () => Role[] = () => {
       avatar: Shunmi,
       coLink: "https://www.token-economist.com/",
       twitterLink: "https://twitter.com/TokenEconomist",
-      name: "加藤 順弥",
-      roleTitles: ["TOKEN ECONOMIST", "代表"],
+      name: t("roles_19_name"),
+      roleTitles: [t("roles_19_co"), t("roles_19_co1")],
       intro: [
         "中上級者向けのブロックチェーンメディア「TOKEN ECONOMIST」の代表。プロジェクトをの深堀りを中心にし、日々良質なプロジェクトのリサーチを行う。その他、Telegram発祥のブロックチェーン「Everscale」の日本DAOや、興味ドリブンでユーザー同士の交流ができるSaaS「Ecomedia」の開発を行うScalably株式会社のBDも務めている。",
       ],
