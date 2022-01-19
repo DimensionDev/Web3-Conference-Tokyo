@@ -16,8 +16,12 @@ const Banner: NextPage = () => {
         <div className={style.LaserContentBox}>
           <Image src={LaserIcon} />
           <div className={style.laserContent}>
-            <div className={style.LaserContentTitle}>{t("banner_1")}</div>
-            <div className={style.LaserContentText}>{t("banner_2")}</div>
+            <div className={style.LaserContentTitle}>
+              Web3 Conference Tokyoについて
+            </div>
+            <div className={style.LaserContentText}>
+              2022年は今年のブームを踏まえより一層業界の枠を超えて交わりを深める必要があり、ブロックチェーン業界内だけで盛り上がるイベントではなく業界内外のハブを目指します
+            </div>
           </div>
         </div>
       )) || <Image src={MobileHeroSub} />

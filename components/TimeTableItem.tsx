@@ -24,12 +24,12 @@ const TimeTableItem: NextPage<Props> = ({ info }) => {
           <div className={style.inner}>
             <div className={style.previewBox}>
               <Image src={preview} className={style.previewImg} />
-              {info.difficuty && (
+              {/* {info.difficuty && (
                 <div className={style.diffBox}>
                   <div>難易度</div>
                   <div className={style.whiteBtn}>{info.difficuty}</div>
                 </div>
-              )}
+              )} */}
               {info.isLive && (
                 <div className={style.previewTip}>
                   <Image src={LiveImgJa} />
@@ -47,9 +47,8 @@ const TimeTableItem: NextPage<Props> = ({ info }) => {
               <div className={style.subTitle}>
                 {sub.map((item, index) => {
                   return (
-                    <div key={index}>
+                    <div style={{ marginBottom: "4px" }} key={index}>
                       {item} <br />
-                      <br />
                     </div>
                   );
                 })}
@@ -105,7 +104,7 @@ const TimeTableItem: NextPage<Props> = ({ info }) => {
                     <div key={index} className={mStyle.subBoxItem}>
                       <div className={mStyle.subBoxType}>
                         {subBoxItem.type || (
-                          <div className={mStyle.hidden}>{'cant see'}</div>
+                          <div className={mStyle.hidden}>{"cant see"}</div>
                         )}
                       </div>
                       <div className={mStyle.subBoxName}>{subBoxItem.name}</div>
