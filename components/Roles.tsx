@@ -12,20 +12,20 @@ import TwitterImg from "../assets/roles/twitter.svg";
 import ETHImg from "../assets/roles/eth.svg";
 import FacebookImg from "../assets/roles/fb.svg";
 import i18next from "i18next";
-
+const rolesMap = rolesInfoMap()
 const Roles: NextPage = () => {
   const {t} = i18next
   const ctx = useRef() as any;
   const [isShowMask, setIsShowMask] = useState(false);
   const [curIndex, setCurIndex] = useState(0);
-  const [curPerson, setCurPerson] = useState<Role>(rolesInfoMap()[curIndex]);
+  const [curPerson, setCurPerson] = useState<Role>(rolesMap[curIndex]);
   const toggle = (num: number) => {
-    if (curIndex + num < 0 || curIndex + num > rolesInfoMap.length - 1) {
+    if (curIndex + num < 0 || curIndex + num > rolesMap.length - 1) {
       return;
     }
     const newV = curIndex + num;
     setCurIndex(newV);
-    setCurPerson(rolesInfoMap()[newV]);
+    setCurPerson(rolesMap[newV]);
   };
   const handleScroll = () => {};
   useEffect(() => {
