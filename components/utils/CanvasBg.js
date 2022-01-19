@@ -1,8 +1,8 @@
 const script = (window) => {
   // 可调参数
-  var POINT_NUM = window.innerWidth > 1024 ? 30 : 15; // 星星数目
+  var POINT_NUM = window.innerWidth > 1024 ? 30 : 5; // 星星数目
   var POINT_COLOR = "rgba(255,255,255,0.7)"; // 点的颜色
-  var LINE_LENGTH = 10000; // 点之间连线长度(的平方)
+  var LINE_LENGTH = window.innerWidth > 1024 ? 10000 : 1000; // 点之间连线长度(的平方)
 
   // 创建背景画布
   var cvs = document.createElement("canvas");
@@ -19,11 +19,6 @@ const script = (window) => {
   document.body.appendChild(cvs);
 
   var ctx = cvs.getContext("2d");
-
-  //随机数函数
-  function randomInt(min, max) {
-    return Math.floor((max - min + 1) * Math.random() + min);
-  }
 
   function randomFloat(min, max) {
     return (max - min) * Math.random() + min;
@@ -82,25 +77,7 @@ const script = (window) => {
 
   var p0 = new Point(); //鼠标
   p0.dx = p0.dy = 0;
-  var degree = 2.5;
-  document.onmousemove = function (ev) {
-    p0.x = ev.clientX;
-    p0.y = ev.clientY;
-  };
-  document.onmousedown = function (ev) {
-    degree = 5.0;
-    p0.x = ev.clientX;
-    p0.y = ev.clientY;
-  };
-  document.onmouseup = function (ev) {
-    degree = 2.5;
-    p0.x = ev.clientX;
-    p0.y = ev.clientY;
-  };
-  window.onmouseout = function () {
-    p0.x = null;
-    p0.y = null;
-  };
+  
 
   function drawLine(p1, p2, deg) {
     var dx = p1.x - p2.x;
