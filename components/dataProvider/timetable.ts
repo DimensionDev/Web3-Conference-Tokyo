@@ -111,8 +111,8 @@ const func: () => TimeTableProp[] = () => {
         { type: "", name: t('roles_16_name'), sub: "Mercari CEO" },
       ],
       isLive: true,
-      switchTime: t('switch'),
-      isBig: true,
+      // switchTime: t('switch'),
+      // isBig: true,
     },
     {
       preview: img7,
