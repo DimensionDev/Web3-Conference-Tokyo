@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  animation: fadeIn 1.5s linear;
 }
 .contentBox {
   max-width: 1180px;
@@ -45,7 +46,7 @@
   display: flex;
   width: 1180px;
   height: 240px;
-  background: url('../assets/laser.png') no-repeat;
+  background: url("../assets/laser.png") no-repeat;
   background-size: 100% 100%;
   align-items: center;
   justify-content: center;
@@ -136,5 +137,17 @@
   }
   .divider {
     margin: 0 12px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
   }
 }

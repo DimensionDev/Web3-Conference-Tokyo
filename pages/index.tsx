@@ -2,8 +2,13 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Layout from "../components/Layout";
+import { useEffect } from "react";
+import CanvasBg from "../components/utils/canvas";
 
 const Home: NextPage = () => {
+  useEffect(() => {
+    CanvasBg();
+  }, []);
   return (
     <div className={styles.container}>
       <Head>
@@ -13,6 +18,7 @@ const Home: NextPage = () => {
       </Head>
 
       <Layout />
+      <canvas id="canvas"></canvas>
     </div>
   );
 };
