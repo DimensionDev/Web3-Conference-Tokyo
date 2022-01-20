@@ -126,7 +126,7 @@ const Roles: NextPage = () => {
             <Image
               src={ArrowRightImg}
               className={
-                curIndex === rolesInfoMap.length - 1
+                curIndex === rolesMap.length - 1
                   ? style.iconDisable
                   : style.iconActive
               }
@@ -148,7 +148,7 @@ const Roles: NextPage = () => {
                 <Image
                   src={ArrowRightImg}
                   className={
-                    curIndex === rolesInfoMap.length - 1
+                    curIndex === rolesMap.length - 1
                       ? style.iconDisable
                       : style.iconActive
                   }
