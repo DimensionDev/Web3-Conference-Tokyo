@@ -1,11 +1,11 @@
 import type { NextPage } from "next";
-import TitleImg from "../assets/title.svg";
+import TitleImg from "../assets/title.png";
 import LaserIcon from "../assets/laser_icon.svg";
 import style from "../styles/Banner.module.css";
 import MobileHeroSubJa from "../assets/mobileHeroSubJa.png";
 import MobileHeroSubEn from "../assets/mobileHeroSubEn.png";
 import Image from "next/image";
-import AstImg from "../assets/hero/ast.svg";
+import AstImg from "../assets/hero/ast.png";
 import i18next from "i18next";
 import { useEffect, useState } from "react";
 
@@ -37,7 +37,12 @@ const Banner: NextPage = () => {
             <div className={style.LaserContentText}>{t("banner_2")}</div>
           </div>
         </div>
-      )) || <Image src={curLang === "ja" ? MobileHeroSubJa : MobileHeroSubEn} />
+      )) || (
+        <Image
+          className={style.mobileLaser}
+          src={curLang === "ja" ? MobileHeroSubJa : MobileHeroSubEn}
+        />
+      )
     );
   };
   return (
@@ -47,7 +52,7 @@ const Banner: NextPage = () => {
           <Image src={AstImg} />
         </div>
         <div className={style.title}>
-          <Image src={TitleImg} alt="" />
+          <Image src={TitleImg} />
         </div>
         <div className={style.titleSub}>
           <div className={style.titleSubContent}>

@@ -13,11 +13,11 @@ const TimeTable: NextPage = () => {
       <div className={style.cardBox}>
         {timeTablesMap().map((item, index) => {
           return (
-            <div className={style.cardBox} key={`outer_${index}`}>
+            <div className={style.cardBox } key={`outer_${index}`}>
               <TimeTableItem key={`${index}_timetable`} info={item} />
-              {item.switchTime && (
+              {/* {item.switchTime && (
                 <PreTimeInfo text={item.switchTime} isBig={item.isBig} />
-              )}
+              )} */}
             </div>
           );
         })}

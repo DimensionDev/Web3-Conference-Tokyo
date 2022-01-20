@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  height: calc(100vh - 80px);
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,7 +15,9 @@
   flex-direction: column;
   align-items: flex-start;
 }
-
+.title{
+  max-width: 70%;
+}
 .titleSub {
   display: flex;
   align-items: center;
@@ -70,9 +72,13 @@
 }
 
 .ast {
+  max-width: 30%;
   position: absolute;
   left: 60%;
   animation: float 8s ease-in-out infinite alternate;
+}
+.mobileLaser{
+  max-width: 95%;
 }
 @keyframes float {
   0% {
@@ -98,19 +104,25 @@
     width: 100%;
     height: auto;
   }
-
   .divider {
     margin: 0 80px;
+  }
+  .ast{
+    max-width: 70%;
+  }
+  .title{
+    max-width: 90%;
   }
 }
 @media screen and (max-width: 768px) {
   .title {
-    max-width: 90%;
+    max-width: 80%;
   }
 }
 @media screen and (max-width: 540px) {
   .container {
     height: unset;
+    min-height: 60vh;
     padding: 16px;
   }
   .titleSub {
