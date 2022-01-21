@@ -258,7 +258,7 @@ const func: () => Role[] = () => {
       coLink: "https://www.hikky.life/",
       twitterLink: "https://twitter.com/SawaeMika",
       name: "さわえ みか",
-      roleTitles: ["株式会社HIKKY COO兼CQO"],
+      roleTitles: ["株式会社HIKKY COO/CQO"],
       intro: [t("role_22_intro")],
     },
     {
