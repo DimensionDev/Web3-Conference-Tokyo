@@ -27,23 +27,21 @@ const Banner: NextPage = () => {
   });
 
   const renderLaser = () => {
-    return (
-      (screenWidth > 1024 && (
+    if (screenWidth && screenWidth > 1024) {
+      return (
         <div className={style.LaserContentBox}>
           <Image src={LaserIcon} />
-
           <div className={style.laserContent}>
             <div className={style.LaserContentTitle}>{t("banner_1")}</div>
             <div className={style.LaserContentText}>{t("banner_2")}</div>
           </div>
         </div>
-      )) || (
-        <Image
-          className={style.mobileLaser}
-          src={curLang === "ja" ? MobileHeroSubJa : MobileHeroSubEn}
-        />
-      )
-    );
+      );
+    } else {
+      return (
+        <Image src={curLang === "ja" ? MobileHeroSubJa : MobileHeroSubEn} />
+      );
+    }
   };
   return (
     <div className={style.container}>
@@ -60,6 +58,12 @@ const Banner: NextPage = () => {
             <span className={style.divider}>|</span>
             {t("banner_4")}
           </div>
+          <a
+            href="https://web3-conference-tokyo.peatix.com/view"
+            className={style.titleSubBtn}
+          >
+            {t("banner_apply")}
+          </a>
         </div>
         {renderLaser()}
       </div>
