@@ -11,7 +11,7 @@ import img10 from "../../assets/schedule/10.png";
 import img11 from "../../assets/schedule/11.png";
 import img12 from "../../assets/schedule/12.png";
 import img13 from "../../assets/schedule/13.png";
-
+import i18next from "i18next";
 export interface TimeTableProp {
   preview: any;
   time: string;
@@ -28,189 +28,192 @@ export interface TimeTableProp {
   switchTime?: string;
   isBig?: boolean;
 }
+const func: () => TimeTableProp[] = () => {
+  const { t } = i18next;
+  const timeTablesMap: TimeTableProp[] = [
+    {
+      preview: img1,
+      time: "11:00-11:10",
+      title: t("timeTable_1_t"),
+      sub: [],
+      extra: [{ type: t("speaker"), name: "Nachan", sub: "MaskNetwork" }],
+      isLive: true,
+      // switchTime: "5分で転換",
+    },
+    {
+      preview: img2,
+      time: "11:15-11:30",
+      title: t("timeTable_2_t"),
+      sub: [t("timeTable_2_s"), t("timeTable_2_s1")],
+      extra: [{ type: t("speaker"), name: "SujiYan", sub: "MaskNetwork CEO" }],
+      isRecord: true,
+      // switchTime: "11:30-11:35転換",
+    },
+    {
+      preview: img3,
+      time: "11:35-12:05",
+      title: t("timeTable_3_t"),
+      sub: [t("timeTable_3_s"), t("timeTable_3_s1")],
+      extra: [
+        { type: t("speaker"), name: t("timeTable_3_r"), sub: "DeFiGeek" },
+      ],
+      isLive: true,
+    },
+    {
+      preview: img4,
+      time: "12:05-12:35",
+      title: t("timeTable_4_t"),
+      sub: [t("timeTable_4_s"), t("timeTable_4_s1")],
+      extra: [
+        { type: "Mod", name: "Mai Fujimoto", sub: "Gracone CEO " },
+        {
+          type: "Speaker",
+          name: t('roles_10_name'),
+          sub: "Kyber Network Japan Manager",
+        },
+        { type: "", name: t('roles_18_name'), sub: "BlockchainPROseed" },
+      ],
+      // switchTime: "12:35-12:40 転換",
+    },
+    {
+      preview: img5,
+      time: "12:40-13:20",
+      title: t("timeTable_5_t"),
+      sub: [t("timeTable_5_s"), t("timeTable_5_s1"), t("timeTable_5_s2")],
+      extra: [
+        { type: "Mod", name: t('roles_20_name'), sub: "PwC" },
+        { type: "Speaker", name: t('roles_5_name'), sub: "Tokyo Otaku Mode COO" },
+        { type: "", name: t('roles_21_name'), sub: "CampFire CEO" },
+        { type: "", name: t('roles_12_name'), sub: "Hottolink CEO" },
+      ],
+      isLive: true,
+      // switchTime: "13:20-13:25 転換",
+    },
+    {
+      preview: img6,
+      time: "13:25-13:55",
+      title: t("timeTable_6_t"),
+      sub: [
+        t("timeTable_6_s"),
+        t("timeTable_6_s1"),
+        t("timeTable_6_s2"),
+        t("timeTable_6_s3"),
+      ],
+      extra: [
+        {
+          type: "Mod",
+          name: t('roles_22_name'),
+          sub: t('roles_22_co'),
+        },
+        { type: "Speaker", name: t('roles_4_name'), sub: "Minto CEO" },
+        { type: "", name: t('roles_6_name'), sub: "FIREBUG CPO" },
+        { type: "", name: t('roles_3_name'), sub: "Akatsuki Director" },
+        { type: "", name: t('roles_16_name'), sub: "Mercari CEO" },
+      ],
+      isLive: true,
+      // switchTime: t('switch'),
+      // isBig: true,
+    },
+    {
+      preview: img7,
+      time: "14:30-15:00",
+      title: t("timeTable_7_t"),
+      sub: [t("timeTable_7_s"), t("timeTable_7_s1"), t("timeTable_7_s2")],
+      extra: [
+        { type: "Mod", name: t('roles_19_name'), sub: "TOKEN ECONOMIST Rep." },
+        { type: "Speaker", name: t('roles_23_name'), sub: "gumi Founder" },
+        { type: "", name: t('roles_24_name'), sub: "Hokusai CEO" },
+        { type: "", name: t('roles_25_name'), sub: "JPYC Inc. CEO" },
+        { type: "", name: t('roles_17_name'), sub: "warashibe CEO " },
+      ],
+      isLive: true,
+      // switchTime: "15:00-15:05 転換",
+    },
+    {
+      preview: img8,
+      time: "15:05-15:35",
+      title: t("timeTable_8_t"),
+      sub: [
+        t("timeTable_8_s"),
+        t("timeTable_8_s1"),
+        t("timeTable_8_s2"),
+        t("timeTable_8_s3"),
+      ],
+      extra: [
+        {
+          type: "Mod",
+          name: t('roles_11_name'),
+          sub: t('roles_11_co'),
+        },
+        { type: "Speaker", name: t('roles_13_name'), sub: t('roles_13_co') },
+        { type: "", name: t('roles_26_name'), sub: "ARIGATOBANK CEO" },
+        { type: "", name: t('roles_7_name'), sub: "Web3 VC/Web3 Researcher" },
+        { type: "", name: t('roles_27_name'), sub: "HIKKY COO/CQO" },
+      ],
+      isLive: true,
+      // switchTime: "15:35-16:05   転換",
+    },
+    {
+      preview: img9,
+      time: "16:05-16:15",
+      title: t("timeTable_9_t"),
+      sub: [],
+      extra: [{ type: "Mod", name: "Chris Dai", sub: "Unicask" }],
+      isLive: true,
+      // switchTime: "16:15-16:20  転換",
+    },
+    {
+      preview: img10,
+      time: "16:20-16:50",
+      title: t("timeTable_10_t"),
+      sub: [],
+      extra: [{ type: t("speaker"), name: "Numbers protocol", sub: "" }],
+      isRecord: true,
+      // switchTime: "16:50-16:55  転換",
+    },
+    {
+      preview: img11,
+      time: "16:55-17:55",
+      title: t("timeTable_11_t"),
+      sub: [t("timeTable_11_s")],
+      extra: [
+        { type: "Mod", name:t('roles_9_name'), sub: "Fracton Ventures Co-Founder" },
+      ],
+      isLive: true,
+      // switchTime: "17:55-18:00 転換",
+    },
+    {
+      preview: img12,
+      time: "16:55-17:55",
+      title: t("timeTable_12_t"),
+      sub: [t("timeTable_12_s"), t("timeTable_12_s1"), t("timeTable_12_s2")],
+      extra: [
+        { type: "Mod", name: t('roles_15_name'), sub: t('roles_15_co') },
+        { type: "Speaker", name: "Makoto Inoue", sub: "ENS Developer" },
+        {
+          type: "",
+          name: "Kathleen Chu",
+          sub: "Polygon Head of Communications",
+        },
+      ],
+      isRecord: true,
+      // switchTime: "18:30-18:35 転換",
+    },
+    {
+      preview: img13,
+      time: "18:35-18:45",
+      title: t("timeTable_13_t"),
+      sub: [],
+      extra: [
+        { type: "Organizer", name: "Nachan", sub: "" },
+        { type: "", name: "Nefer", sub: "" },
+        { type: "", name: "Vivian", sub: "" },
+        { type: "", name: "MissBitcoin  Mai", sub: "" },
+      ],
+      isLive: true,
+    },
+  ];
+  return timeTablesMap;
+};
 
-const timeTablesMap: TimeTableProp[] = [
-  {
-    preview: img1,
-    time: "11:00-11:10",
-    title: "オープニング ",
-    sub: ["・  辻さんからイベント開催の想いなどを話してもらいます"],
-    extra: [{ type: "登壇者", name: "Tsuji Kanakoちゃん", sub: "maskNetwork" }],
-    isLive: true,
-    switchTime: "5分で転換",
-  },
-  {
-    preview: img2,
-    time: "11:15-11:30",
-    title: "インターネットの歴史とMaskNetworkの紹介",
-    sub: [
-      "・  Web1-Web2-Web3 の歴史を振り返りながらMaskの紹介",
-      "・  未来のWebの予想",
-    ],
-    extra: [{ type: "登壇者", name: "SujiYan", sub: "MaskNetwork CEO" }],
-    isRecord: true,
-    switchTime: "11:30-11:35転換",
-  },
-  {
-    preview: img3,
-    time: "11:35-12:05",
-    title: "OSS（オープンソースソフトウェア）",
-    sub: ["  ・ の歴史からみるWeb3について"],
-    extra: [{ type: "登壇者", name: "猫井夕菜", sub: "@nekomatu @nekoi7yu" }],
-    isLive: true,
-  },
-  {
-    preview: img4,
-    time: "12:05-12:35",
-    title: "Web3を語るなら、まずDeFiを学ぼう",
-    sub: [
-      "  ・ Yuさんからはweb3の定義を",
-      "  ・ DeFi領域の第一人者であるホリーさんに来てもらいお話いただく",
-      "  ・ そしてなぜDeFiが大事なのかをYuさんんに誘導してもらう",
-    ],
-    extra: [
-      { type: "Mod", name: "なし / Mai Fujimoto", sub: "" },
-      { type: "Speaker", name: "ホリーさん", sub: "やさしいDeFi" },
-      { type: "", name: "Yuさん", sub: "" },
-    ],
-    difficuty: "上級編",
-    switchTime: "12:35-12:40 転換",
-  },
-  {
-    preview: img5,
-    time: "12:40-13:20",
-    title: "セッション１:Web3.0が、Web1.0の理念を復活できるのか？",
-    sub: [
-      "  ・ Web1.0の頃は自由で検閲されない文化のはずだった。しかし、だんだん企業画集権的なってきて、今のWeb2.0になった。Web3.0はWeb1.0の理念を復帰できるのか？",
-      "  ・ Web2.0は、インターネットの最終形ではないと思う",
-    ],
-    extra: [
-      { type: "Mod", name: "馬渕さん", sub: "PwC" },
-      { type: "Speaker", name: "安宅さん", sub: "Tokyo Otaku Mode" },
-      { type: "", name: "家入一真", sub: "CampFire" },
-      { type: "", name: "内山さん", sub: "Hottolink" },
-    ],
-    difficuty: "初心者編",
-    isLive: true,
-    switchTime: "13:20-13:25 転換",
-  },
-  {
-    preview: img6,
-    time: "13:25-13:55",
-    title: "セッション２:既存IPの効果的なweb3.0へのアプローチ方法",
-    sub: [
-      " ・既にweb2.0企業が、web3.0業界とのコラボで大成功を収めている事例ができていている。",
-      " ・できない理由を探すよりできる理由から学ぼう！",
-    ],
-    extra: [
-      { type: "Mod", name: "新子さん", sub: "渋谷デザイン" },
-      { type: "Speaker", name: "Mizonoさん", sub: "Quon" },
-      { type: "", name: "佐藤詳悟", sub: "Firebug" },
-      { type: "", name: "熊谷さん", sub: "Akatsuki" },
-      { type: "", name: "伏見さん", sub: "メルカリ" },
-    ],
-    isLive: true,
-    switchTime: "13:55-14:30 大きな休憩",
-    isBig: true,
-  },
-  {
-    preview: img7,
-    time: "14:30-15:00",
-    title: "セッション３:Web3.0事業例①インフラ",
-    sub: [
-      " ・ それぞれの事業内容と、なぜWeb3で企業しようとおもったのか",
-      " ・ 今後どのような企業とコラボレーションを希望しているのか",
-    ],
-    extra: [
-      { type: "Mod", name: "加藤さん", sub: "TOKEN economist" },
-      { type: "Speaker", name: "國光さん", sub: "gumi Cryptos" },
-      { type: "", name: "陽水さん", sub: "Hokusai" },
-      { type: "", name: "岡部さん", sub: "JPYC" },
-      { type: "", name: "Sushiさん", sub: "HiDE" },
-    ],
-    isLive: true,
-    switchTime: "15:00-15:05 転換",
-  },
-  {
-    preview: img8,
-    time: "15:05-15:35",
-    title: "セッション４:Web3.0事業例②メタバース/NFT関連",
-    sub: [
-      " ・ 分散型のメタバースと既存のVRコミュニティがどのように交わっていきたいか",
-      " ・ メタバース/XR領域でのNFTの活用の仕方",
-    ],
-    extra: [
-      { type: "Mod", name: "設楽さん", sub: "幻冬舎" },
-      { type: "Speaker", name: "佐渡島さん", sub: "コルク" },
-      { type: "", name: "白石さん", sub: "Arigato Bank" },
-      { type: "", name: "久保田さん", sub: "元CoinDesk Japan" },
-      { type: "", name: "平手さん", sub: "Joyfa" },
-    ],
-    isLive: true,
-    switchTime: "15:35-16:05   転換",
-  },
-  {
-    preview: img9,
-    time: "16:05-16:15",
-    title: "社会実装に使えるブロックチェーン技術(国内)",
-    sub: [
-      " ・ 分散型のメタバースと既存のVRコミュニティがどのように交わっていきたいか",
-      " ・ メタバース/XR領域でのNFTの活用の仕方",
-    ],
-    extra: [{ type: "Mod", name: "クリスさ", sub: "Unicask" }],
-    isLive: true,
-    switchTime: "16:15-16:20  転換",
-  },
-  {
-    preview: img10,
-    time: "16:20-16:50",
-    title: "社会実装に使えるブロックチェーン技術(海外)",
-    sub: [],
-    extra: [{ type: "登壇者", name: "Numbers protocol", sub: "" }],
-    isRecord: true,
-    switchTime: "16:50-16:55  転換",
-  },
-  {
-    preview: img11,
-    time: "16:55-17:55",
-    title: "セッション５:超スタートアップピッチタイム",
-    sub: [
-      " ・各企業10分ぐらいで新しいサービスの説明ができる時間   6組紹介予定（一般公募）",
-    ],
-    extra: [
-      { type: "Mod", name: "Fracton Ventures ", sub: "" },
-      { type: "Speaker", name: "SHUSHI TOP marketing ", sub: "" },
-      { type: "Mod", name: "ReCone ", sub: "" },
-    ],
-    isLive: true,
-    switchTime: "17:55-18:00 転換",
-  },
-  {
-    preview: img12,
-    time: "16:55-17:55",
-    title: "セッション６:DAOはどう世界を変えていくのか",
-    sub: ["・DAOって何がすごいの？", "・DAOの在り方", "・DAOのこれから"],
-    extra: [
-      { type: "Mod", name: "アラタさん", sub: "CryptoTimes" },
-      { type: "Speaker", name: "Makotoさん", sub: "ENS" },
-      { type: "", name: "キャサリン", sub: "現Polygon、元MakerDAO" },
-      { type: "", name: "Gabby", sub: "YGG" },
-      // { type: "", name: "登壇舎未定", sub: "Merit circle" },
-    ],
-    isRecord: true,
-    switchTime: "18:30-18:35 転換",
-  },
-  {
-    preview: img13,
-    time: "18:35-18:45",
-    title: "エンディング",
-    sub: [],
-    extra: [
-      { type: "主催", name: "辻さん", sub: "" },
-      { type: "", name: "藤本", sub: "" },
-      { type: "", name: "Maskメンバー！", sub: "" },
-    ],
-    isLive: true,
-  },
-];
-export default timeTablesMap;
+export default func;

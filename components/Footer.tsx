@@ -10,13 +10,13 @@ import YoutubeImg from "../assets/media/icon_youtube.png";
 import Image from "next/image";
 const Footer: NextPage = () => {
   const mediaMap = [
-    { key: 1, img: TwitterImg, url: "" },
-    { key: 2, img: TeleImg, url: "" },
-    { key: 3, img: DiscordImg, url: "" },
-    { key: 4, img: FacebookImg, url: "" },
-    { key: 5, img: RedditImg, url: "" },
-    { key: 6, img: GithubImg, url: "" },
-    { key: 7, img: YoutubeImg, url: "" },
+    { key: 1, img: TwitterImg, url: "https://twitter.com/realMaskNetwork" },
+    { key: 2, img: TeleImg, url: "https://t.me/maskbook_group#telegram" },
+    { key: 3, img: DiscordImg, url: "https://discord.gg/4SVXvj7" },
+    { key: 4, img: FacebookImg, url: "https://www.facebook.com/masknetwork" },
+    { key: 5, img: RedditImg, url: "https://www.reddit.com/r/MaskNetwork/" },
+    { key: 6, img: GithubImg, url: "https://github.com/DimensionDev" },
+    { key: 7, img: YoutubeImg, url: "https://www.youtube.com/c/MaskNetwork" },
   ];
   return (
     <div className={style.container}>
@@ -25,9 +25,9 @@ const Footer: NextPage = () => {
         <div className={style.mediaBox}>
           {mediaMap.map((item) => {
             return (
-              <div key={item.key} className={style.imgItem}>
+              <a href={item.url} key={item.key} className={style.imgItem} >
                 <Image src={item.img} />
-              </div>
+              </a>
             );
           })}
         </div>

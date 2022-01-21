@@ -6,39 +6,47 @@ import { useEffect, useRef, useState } from "react";
 import ArrowLeftImg from "../assets/arrow_left.svg";
 import ArrowRightImg from "../assets/arrow_right.svg";
 import CloseImg from "../assets/close.svg";
-import Image from "next/image"
+import Image from "next/image";
 import CoImg from "../assets/roles/co.svg";
 import TwitterImg from "../assets/roles/twitter.svg";
 import ETHImg from "../assets/roles/eth.svg";
 import FacebookImg from "../assets/roles/fb.svg";
 import i18next from "i18next";
-
+const rolesMap = rolesInfoMap();
 const Roles: NextPage = () => {
-  const {t} = i18next
+  const { t } = i18next;
   const ctx = useRef() as any;
   const [isShowMask, setIsShowMask] = useState(false);
   const [curIndex, setCurIndex] = useState(0);
-  const [curPerson, setCurPerson] = useState<Role>(rolesInfoMap[curIndex]);
-  const toggle = (num: number) => {
-    if (curIndex + num < 0 || curIndex + num > rolesInfoMap.length - 1) {
+  const [curPerson, setCurPerson] = useState<Role>(rolesMap[curIndex]);
+  const [screenWidth, setScreenWidth] = useState(
+    (globalThis || window).innerWidth
+  );
+  const toggle = (e: any, num: number) => {
+    e.stopPropagation();
+    if (curIndex + num < 0 || curIndex + num > rolesMap.length - 1) {
       return;
     }
     const newV = curIndex + num;
     setCurIndex(newV);
-    setCurPerson(rolesInfoMap[newV]);
+    setCurPerson(rolesInfoMap()[newV]);
   };
-  const handleScroll = () => {};
+
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll, true);
-    return () => {
-      window.removeEventListener("scroll", handleScroll, true);
-    };
-  }, []);
+    window.addEventListener("resize", () =>
+      setScreenWidth((globalThis || window).innerWidth)
+    );
+    return () =>
+      window.removeEventListener("resize", () =>
+        setScreenWidth((globalThis || window).innerWidth)
+      );
+  });
+
   return (
-    <div ref={ctx} className={style.container} id="Speaker">
-      <div className={style.title}>{t('roles_title')}</div>
+    <div ref={ctx} className={style.container} id="#2">
+      <div className={style.title}>{t("roles_title")}</div>
       <div className={style.rolesBox}>
-        {rolesInfoMap.map((item, index) => {
+        {rolesInfoMap().map((item, index) => {
           return (
             <RoleItem
               onMore={(role: Role, idx: number) => {
@@ -57,12 +65,12 @@ const Roles: NextPage = () => {
         <div className={style.mask} onClick={() => setIsShowMask(false)}></div>
       )}
       {isShowMask && (
-        <div className={style.detailBox}>
+        <div className={style.detailBox} onClick={() => setIsShowMask(false)}>
           {(globalThis || window).innerWidth > 539 && (
             <Image
               src={ArrowLeftImg}
               className={curIndex === 0 ? style.iconDisable : style.iconActive}
-              onClick={() => toggle(-1)}
+              onClick={(e) => toggle(e, -1)}
             />
           )}
 
@@ -121,11 +129,11 @@ const Roles: NextPage = () => {
             <Image
               src={ArrowRightImg}
               className={
-                curIndex === rolesInfoMap.length - 1
+                curIndex === rolesMap.length - 1
                   ? style.iconDisable
                   : style.iconActive
               }
-              onClick={() => toggle(1)}
+              onClick={(e) => toggle(e, 1)}
             />
           )}
           {(globalThis || window).innerWidth < 540 && (
@@ -136,18 +144,18 @@ const Roles: NextPage = () => {
                   className={
                     curIndex === 0 ? style.iconDisable : style.iconActive
                   }
-                  onClick={() => toggle(-1)}
+                  onClick={(e) => toggle(e, -1)}
                 />
               </div>
               <div className={style.mobileSwitchIcon}>
                 <Image
                   src={ArrowRightImg}
                   className={
-                    curIndex === rolesInfoMap.length - 1
+                    curIndex === rolesMap.length - 1
                       ? style.iconDisable
                       : style.iconActive
                   }
-                  onClick={() => toggle(1)}
+                  onClick={(e) => toggle(e, 1)}
                 />
               </div>
             </div>

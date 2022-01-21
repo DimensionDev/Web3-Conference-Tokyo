@@ -8,27 +8,28 @@ import React from "react";
 import i18next from "i18next";
 
 const menuMap = [
-  { text: "Overall Progress", ref: "test" },
-  { text: "Speaker", ref: "2" },
-  { text: "Partner", ref: "3" },
+  { text: "Schedule", ref: "#1" },
+  { text: "Speaker", ref: "#2" },
+  { text: "Partner", ref: "#3" },
 ];
 const Topbar: NextPage = () => {
   const ctx = useRef() as any;
-  const [LangText, setLangText] = useState("日本語");
+  const [LangText, setLangText] = useState(
+    i18next.language === "ja" ? "日本語" : "English"
+  );
   const [activeTopbar, setActiveTopbar] = useState(false);
-
-  // const [activeMenuItem, setActiveMenuItem] = useState("");
 
   const [curHref, setCurHref] = useState("");
   const toggleLang = () => {
     if (LangText === "English") {
       i18next.changeLanguage("ja");
-      setLangText('日本語')
+      setLangText("日本語");
     } else {
       i18next.changeLanguage("en");
       setLangText("English");
     }
   };
+
   const getTopbarStyle = () => {
     if (ctx && ctx.current && ctx.current.offsetTop > 1) {
       setActiveTopbar(true);
@@ -71,7 +72,7 @@ const Topbar: NextPage = () => {
                     ? `${style.ActiveMenuItem} ${style.menuItem}`
                     : style.menuItem
                 }
-                onClick={() => jumpHref(item.text)}
+                onClick={() => jumpHref(item.ref)}
               >
                 {item.text}
               </div>

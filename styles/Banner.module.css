@@ -1,51 +1,69 @@
 .container {
   width: 100%;
-  height: calc(100vh - 80px);
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   position: relative;
+  animation: fadeIn 1.5s linear;
 }
 .contentBox {
   max-width: 1180px;
-  margin: auto 0;
+  margin: 0 auto;
+  margin-top: 10%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-
+.title {
+  max-width: 70%;
+}
 .titleSub {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 839px;
+  justify-content: space-between;
+  width: 80%;
   height: 60px;
+
+  margin-top: 40px;
+  margin-bottom: 70px;
+}
+.divider {
+  margin: 0 120px;
+}
+.titleSubContent {
+  width: 100%;
+  height: 100%;
   background: linear-gradient(
     90deg,
     rgba(255, 255, 255, 0) 2.92%,
     rgba(255, 255, 255, 0.086) 23.4%,
     rgba(255, 255, 255, 0) 90.3%
   );
-  margin-top: 40px;
-  margin-bottom: 70px;
-}
-.titleSubContent {
-  display: flex;
-  align-items: center;
-  gap: 120px;
-  background: linear-gradient(90.19deg, #ff4dcd 3.38%, #4976ec 74.22%);
-  background-clip: text;
-  color: transparent;
-  font-style: normal;
+  line-height: 60px;
   font-weight: bold;
   font-size: 18px;
+  color: white;
+  text-align: center;
+}
+.titleSubBtn {
+  background: linear-gradient(90.29deg, #ff4dce -0.06%, #4977ec 107.56%);
+  width: 220px;
+  height: 60px;
+  margin-left: 2rem;
+  border: 1px solid white;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-size: 28px;
+  line-height: 60px;
+  text-align: center;
+  border-radius: 24px 12px;
+  cursor: pointer;
 }
 .LaserContentBox {
   display: flex;
   width: 1180px;
   height: 240px;
-  background: url(../assets/laser.svg) no-repeat;
+  background: url("../assets/laser.png") no-repeat;
   background-size: 100% 100%;
   align-items: center;
   justify-content: center;
@@ -69,67 +87,123 @@
 }
 
 .ast {
+  max-width: 25%;
   position: absolute;
+  top: 0;
   left: 60%;
   animation: float 8s ease-in-out infinite alternate;
 }
+.mobileLaser {
+  width: 95%;
+}
+
 @keyframes float {
   0% {
-    transform: translateY(-20%);
+    transform: translateY(10%);
   }
   50% {
-    transform: translateY(-15%);
+    transform: translateY(15%);
   }
   100% {
-    transform: translateY(-20%);
+    transform: translateY(10%);
   }
 }
 
 @media screen and (max-width: 1024px) {
+  .container{
+    height: unset;
+  }
   .contentBox {
     width: 100%;
     align-items: center;
+    justify-content: center;
+    padding: 16px;
   }
   .titleSub {
     width: 100%;
+    height: unset;
+    flex-direction: column;
+    align-items: center;
   }
   .LaserContentBox {
     width: 100%;
     height: auto;
   }
-  .titleSubContent {
-    gap: 80px;
+  .divider {
+    margin: 0 80px;
   }
+  .ast {
+    max-width: 70%;
+  }
+  .title {
+    transform: translateX(-10%);
+    max-width: 70%;
+  }
+  .titleSubBtn {
+    margin-top: 40px;
+  }
+  @keyframes float {
+    0% {
+      top: 3%;
+    }
+    50% {
+      top: 5%
+    }
+    100% {
+      top: 3%
+    }
+  }
+  
 }
 @media screen and (max-width: 768px) {
+  .titleSubContent {
+    font-size: 14px;
+  }
   .title {
-    max-width: 90%;
+    max-width: 80%;
   }
 }
 @media screen and (max-width: 540px) {
-  .container {
-    height: unset;
-    padding: 16px;
-  }
   .titleSub {
     margin-top: 32px;
     margin-bottom: 40px;
   }
-  .titleSubContent {
-    font-size: 16px;
-    gap: 40px;
+  .divider {
+    margin: 0 40px;
+  }
+  .titleSubBtn{
+    font-size: 18px;
+    min-width: 120px;
+    max-width: 30%;
+    height: 40px;
+    line-height: 40px;
   }
 }
 
-@media screen and (max-width: 414px) {
-  .titleSubContent {
-    font-size: 14px;
-    gap: 20px;
-  }
-}
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
   .titleSubContent {
     font-size: 12px;
     gap: 12px;
+  }
+  .divider {
+    margin: 0 20px;
+  }
+}
+@media screen and (max-width: 375px) {
+  
+  .divider {
+    margin: 0 12px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
   }
 }

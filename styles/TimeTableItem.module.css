@@ -7,16 +7,28 @@
     rgba(255, 255, 255, 0.086) 23.4%,
     rgba(255, 255, 255, 0) 90.3%
   );
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 2.92%,
+      rgba(255, 255, 255, 0.086) 23.4%,
+      rgba(255, 255, 255, 0) 90.3%
+    )
+    1;
 }
 
 .inner {
+  width: 100%;
   display: flex;
   gap: 62px;
 }
 .previewBox {
   position: relative;
-  width: 292px;
-  height: 292px;
+  min-width: 292px;
+  min-height: 292px;
+  max-width: 292px;
+  max-height: 292px;
   border-radius: 10px;
   border: 2px solid transparent;
   background-image: radial-gradient(
@@ -44,9 +56,7 @@
 
 .infoBox {
   width: auto;
-  max-width: 50%;
-  display: flex;
-  flex-direction: column;
+  max-width: 80%;
 }
 .time {
   font-size: 18px;
@@ -83,6 +93,7 @@
   margin-top: 15px;
   display: flex;
   align-items: flex-start;
+  gap: 15px;
 }
 .subBoxItem {
   color: #87b1ff;
@@ -100,9 +111,11 @@
   margin-bottom: 4px;
   font-size: 20px;
   font-weight: bold;
+  white-space: nowrap;
 }
 .subBoxSub {
   font-size: 14px;
+  white-space: nowrap;
 }
 .hidden {
   opacity: 0;

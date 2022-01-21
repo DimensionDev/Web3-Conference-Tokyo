@@ -1,13 +1,14 @@
 import type { NextPage } from "next";
 import style from "../styles/Sponsor.module.css";
-import SponsorImg from "../assets/sponsorBg.svg";
-import Image from 'next/image'
-
+import SponsorImgJa from "../assets/sponsor/ja.png";
+import SponsorImgEn from "../assets/sponsor/en.png";
+import Image from "next/image";
+import i18next from "i18next";
 const Sponsor: NextPage = () => {
   return (
-    <div className={style.container} id="Partner">
+    <div className={style.container} id="#3">
       <div className={style.inner}>
-        <Image src={SponsorImg} />
+        <Image src={i18next.language === "ja" ? SponsorImgJa : SponsorImgEn} />
       </div>
     </div>
   );

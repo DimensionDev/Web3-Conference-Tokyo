@@ -1,18 +1,34 @@
 import type { NextPage } from "next";
-import TitleImg from "../assets/title.svg";
+import TitleImg from "../assets/title.png";
 import LaserIcon from "../assets/laser_icon.svg";
 import style from "../styles/Banner.module.css";
-import MobileHeroSub from "../assets/mobileHeroSub.svg";
+import MobileHeroSubJa from "../assets/mobileHeroSubJa.png";
+import MobileHeroSubEn from "../assets/mobileHeroSubEn.png";
 import Image from "next/image";
-import AstImg from "../assets/hero/ast.svg";
+import AstImg from "../assets/hero/ast.png";
 import i18next from "i18next";
+import { useEffect, useState } from "react";
 
 const Banner: NextPage = () => {
-  const t = i18next.t;
+  const { t } = i18next;
+  const [screenWidth, setScreenWidth] = useState(
+    (globalThis || window).innerWidth
+  );
+  const [curLang, setCurLang] = useState("ja");
+  useEffect(() => {
+    setCurLang(i18next.language);
+    window.addEventListener("resize", () =>
+      setScreenWidth((globalThis || window).innerWidth)
+    );
+    return () =>
+      window.removeEventListener("resize", () =>
+        setScreenWidth((globalThis || window).innerWidth)
+      );
+  });
 
   const renderLaser = () => {
-    return (
-      ((globalThis || window).innerWidth > 1024 && (
+    if (screenWidth && screenWidth > 1024) {
+      return (
         <div className={style.LaserContentBox}>
           <Image src={LaserIcon} />
           <div className={style.laserContent}>
@@ -20,8 +36,12 @@ const Banner: NextPage = () => {
             <div className={style.LaserContentText}>{t("banner_2")}</div>
           </div>
         </div>
-      )) || <Image src={MobileHeroSub} />
-    );
+      );
+    } else {
+      return (
+        <Image src={curLang === "ja" ? MobileHeroSubJa : MobileHeroSubEn} />
+      );
+    }
   };
   return (
     <div className={style.container}>
@@ -30,14 +50,20 @@ const Banner: NextPage = () => {
           <Image src={AstImg} />
         </div>
         <div className={style.title}>
-          <Image src={TitleImg} alt="" />
+          <Image src={TitleImg} />
         </div>
         <div className={style.titleSub}>
           <div className={style.titleSubContent}>
-            <div>{t("banner_3")}</div>
-            <div>|</div>
-            <div>{t("banner_4")}</div>
+            {t("banner_3")}
+            <span className={style.divider}>|</span>
+            {t("banner_4")}
           </div>
+          <a
+            href="https://web3-conference-tokyo.peatix.com/view"
+            className={style.titleSubBtn}
+          >
+            {t("banner_apply")}
+          </a>
         </div>
         {renderLaser()}
       </div>

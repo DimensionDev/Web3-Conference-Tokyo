@@ -3,10 +3,11 @@ import type { AppProps } from "next/app";
 import i18next from "i18next";
 import _en from "../public/locales/en/common.json";
 import _ja from "../public/locales/ja/common.json";
+import 'animate.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   i18next.init({
-    lng: 'ja',
+    lng: "ja",
     fallbackLng: "ja",
     resources: {
       en: {
@@ -17,7 +18,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       },
     },
   });
- 
 
   return <Component {...pageProps} />;
 }
