@@ -19,8 +19,11 @@ const Roles: NextPage = () => {
   const [isShowMask, setIsShowMask] = useState(false);
   const [curIndex, setCurIndex] = useState(0);
   const [curPerson, setCurPerson] = useState<Role>(rolesMap[curIndex]);
-  const [screenWidth, setScreenWidth] = useState((globalThis || window).innerWidth);
-  const toggle = (num: number) => {
+  const [screenWidth, setScreenWidth] = useState(
+    (globalThis || window).innerWidth
+  );
+  const toggle = (e: any, num: number) => {
+    e.stopPropagation();
     if (curIndex + num < 0 || curIndex + num > rolesMap.length - 1) {
       return;
     }
@@ -62,12 +65,12 @@ const Roles: NextPage = () => {
         <div className={style.mask} onClick={() => setIsShowMask(false)}></div>
       )}
       {isShowMask && (
-        <div className={style.detailBox}>
+        <div className={style.detailBox} onClick={() => setIsShowMask(false)}>
           {(globalThis || window).innerWidth > 539 && (
             <Image
               src={ArrowLeftImg}
               className={curIndex === 0 ? style.iconDisable : style.iconActive}
-              onClick={() => toggle(-1)}
+              onClick={(e) => toggle(e, -1)}
             />
           )}
 
@@ -130,7 +133,7 @@ const Roles: NextPage = () => {
                   ? style.iconDisable
                   : style.iconActive
               }
-              onClick={() => toggle(1)}
+              onClick={(e) => toggle(e, 1)}
             />
           )}
           {(globalThis || window).innerWidth < 540 && (
@@ -141,7 +144,7 @@ const Roles: NextPage = () => {
                   className={
                     curIndex === 0 ? style.iconDisable : style.iconActive
                   }
-                  onClick={() => toggle(-1)}
+                  onClick={(e) => toggle(e, -1)}
                 />
               </div>
               <div className={style.mobileSwitchIcon}>
@@ -152,7 +155,7 @@ const Roles: NextPage = () => {
                       ? style.iconDisable
                       : style.iconActive
                   }
-                  onClick={() => toggle(1)}
+                  onClick={(e) => toggle(e, 1)}
                 />
               </div>
             </div>
