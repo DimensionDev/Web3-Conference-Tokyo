@@ -81,7 +81,7 @@ const func: () => TimeTableProp[] = () => {
       title: t("timeTable_5_t"),
       sub: [t("timeTable_5_s"), t("timeTable_5_s1"), t("timeTable_5_s2")],
       extra: [
-        { type: "Mod", name: t('roles_20_name'), sub: "PwC" },
+        { type: "Mod", name: t('roles_20_name'), sub: "PwC Managing Director ex Facebook Director" },
         { type: "Speaker", name: t('roles_5_name'), sub: "Tokyo Otaku Mode COO" },
         { type: "", name: t('roles_21_name'), sub: "CampFire CEO" },
         { type: "", name: t('roles_12_name'), sub: "Hottolink CEO" },
@@ -195,6 +195,11 @@ const func: () => TimeTableProp[] = () => {
           name: "Kathleen Chu",
           sub: "Polygon Head of Communications",
         },
+        {
+          type:"",
+          name:"SujiYan",
+          sub:"MaskNetwork CEO"
+        }
       ],
       isRecord: true,
       // switchTime: "18:30-18:35 転換",
