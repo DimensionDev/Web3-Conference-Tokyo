@@ -278,14 +278,14 @@ const func: () => Role[] = () => {
       roleTitles: [t("roles_21_co")],
       intro: [t("role_24_intro")],
     },
-    // {
-    //   avatar: guoguang,
-    //   coLink: "https://www.thirdverse.io/ja/",
-    //   facebookLink: "https://www.facebook.com/hkunimitsu",
-    //   name: t("roles_23_name"),
-    //   roleTitles: [t("roles_23_co")],
-    //   intro: [t("role_25_intro")],
-    // },
+    {
+      avatar: guoguang,
+      coLink: "https://www.corp.financie.jp",
+      facebookLink: "https://www.facebook.com/hkunimitsu",
+      name: t("roles_23_name"),
+      roleTitles: [t("roles_23_co")],
+      intro: [t("role_25_intro")],
+    },
     {
       avatar: changTian,
       coLink: "https://fds.or.jp",
