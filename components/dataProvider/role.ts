@@ -27,6 +27,7 @@ import jiaRu from "../../assets/roles/25.png";
 import tengBen from "../../assets/roles/26.png";
 import changTian from "../../assets/roles/27.png";
 import Fenhong from "../../assets/roles/28.png";
+import guoguang from "../../assets/roles/29.png";
 
 import i18next from "i18next";
 const { t } = i18next;
@@ -249,33 +250,49 @@ const func: () => Role[] = () => {
       avatar: BaiShi,
       coLink: "https://www.arigatobank.co.jp",
       twitterLink: "https://twitter.com/YosukeShiraishi",
-      name: "白石 陽介",
-      roleTitles: ["株式会社ARIGATOBANK", "代表取締役"],
+      name: t("roles_26_name"),
+      roleTitles: [t("roles_26_co")],
       intro: [t("role_21_intro")],
     },
     {
       avatar: Fenhong,
       coLink: "https://www.hikky.life/",
       twitterLink: "https://twitter.com/SawaeMika",
-      name: "さわえ みか",
-      roleTitles: ["株式会社HIKKY COO/CQO"],
+      name: t("roles_27_name"),
+      roleTitles: [t("roles_27_co")],
       intro: [t("role_22_intro")],
     },
     {
       avatar: tengBen,
       coLink: "https://gracone.co.jp/",
       twitterLink: "https://twitter.com/missbitcoin_mai",
-      name: "藤本 真衣",
-      roleTitles: ["株式会社グラコネ  代表取締役"],
+      name: t("roles_28_name"),
+      roleTitles: [t("roles_28_title")],
       intro: [t("role_23_intro")],
     },
     {
       avatar: jiaRu,
       coLink: "https://campfire.co.jp/",
       twitterLink: "https://twitter.com/hbkr",
-      name: "家入 一真",
-      roleTitles: ["株式会社CAMPFIRE 代表取締役社長CEO"],
+      name: t("roles_21_name"),
+      roleTitles: [t("roles_21_co")],
       intro: [t("role_24_intro")],
+    },
+    // {
+    //   avatar: guoguang,
+    //   coLink: "https://www.thirdverse.io/ja/",
+    //   facebookLink: "https://www.facebook.com/hkunimitsu",
+    //   name: t("roles_23_name"),
+    //   roleTitles: [t("roles_23_co")],
+    //   intro: [t("role_25_intro")],
+    // },
+    {
+      avatar: changTian,
+      coLink: "https://fds.or.jp",
+      facebookLink: "https://www.facebook.com/shinko.osada",
+      name: t("roles_22_name"),
+      roleTitles: [t("roles_22_co")],
+      intro: [t("role_26_intro")],
     },
   ];
   return rolesInfoMap;
