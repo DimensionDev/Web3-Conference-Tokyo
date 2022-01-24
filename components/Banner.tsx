@@ -58,12 +58,14 @@ const Banner: NextPage = () => {
             <span className={style.divider}>|</span>
             {t("banner_4")}
           </div>
-          <a
-            href="https://web3-conference-tokyo.peatix.com/view"
+          <div
+            onClick={() =>
+              window.open("https://web3-conference-tokyo.peatix.com/view")
+            }
             className={style.titleSubBtn}
           >
             {t("banner_apply")}
-          </a>
+          </div>
         </div>
         {renderLaser()}
       </div>
