@@ -27,17 +27,19 @@ export interface TimeTableProp {
   difficuty?: string;
   switchTime?: string;
   isBig?: boolean;
+  vitalik?: boolean;
 }
 const func: () => TimeTableProp[] = () => {
   const { t } = i18next;
   const timeTablesMap: TimeTableProp[] = [
     {
       preview: img1,
-      time: "11:00-11:10",
+      time: "10:30-11:10",
       title: t("timeTable_1_t"),
       sub: [],
-      extra: [{ type: t("speaker"), name: "Nachan", sub: "MaskNetwork" }],
+      extra: [{ type: t("speaker"), name: "Vitalik Buterin", sub: "" }],
       isLive: true,
+      vitalik: true,
       // switchTime: "5分で転換",
     },
     {
