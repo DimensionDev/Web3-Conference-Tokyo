@@ -38,7 +38,7 @@ const func: () => TimeTableProp[] = () => {
       title: t("timeTable_1_t"),
       sub: [],
       extra: [{ type: t("speaker"), name: "Vitalik Buterin", sub: "" }],
-      isLive: true,
+      isRecord: true,
       vitalik: true,
       // switchTime: "5分で転換",
     },
