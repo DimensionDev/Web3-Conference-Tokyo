@@ -92,7 +92,7 @@
 .subBox {
   margin-top: 15px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 15px;
 }
 .subBoxItem {
