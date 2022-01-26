@@ -11,6 +11,7 @@ import img10 from "../../assets/schedule/10.png";
 import img11 from "../../assets/schedule/11.png";
 import img12 from "../../assets/schedule/12.png";
 import img13 from "../../assets/schedule/13.png";
+import imgV from '../../assets/schedule/V.png';
 import i18next from "i18next";
 export interface TimeTableProp {
   preview: any;
@@ -34,12 +35,20 @@ const func: () => TimeTableProp[] = () => {
   const timeTablesMap: TimeTableProp[] = [
     {
       preview: img1,
-      time: "10:30-11:10",
+      time: "10:45-10:50",
       title: t("timeTable_1_t"),
+      sub: [],
+      extra: [{ type: t("speaker"), name: "Nachan", sub: "MaskNetwork" }],
+      isRecord: true,
+      // switchTime: "5分で転換",
+    },
+    {
+      preview: imgV,
+      time: "10:50-11:15",
+      title: t("timeTable_v_t"),
       sub: [],
       extra: [{ type: t("speaker"), name: "Vitalik Buterin", sub: "" }],
       isRecord: true,
-      vitalik: true,
       // switchTime: "5分で転換",
     },
     {
