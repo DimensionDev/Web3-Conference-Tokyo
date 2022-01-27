@@ -195,7 +195,7 @@ const func: () => TimeTableProp[] = () => {
     },
     {
       preview: img12,
-      time: "16:55-17:55",
+      time: "17:55-18:25",
       title: t("timeTable_12_t"),
       sub: [t("timeTable_12_s"), t("timeTable_12_s1"), t("timeTable_12_s2")],
       extra: [
