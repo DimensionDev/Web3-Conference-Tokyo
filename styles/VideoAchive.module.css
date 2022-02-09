@@ -1,0 +1,106 @@
+.container {
+  width: 100%;
+  margin: 120px 0;
+}
+.inner {
+  margin: 0 auto;
+  max-width: 1380px;
+  display: flex;
+  justify-content: space-between;
+}
+.left {
+  max-width: 600px;
+}
+.left_title {
+  font-weight: 1000;
+  font-size: 3rem;
+  line-height: 1.3;
+  display: flex;
+  align-items: center;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 10px 0px;
+  background: linear-gradient(
+    92.13deg,
+    #e086ff 4.53%,
+    rgba(128, 247, 255, 0.76) 39.58%,
+    #68a4ff 70.46%
+  );
+  color: transparent;
+  background-clip: text;
+}
+.left_sub {
+  font-weight: 1000;
+  font-size: 2rem;
+  line-height: 1.3;
+  color: #ffffff;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+.left_btn {
+  cursor: pointer;
+  max-width: 415px;
+  padding: 24px;
+  background: linear-gradient(
+    91.26deg,
+    #31b3fc -8.59%,
+    #d898ff 54.22%,
+    #3cd5df 113.12%,
+    #2c91ee 113.12%
+  );
+  font-weight: 1000;
+  font-size: 1.85rem;
+  line-height: 1.3;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  border-radius: 17px;
+}
+.right {
+  width: 50%;
+}
+.badge {
+  width: 364px;
+  height: 46px;
+}
+.badge_text {
+  background: radial-gradient(
+    101.93% 549.13% at -1.93% 179.49%,
+    #72fff9 0%,
+    #faffda 23.44%,
+    #9dd9fb 37.81%,
+    #a0faea 46.14%,
+    #9aa6ff 54.47%,
+    #b4d7e6 63.54%,
+    #fccdb9 75.52%,
+    #cff4ff 84.9%,
+    #faffed 92.19%,
+    #40d1ff 100%
+  );
+  background-clip: text;
+  color: transparent;
+  /* -webkit-text-stroke: 1px #0b39b0; */
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+.videoBox {
+  margin-top: 8px;
+  width: 680px;
+  height: 428px;
+  border: solid 2px transparent;
+  border-radius: 10px;
+  transform: translateY(0px);
+  background-image: linear-gradient(rgb(71, 68, 68), rgb(59, 56, 56)),
+    radial-gradient(
+      68.14% 395.66% at 52.92% 43.33%,
+      #ff7ee3 0%,
+      #8692ff 25%,
+      #c3fbff 45.83%,
+      rgba(214, 228, 255, 0.4) 76.04%,
+      rgba(23, 227, 255, 0.4) 100%
+    );
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  overflow: hidden;
+}
