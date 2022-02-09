@@ -4,7 +4,7 @@
 }
 .inner {
   margin: 0 auto;
-  max-width: 1380px;
+  max-width: 1280px;
   display: flex;
   justify-content: space-between;
 }
@@ -39,6 +39,7 @@
   margin-bottom: 80px;
 }
 .left_btn {
+  display: block;
   cursor: pointer;
   max-width: 415px;
   padding: 24px;
@@ -50,10 +51,11 @@
     #2c91ee 113.12%
   );
   font-weight: 1000;
-  font-size: 1.85rem;
+  font-size: 1.8rem;
   line-height: 1.3;
   display: flex;
   align-items: center;
+  justify-content: center;
   color: #ffffff;
   border-radius: 17px;
 }
@@ -103,4 +105,53 @@
   background-origin: border-box;
   background-clip: content-box, border-box;
   overflow: hidden;
+}
+
+@media screen and (max-width: 1280px) {
+  .inner {
+    max-width: 90%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .right {
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .left_title {
+    font-size: 3rem;
+  }
+  .videoBox {
+    width: 100%;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .left_sub {
+    font-size: 1.5rem;
+  }
+  .left_btn {
+    font-size: 1.5rem;
+  }
+  .videoBox{
+      height: 300px;
+  }
+}
+@media screen and (max-width: 375px) {
+    .videoBox{
+        height: 180px;
+    }
+    .left_title{
+        font-size: 2.5rem;
+    }
+    .left_sub {
+        font-size: 1.2rem;
+      }
+    .left_btn{
+        font-size: 1rem;
+    }
 }

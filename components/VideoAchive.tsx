@@ -13,7 +13,7 @@ const VideoAchive: NextPage = () => {
         <div className={style.left}>
           <div className={style.left_title}>Check it Out!</div>
           <div className={style.left_sub}>
-            YouTubeにて録画映像を配信しております いつでもお楽しみ頂けます。
+            YouTubeにて録画映像を公開しております いつでもお楽しみ頂けます。
           </div>
           <a
             href={maskYoutubeChannelUrl}
@@ -29,8 +29,8 @@ const VideoAchive: NextPage = () => {
           </div>
           <div className={style.videoBox}>
             <iframe
-              width="680"
-              height="428"
+              width="100%"
+              height="100%"
               src={web3ConferenceYoutubeUrl}
               title="YouTube video player"
               frameBorder="0"
