@@ -27,6 +27,7 @@
   cursor: pointer;
   max-width: 415px;
   padding: 24px;
+  white-space: nowrap;
   background: linear-gradient(
     91.26deg,
     #31b3fc -8.59%,
@@ -120,6 +121,7 @@
     font-size: 1.5rem;
   }
   .left_btn {
+    padding: 16px;
     font-size: 1.5rem;
   }
   .videoBox{
