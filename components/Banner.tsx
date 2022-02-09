@@ -25,6 +25,10 @@ const Banner: NextPage = () => {
         setScreenWidth((globalThis || window).innerWidth)
       );
   });
+  const jumpHref = (href: string) => {
+    const el = document.getElementById(href);
+    el?.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
 
   const renderLaser = () => {
     if (screenWidth && screenWidth > 1024) {
@@ -59,9 +63,7 @@ const Banner: NextPage = () => {
             {t("banner_4")}
           </div>
           <div
-            onClick={() =>
-              window.open("https://web3-conference-tokyo.peatix.com/view")
-            }
+            onClick={() => jumpHref("youtube")}
             className={style.titleSubBtn}
           >
             {t("banner_apply")}
