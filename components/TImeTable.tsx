@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import style from "../styles/TimeTable.module.css";
 import timeTablesMap from "./dataProvider/timetable";
-import PreTimeInfo from "./PreTimeInfo";
 import TimeTableItem from "./TimeTableItem";
 import i18next from "i18next";
 

@@ -12,7 +12,6 @@ import MobileLiveJa from "../assets/mobile_live.png";
 import MobileRecordJa from "../assets/mobile_record.png";
 import MobileLiveEn from "../assets/mobile_live_en.png";
 import MobileRecordEn from "../assets/mobile_record_en.png";
-import VitalikImg from "../assets/schedule/vitalik.png";
 
 import { useEffect, useState } from "react";
 import i18next from "i18next";
@@ -75,7 +74,6 @@ const TimeTableItem: NextPage<Props> = ({ info }) => {
                 )}
               </div>
               <div className={style.subBox}>
-                {info.vitalik && <Image src={VitalikImg}></Image>}
                 {extra.map((subBoxItem, index) => {
                   return (
                     <div key={index} className={style.subBoxItem}>
@@ -130,11 +128,7 @@ const TimeTableItem: NextPage<Props> = ({ info }) => {
                 className={mStyle.subBox}
                 style={info.vitalik ? { alignItems: "center" } : {}}
               >
-                {info.vitalik && (
-                  <div style={{ marginRight: "1.5rem" }}>
-                    <Image width={112} height={112} src={VitalikImg}></Image>
-                  </div>
-                )}
+                
                 {extra.map((subBoxItem, index) => {
                   return (
                     <div key={index} className={mStyle.subBoxItem}>
