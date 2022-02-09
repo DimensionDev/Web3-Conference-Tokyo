@@ -12,23 +12,7 @@
   max-width: 600px;
 }
 .left_title {
-  font-weight: 1000;
-  font-size: 3rem;
-  line-height: 1.3;
-  display: flex;
-  align-items: center;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  margin: 10px 0px;
-  background: linear-gradient(
-    92.13deg,
-    #e086ff 4.53%,
-    rgba(128, 247, 255, 0.76) 39.58%,
-    #68a4ff 70.46%
-  );
-  color: transparent;
-  background-clip: text;
+  max-width: 50%;
 }
 .left_sub {
   font-weight: 1000;
@@ -126,6 +110,7 @@
     font-size: 3rem;
   }
   .videoBox {
+      margin-top: 24px;
     width: 100%;
     height: 400px;
   }

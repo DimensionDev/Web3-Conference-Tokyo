@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import BadgeImage from "../assets/video/badge.png";
+import LeftImage from '../assets/video/lefT.png'
 import style from "../styles/VideoAchive.module.css";
 
 const maskYoutubeChannelUrl =
@@ -11,7 +12,11 @@ const VideoAchive: NextPage = () => {
     <div className={style.container}>
       <div className={style.inner}>
         <div className={style.left}>
-          <div className={style.left_title}>Check it Out!</div>
+          {/* <div className={style.left_title}>Check it Out!</div> */}
+          <div className={style.left_title} > 
+          <Image src={LeftImage} />
+
+          </div>
           <div className={style.left_sub}>
             YouTubeにて録画映像を公開しております いつでもお楽しみ頂けます。
           </div>
