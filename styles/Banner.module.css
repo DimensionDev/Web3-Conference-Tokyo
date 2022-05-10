@@ -16,8 +16,12 @@
   flex-direction: column;
   align-items: flex-start;
 }
-.title {
-  max-width: 70%;
+.titleHead {
+  width: 30%
+}
+.titleMain{
+  width: 70%;
+  transform: translateY(-5%);
 }
 .titleSub {
   display: flex;
@@ -78,7 +82,7 @@
 
 .LaserContentTitle {
   color: #000000;
-  font-size: 36px;
+  font-size: 24px;
   margin-bottom: 7px;
 }
 .LaserContentText {
@@ -90,8 +94,8 @@
 .ast {
   max-width: 25%;
   position: absolute;
-  top: 0;
-  left: 60%;
+  top: 5%;
+  left: 55%;
   animation: float 8s ease-in-out infinite alternate;
   pointer-events: none;
 }

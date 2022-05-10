@@ -28,9 +28,9 @@ const Layout: NextPage = () => {
     <div id="layout" className={style.container}>
       <Topbar />
       <Banner />
+      <VideoAchive />
       <TimeTable />
       <Roles />
-      <VideoAchive />
       <Sponsor />
       <Footer />
     </div>

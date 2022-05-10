@@ -17,7 +17,10 @@ const VideoAchive: NextPage = () => {
           <div className={style.left_title}>
             <Image src={LeftImage} />
           </div>
-          <div className={style.left_sub}>{t("video_2_t")}</div>
+          <div className={style.left_sub}>
+            <div> Web3 Conference Tokyo</div>
+            {t("video_2_t")}
+          </div>
           <a
             href={maskYoutubeChannelUrl}
             target="_blank"
