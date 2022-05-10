@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
-import TitleImg from "../assets/title.png";
+import TitleHead from "../assets/title_head.png";
+import TitleMain from "../assets/title_main.png";
 import LaserIcon from "../assets/laser_icon.svg";
 import style from "../styles/Banner.module.css";
 import MobileHeroSubJa from "../assets/mobileHeroSubJa.png";
@@ -53,15 +54,20 @@ const Banner: NextPage = () => {
         <div className={style.ast}>
           <Image src={AstImg} />
         </div>
-        <div className={style.title}>
-          <Image src={TitleImg} />
+        <div>
+          <div className={style.titleHead}>
+            <Image src={TitleHead} />
+          </div>
+          <div className={style.titleMain}>
+            <Image className={style.titleMain} src={TitleMain} />
+          </div>
         </div>
         <div className={style.titleSub}>
-          <div className={style.titleSubContent}>
+          {/* <div className={style.titleSubContent}>
             {t("banner_3")}
             <span className={style.divider}>|</span>
             {t("banner_4")}
-          </div>
+          </div> */}
           <div
             onClick={() => jumpHref("youtube")}
             className={style.titleSubBtn}
