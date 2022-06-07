@@ -8,7 +8,7 @@ import React from "react";
 import i18next from "i18next";
 
 const menuMap = [
-  { text: "Schedule", ref: "#1" },
+  // { text: "Schedule", ref: "#1" },
   { text: "Speaker", ref: "#2" },
   { text: "Partner", ref: "#3" },
 ];
