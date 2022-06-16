@@ -30,7 +30,7 @@ const Layout: NextPage = () => {
       <Banner />
       <VideoAchive />
       {/* <TimeTable /> */}
-      <Roles />
+      {/* <Roles /> */}
       <Sponsor />
       <Footer />
     </div>
